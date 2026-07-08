@@ -2,22 +2,22 @@
 
 A cross-platform (Windows & macOS) desktop app for practicing Russian → English translation. Paste a Russian text, write your own translation next to it, and get real-time feedback — spelling and grammar checked locally, translation quality checked against a live reference translation. Includes a spaced-repetition (SM-2) vocabulary trainer.
 
-[![CI](https://github.com/stormi-oss/langvor/actions/workflows/ci.yml/badge.svg)](https://github.com/stormi-oss/langvor/actions/workflows/ci.yml)
+[![CI](https://github.com/stormi-oss/LangVor/actions/workflows/ci.yml/badge.svg)](https://github.com/stormi-oss/LangVor/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## Download
 
 <p>
-  <a href="https://github.com/stormi-oss/langvor/releases/latest/download/langvor-windows.zip">
+  <a href="https://github.com/stormi-oss/LangVor/releases/latest/download/langvor-windows.zip">
     <img alt="Download for Windows" src="https://img.shields.io/badge/Download-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white">
   </a>
   &nbsp;
-  <a href="https://github.com/stormi-oss/langvor/releases/latest/download/langvor-macos.zip">
+  <a href="https://github.com/stormi-oss/LangVor/releases/latest/download/langvor-macos.zip">
     <img alt="Download for macOS" src="https://img.shields.io/badge/Download-macOS-000000?style=for-the-badge&logo=apple&logoColor=white">
   </a>
 </p>
 
-Or browse all releases: **[github.com/stormi-oss/langvor/releases](https://github.com/stormi-oss/langvor/releases)**
+Or browse all releases: **[github.com/stormi-oss/LangVor/releases](https://github.com/stormi-oss/LangVor/releases)**
 
 These builds are **not signed** with a paid developer certificate, so both operating systems will show a warning the first time you open the app. This is normal for independently distributed apps — see below for how to proceed.
 
