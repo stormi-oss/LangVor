@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'data/database.dart';
 import 'domain/dictionary_seeder.dart';
 import 'domain/offline_analyzer.dart';
@@ -12,9 +11,6 @@ import 'presentation/bloc/settings/settings_bloc.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  // Disable runtime fetching of fonts to prevent SocketExceptions and support 100% offline use
-  GoogleFonts.config.allowRuntimeFetching = false;
 
   // Initialize database
   final database = AppDatabase();

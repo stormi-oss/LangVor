@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'app_colors.dart';
 
 /// LangVor theme data — dark and light themes with Inter typography.
@@ -27,12 +26,12 @@ class AppTheme {
         onError: Colors.white,
       ),
       textTheme: _buildTextTheme(Brightness.dark),
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
         backgroundColor: AppColors.darkSurface,
         foregroundColor: AppColors.darkTextPrimary,
         elevation: 0,
         centerTitle: false,
-        titleTextStyle: GoogleFonts.inter(
+        titleTextStyle: TextStyle(fontFamily: 'Inter', 
           fontSize: 20,
           fontWeight: FontWeight.w600,
           color: AppColors.darkTextPrimary,
@@ -64,7 +63,7 @@ class AppTheme {
           borderRadius: BorderRadius.circular(_inputBorderRadius),
           borderSide: const BorderSide(color: AppColors.primary, width: 2),
         ),
-        hintStyle: GoogleFonts.inter(
+        hintStyle: const TextStyle(fontFamily: 'Inter', 
           color: AppColors.darkTextTertiary,
           fontSize: 14,
         ),
@@ -76,8 +75,8 @@ class AppTheme {
       navigationBarTheme: NavigationBarThemeData(
         backgroundColor: AppColors.darkSurface,
         indicatorColor: AppColors.primary.withValues(alpha: 0.2),
-        labelTextStyle: WidgetStatePropertyAll(
-          GoogleFonts.inter(fontSize: 12, fontWeight: FontWeight.w500),
+        labelTextStyle: const WidgetStatePropertyAll(
+          TextStyle(fontFamily: 'Inter', fontSize: 12, fontWeight: FontWeight.w500),
         ),
       ),
       navigationRailTheme: NavigationRailThemeData(
@@ -86,12 +85,12 @@ class AppTheme {
         selectedIconTheme: const IconThemeData(color: AppColors.primary),
         unselectedIconTheme:
             const IconThemeData(color: AppColors.darkTextSecondary),
-        selectedLabelTextStyle: GoogleFonts.inter(
+        selectedLabelTextStyle: const TextStyle(fontFamily: 'Inter', 
           fontSize: 12,
           fontWeight: FontWeight.w600,
           color: AppColors.primary,
         ),
-        unselectedLabelTextStyle: GoogleFonts.inter(
+        unselectedLabelTextStyle: const TextStyle(fontFamily: 'Inter', 
           fontSize: 12,
           color: AppColors.darkTextSecondary,
         ),
@@ -103,7 +102,7 @@ class AppTheme {
       ),
       chipTheme: ChipThemeData(
         backgroundColor: AppColors.darkSurfaceElevated,
-        labelStyle: GoogleFonts.inter(
+        labelStyle: const TextStyle(fontFamily: 'Inter', 
           fontSize: 12,
           color: AppColors.darkTextSecondary,
         ),
@@ -118,7 +117,7 @@ class AppTheme {
       ),
       snackBarTheme: SnackBarThemeData(
         backgroundColor: AppColors.darkSurfaceElevated,
-        contentTextStyle: GoogleFonts.inter(
+        contentTextStyle: const TextStyle(fontFamily: 'Inter', 
           color: AppColors.darkTextPrimary,
           fontSize: 14,
         ),
@@ -148,12 +147,12 @@ class AppTheme {
         onError: Colors.white,
       ),
       textTheme: _buildTextTheme(Brightness.light),
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
         backgroundColor: AppColors.lightSurface,
         foregroundColor: AppColors.lightTextPrimary,
         elevation: 0,
         centerTitle: false,
-        titleTextStyle: GoogleFonts.inter(
+        titleTextStyle: TextStyle(fontFamily: 'Inter', 
           fontSize: 20,
           fontWeight: FontWeight.w600,
           color: AppColors.lightTextPrimary,
@@ -185,7 +184,7 @@ class AppTheme {
           borderRadius: BorderRadius.circular(_inputBorderRadius),
           borderSide: const BorderSide(color: AppColors.primary, width: 2),
         ),
-        hintStyle: GoogleFonts.inter(
+        hintStyle: const TextStyle(fontFamily: 'Inter', 
           color: AppColors.lightTextTertiary,
           fontSize: 14,
         ),
@@ -197,8 +196,8 @@ class AppTheme {
       navigationBarTheme: NavigationBarThemeData(
         backgroundColor: AppColors.lightSurface,
         indicatorColor: AppColors.primary.withValues(alpha: 0.1),
-        labelTextStyle: WidgetStatePropertyAll(
-          GoogleFonts.inter(fontSize: 12, fontWeight: FontWeight.w500),
+        labelTextStyle: const WidgetStatePropertyAll(
+          TextStyle(fontFamily: 'Inter', fontSize: 12, fontWeight: FontWeight.w500),
         ),
       ),
       navigationRailTheme: NavigationRailThemeData(
@@ -207,12 +206,12 @@ class AppTheme {
         selectedIconTheme: const IconThemeData(color: AppColors.primary),
         unselectedIconTheme:
             const IconThemeData(color: AppColors.lightTextSecondary),
-        selectedLabelTextStyle: GoogleFonts.inter(
+        selectedLabelTextStyle: const TextStyle(fontFamily: 'Inter', 
           fontSize: 12,
           fontWeight: FontWeight.w600,
           color: AppColors.primary,
         ),
-        unselectedLabelTextStyle: GoogleFonts.inter(
+        unselectedLabelTextStyle: const TextStyle(fontFamily: 'Inter', 
           fontSize: 12,
           color: AppColors.lightTextSecondary,
         ),
@@ -224,7 +223,7 @@ class AppTheme {
       ),
       chipTheme: ChipThemeData(
         backgroundColor: AppColors.lightSurfaceElevated,
-        labelStyle: GoogleFonts.inter(
+        labelStyle: const TextStyle(fontFamily: 'Inter', 
           fontSize: 12,
           color: AppColors.lightTextSecondary,
         ),
@@ -239,7 +238,7 @@ class AppTheme {
       ),
       snackBarTheme: SnackBarThemeData(
         backgroundColor: AppColors.lightTextPrimary,
-        contentTextStyle: GoogleFonts.inter(
+        contentTextStyle: const TextStyle(fontFamily: 'Inter', 
           color: Colors.white,
           fontSize: 14,
         ),
@@ -262,73 +261,73 @@ class AppTheme {
         : AppColors.lightTextSecondary;
 
     return TextTheme(
-      displayLarge: GoogleFonts.inter(
+      displayLarge: TextStyle(fontFamily: 'Inter', 
         fontSize: 32,
         fontWeight: FontWeight.w700,
         color: color,
         letterSpacing: -0.5,
       ),
-      displayMedium: GoogleFonts.inter(
+      displayMedium: TextStyle(fontFamily: 'Inter', 
         fontSize: 28,
         fontWeight: FontWeight.w700,
         color: color,
         letterSpacing: -0.5,
       ),
-      headlineLarge: GoogleFonts.inter(
+      headlineLarge: TextStyle(fontFamily: 'Inter', 
         fontSize: 24,
         fontWeight: FontWeight.w600,
         color: color,
       ),
-      headlineMedium: GoogleFonts.inter(
+      headlineMedium: TextStyle(fontFamily: 'Inter', 
         fontSize: 20,
         fontWeight: FontWeight.w600,
         color: color,
       ),
-      titleLarge: GoogleFonts.inter(
+      titleLarge: TextStyle(fontFamily: 'Inter', 
         fontSize: 18,
         fontWeight: FontWeight.w600,
         color: color,
       ),
-      titleMedium: GoogleFonts.inter(
+      titleMedium: TextStyle(fontFamily: 'Inter', 
         fontSize: 16,
         fontWeight: FontWeight.w500,
         color: color,
       ),
-      titleSmall: GoogleFonts.inter(
+      titleSmall: TextStyle(fontFamily: 'Inter', 
         fontSize: 14,
         fontWeight: FontWeight.w500,
         color: secondaryColor,
       ),
-      bodyLarge: GoogleFonts.inter(
+      bodyLarge: TextStyle(fontFamily: 'Inter', 
         fontSize: 16,
         fontWeight: FontWeight.w400,
         color: color,
         height: 1.6,
       ),
-      bodyMedium: GoogleFonts.inter(
+      bodyMedium: TextStyle(fontFamily: 'Inter', 
         fontSize: 14,
         fontWeight: FontWeight.w400,
         color: color,
         height: 1.5,
       ),
-      bodySmall: GoogleFonts.inter(
+      bodySmall: TextStyle(fontFamily: 'Inter', 
         fontSize: 12,
         fontWeight: FontWeight.w400,
         color: secondaryColor,
         height: 1.4,
       ),
-      labelLarge: GoogleFonts.inter(
+      labelLarge: TextStyle(fontFamily: 'Inter', 
         fontSize: 14,
         fontWeight: FontWeight.w600,
         color: color,
         letterSpacing: 0.3,
       ),
-      labelMedium: GoogleFonts.inter(
+      labelMedium: TextStyle(fontFamily: 'Inter', 
         fontSize: 12,
         fontWeight: FontWeight.w500,
         color: secondaryColor,
       ),
-      labelSmall: GoogleFonts.inter(
+      labelSmall: TextStyle(fontFamily: 'Inter', 
         fontSize: 11,
         fontWeight: FontWeight.w500,
         color: secondaryColor,

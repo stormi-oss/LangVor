@@ -1,7 +1,7 @@
 name: langvor
 description: Cross-platform translation practice app for English learners (A2-B1 → B2).
 publish_to: 'none'
-version: 1.0.0+1
+version: 1.0.1+2
 
 environment:
   sdk: ^3.6.0
@@ -21,7 +21,6 @@ dependencies:
   path: ^1.9.1
   
   # UI & Design
-  google_fonts: ^6.2.1
   flutter_animate: ^4.5.2
   flutter_quill: ^11.1.0
   
@@ -46,3 +45,14 @@ flutter:
     - assets/dictionary/en_ru_50k.json
     - assets/dictionary/en_words.txt
     - assets/grammar/
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700
