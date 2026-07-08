@@ -1,0 +1,3332 @@
+[
+  {
+    "word": "time",
+    "definition": "a period or point measured in hours, minutes, etc.",
+    "partOfSpeech": "noun",
+    "russianTranslation": "время",
+    "synonyms": "period, moment, duration",
+    "frequencyRank": 1,
+    "cefrLevel": "A1",
+    "exampleSentence": "What time is it?"
+  },
+  {
+    "word": "year",
+    "definition": "a period of 365 days",
+    "partOfSpeech": "noun",
+    "russianTranslation": "год",
+    "synonyms": "annual period",
+    "frequencyRank": 2,
+    "cefrLevel": "A1",
+    "exampleSentence": "I graduated last year."
+  },
+  {
+    "word": "people",
+    "definition": "human beings in general or considered collectively",
+    "partOfSpeech": "noun",
+    "russianTranslation": "люди, народ",
+    "synonyms": "persons, individuals, humans",
+    "frequencyRank": 3,
+    "cefrLevel": "A1",
+    "exampleSentence": "Many people attended the event."
+  },
+  {
+    "word": "way",
+    "definition": "a method, style, or manner of doing something",
+    "partOfSpeech": "noun",
+    "russianTranslation": "путь, способ",
+    "synonyms": "method, route, manner",
+    "frequencyRank": 4,
+    "cefrLevel": "A1",
+    "exampleSentence": "There must be a better way."
+  },
+  {
+    "word": "day",
+    "definition": "a period of twenty-four hours",
+    "partOfSpeech": "noun",
+    "russianTranslation": "день",
+    "synonyms": "date, daytime",
+    "frequencyRank": 5,
+    "cefrLevel": "A1",
+    "exampleSentence": "What a beautiful day!"
+  },
+  {
+    "word": "man",
+    "definition": "an adult male human being",
+    "partOfSpeech": "noun",
+    "russianTranslation": "мужчина, человек",
+    "synonyms": "male, gentleman, fellow",
+    "frequencyRank": 6,
+    "cefrLevel": "A1",
+    "exampleSentence": "The man opened the door."
+  },
+  {
+    "word": "woman",
+    "definition": "an adult female human being",
+    "partOfSpeech": "noun",
+    "russianTranslation": "женщина",
+    "synonyms": "female, lady",
+    "frequencyRank": 7,
+    "cefrLevel": "A1",
+    "exampleSentence": "The woman smiled at us."
+  },
+  {
+    "word": "child",
+    "definition": "a young human being below the age of puberty",
+    "partOfSpeech": "noun",
+    "russianTranslation": "ребёнок, дитя",
+    "synonyms": "kid, youngster, minor",
+    "frequencyRank": 8,
+    "cefrLevel": "A1",
+    "exampleSentence": "The child is playing in the garden."
+  },
+  {
+    "word": "world",
+    "definition": "the earth, together with all of its countries and peoples",
+    "partOfSpeech": "noun",
+    "russianTranslation": "мир, свет",
+    "synonyms": "globe, earth, planet",
+    "frequencyRank": 9,
+    "cefrLevel": "A1",
+    "exampleSentence": "She traveled around the world."
+  },
+  {
+    "word": "life",
+    "definition": "the existence of an individual human being",
+    "partOfSpeech": "noun",
+    "russianTranslation": "жизнь",
+    "synonyms": "existence, living, being",
+    "frequencyRank": 10,
+    "cefrLevel": "A1",
+    "exampleSentence": "Life is beautiful."
+  },
+  {
+    "word": "hand",
+    "definition": "the end part of a person's arm beyond the wrist",
+    "partOfSpeech": "noun",
+    "russianTranslation": "рука, кисть",
+    "synonyms": "palm, fist",
+    "frequencyRank": 11,
+    "cefrLevel": "A1",
+    "exampleSentence": "She raised her hand."
+  },
+  {
+    "word": "part",
+    "definition": "a piece or segment of something",
+    "partOfSpeech": "noun",
+    "russianTranslation": "часть, доля",
+    "synonyms": "piece, portion, section",
+    "frequencyRank": 12,
+    "cefrLevel": "A1",
+    "exampleSentence": "This is part of the plan."
+  },
+  {
+    "word": "place",
+    "definition": "a particular position or point in space",
+    "partOfSpeech": "noun",
+    "russianTranslation": "место",
+    "synonyms": "location, spot, area",
+    "frequencyRank": 13,
+    "cefrLevel": "A1",
+    "exampleSentence": "This is a nice place."
+  },
+  {
+    "word": "case",
+    "definition": "an instance of a particular situation",
+    "partOfSpeech": "noun",
+    "russianTranslation": "случай, дело",
+    "synonyms": "instance, situation, matter",
+    "frequencyRank": 14,
+    "cefrLevel": "A2",
+    "exampleSentence": "In that case, let's go."
+  },
+  {
+    "word": "week",
+    "definition": "a period of seven days",
+    "partOfSpeech": "noun",
+    "russianTranslation": "неделя",
+    "synonyms": "seven days",
+    "frequencyRank": 15,
+    "cefrLevel": "A1",
+    "exampleSentence": "I'll see you next week."
+  },
+  {
+    "word": "company",
+    "definition": "a commercial business",
+    "partOfSpeech": "noun",
+    "russianTranslation": "компания, фирма",
+    "synonyms": "firm, business, corporation",
+    "frequencyRank": 16,
+    "cefrLevel": "A2",
+    "exampleSentence": "She works for a big company."
+  },
+  {
+    "word": "system",
+    "definition": "a set of connected things or parts forming a complex whole",
+    "partOfSpeech": "noun",
+    "russianTranslation": "система",
+    "synonyms": "arrangement, structure, network",
+    "frequencyRank": 17,
+    "cefrLevel": "A2",
+    "exampleSentence": "The education system needs reform."
+  },
+  {
+    "word": "program",
+    "definition": "a planned series of events or activities",
+    "partOfSpeech": "noun",
+    "russianTranslation": "программа",
+    "synonyms": "plan, schedule, scheme",
+    "frequencyRank": 18,
+    "cefrLevel": "A2",
+    "exampleSentence": "The program starts at nine."
+  },
+  {
+    "word": "question",
+    "definition": "a sentence worded to elicit information",
+    "partOfSpeech": "noun",
+    "russianTranslation": "вопрос",
+    "synonyms": "query, inquiry",
+    "frequencyRank": 19,
+    "cefrLevel": "A1",
+    "exampleSentence": "Can I ask you a question?"
+  },
+  {
+    "word": "work",
+    "definition": "activity involving mental or physical effort done to achieve a purpose",
+    "partOfSpeech": "noun/verb",
+    "russianTranslation": "работа, работать",
+    "synonyms": "job, labor, toil",
+    "frequencyRank": 20,
+    "cefrLevel": "A1",
+    "exampleSentence": "I have a lot of work to do."
+  },
+  {
+    "word": "government",
+    "definition": "the governing body of a nation or state",
+    "partOfSpeech": "noun",
+    "russianTranslation": "правительство",
+    "synonyms": "administration, authority, regime",
+    "frequencyRank": 21,
+    "cefrLevel": "A2",
+    "exampleSentence": "The government announced new policies."
+  },
+  {
+    "word": "number",
+    "definition": "an arithmetical value or quantity",
+    "partOfSpeech": "noun",
+    "russianTranslation": "число, номер",
+    "synonyms": "figure, digit, amount",
+    "frequencyRank": 22,
+    "cefrLevel": "A1",
+    "exampleSentence": "What is your phone number?"
+  },
+  {
+    "word": "night",
+    "definition": "the period of darkness between sunset and sunrise",
+    "partOfSpeech": "noun",
+    "russianTranslation": "ночь",
+    "synonyms": "evening, darkness, nighttime",
+    "frequencyRank": 23,
+    "cefrLevel": "A1",
+    "exampleSentence": "The stars shine at night."
+  },
+  {
+    "word": "point",
+    "definition": "a particular spot, place, or position",
+    "partOfSpeech": "noun",
+    "russianTranslation": "точка, пункт, суть",
+    "synonyms": "spot, tip, dot",
+    "frequencyRank": 24,
+    "cefrLevel": "A2",
+    "exampleSentence": "That's a good point."
+  },
+  {
+    "word": "home",
+    "definition": "the place where one lives permanently",
+    "partOfSpeech": "noun",
+    "russianTranslation": "дом, домой",
+    "synonyms": "house, residence, dwelling",
+    "frequencyRank": 25,
+    "cefrLevel": "A1",
+    "exampleSentence": "Let's go home."
+  },
+  {
+    "word": "water",
+    "definition": "a colorless, transparent liquid",
+    "partOfSpeech": "noun",
+    "russianTranslation": "вода",
+    "synonyms": "liquid, H2O",
+    "frequencyRank": 26,
+    "cefrLevel": "A1",
+    "exampleSentence": "I need a glass of water."
+  },
+  {
+    "word": "room",
+    "definition": "a part of a building enclosed by walls",
+    "partOfSpeech": "noun",
+    "russianTranslation": "комната, номер",
+    "synonyms": "chamber, space",
+    "frequencyRank": 27,
+    "cefrLevel": "A1",
+    "exampleSentence": "The room is very spacious."
+  },
+  {
+    "word": "mother",
+    "definition": "a female parent",
+    "partOfSpeech": "noun",
+    "russianTranslation": "мать, мама",
+    "synonyms": "mom, mum, parent",
+    "frequencyRank": 28,
+    "cefrLevel": "A1",
+    "exampleSentence": "My mother is a teacher."
+  },
+  {
+    "word": "area",
+    "definition": "a region or part of a town, country, or the world",
+    "partOfSpeech": "noun",
+    "russianTranslation": "область, район, площадь",
+    "synonyms": "region, zone, district",
+    "frequencyRank": 29,
+    "cefrLevel": "A2",
+    "exampleSentence": "This area is known for its parks."
+  },
+  {
+    "word": "money",
+    "definition": "a current medium of exchange",
+    "partOfSpeech": "noun",
+    "russianTranslation": "деньги",
+    "synonyms": "cash, funds, currency",
+    "frequencyRank": 30,
+    "cefrLevel": "A1",
+    "exampleSentence": "I don't have enough money."
+  },
+  {
+    "word": "story",
+    "definition": "an account of imaginary or real events",
+    "partOfSpeech": "noun",
+    "russianTranslation": "история, рассказ",
+    "synonyms": "tale, narrative, account",
+    "frequencyRank": 31,
+    "cefrLevel": "A1",
+    "exampleSentence": "Tell me a story."
+  },
+  {
+    "word": "fact",
+    "definition": "a thing that is known or proved to be true",
+    "partOfSpeech": "noun",
+    "russianTranslation": "факт",
+    "synonyms": "truth, reality, datum",
+    "frequencyRank": 32,
+    "cefrLevel": "A2",
+    "exampleSentence": "It's a well-known fact."
+  },
+  {
+    "word": "month",
+    "definition": "each of the twelve named periods of the year",
+    "partOfSpeech": "noun",
+    "russianTranslation": "месяц",
+    "synonyms": "thirty days",
+    "frequencyRank": 33,
+    "cefrLevel": "A1",
+    "exampleSentence": "January is the first month."
+  },
+  {
+    "word": "lot",
+    "definition": "a great amount or number",
+    "partOfSpeech": "noun",
+    "russianTranslation": "много",
+    "synonyms": "plenty, bunch, heap",
+    "frequencyRank": 34,
+    "cefrLevel": "A1",
+    "exampleSentence": "I have a lot of friends."
+  },
+  {
+    "word": "right",
+    "definition": "morally good, justified, or acceptable",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "правильный, правый",
+    "synonyms": "correct, proper, true",
+    "frequencyRank": 35,
+    "cefrLevel": "A1",
+    "exampleSentence": "You are right about that."
+  },
+  {
+    "word": "study",
+    "definition": "the devotion of time and attention to gaining knowledge",
+    "partOfSpeech": "noun/verb",
+    "russianTranslation": "изучать, учиться",
+    "synonyms": "learn, research, examine",
+    "frequencyRank": 36,
+    "cefrLevel": "A1",
+    "exampleSentence": "I study English every day."
+  },
+  {
+    "word": "book",
+    "definition": "a written or printed work consisting of pages",
+    "partOfSpeech": "noun",
+    "russianTranslation": "книга",
+    "synonyms": "volume, publication, text",
+    "frequencyRank": 37,
+    "cefrLevel": "A1",
+    "exampleSentence": "This is an interesting book."
+  },
+  {
+    "word": "eye",
+    "definition": "each of a pair of globular organs of sight",
+    "partOfSpeech": "noun",
+    "russianTranslation": "глаз",
+    "synonyms": "vision, sight",
+    "frequencyRank": 38,
+    "cefrLevel": "A1",
+    "exampleSentence": "She has beautiful blue eyes."
+  },
+  {
+    "word": "job",
+    "definition": "a paid position of regular employment",
+    "partOfSpeech": "noun",
+    "russianTranslation": "работа, должность",
+    "synonyms": "position, occupation, employment",
+    "frequencyRank": 39,
+    "cefrLevel": "A1",
+    "exampleSentence": "He found a new job."
+  },
+  {
+    "word": "word",
+    "definition": "a single distinct meaningful element of speech",
+    "partOfSpeech": "noun",
+    "russianTranslation": "слово",
+    "synonyms": "term, expression, vocable",
+    "frequencyRank": 40,
+    "cefrLevel": "A1",
+    "exampleSentence": "What does this word mean?"
+  },
+  {
+    "word": "business",
+    "definition": "a person's regular occupation, profession, or trade",
+    "partOfSpeech": "noun",
+    "russianTranslation": "бизнес, дело",
+    "synonyms": "commerce, trade, enterprise",
+    "frequencyRank": 41,
+    "cefrLevel": "A2",
+    "exampleSentence": "He started his own business."
+  },
+  {
+    "word": "issue",
+    "definition": "an important topic or problem for debate",
+    "partOfSpeech": "noun",
+    "russianTranslation": "проблема, вопрос, выпуск",
+    "synonyms": "matter, concern, problem",
+    "frequencyRank": 42,
+    "cefrLevel": "B1",
+    "exampleSentence": "This is an important issue."
+  },
+  {
+    "word": "side",
+    "definition": "a position to the left or right of something",
+    "partOfSpeech": "noun",
+    "russianTranslation": "сторона, бок",
+    "synonyms": "edge, flank, face",
+    "frequencyRank": 43,
+    "cefrLevel": "A1",
+    "exampleSentence": "Look on the bright side."
+  },
+  {
+    "word": "kind",
+    "definition": "a group of people or things having similar characteristics",
+    "partOfSpeech": "noun/adjective",
+    "russianTranslation": "вид, добрый",
+    "synonyms": "type, sort, variety",
+    "frequencyRank": 44,
+    "cefrLevel": "A1",
+    "exampleSentence": "What kind of music do you like?"
+  },
+  {
+    "word": "head",
+    "definition": "the upper part of the human body",
+    "partOfSpeech": "noun",
+    "russianTranslation": "голова",
+    "synonyms": "skull, mind, brain",
+    "frequencyRank": 45,
+    "cefrLevel": "A1",
+    "exampleSentence": "Use your head!"
+  },
+  {
+    "word": "house",
+    "definition": "a building for human habitation",
+    "partOfSpeech": "noun",
+    "russianTranslation": "дом, жилище",
+    "synonyms": "dwelling, residence, home",
+    "frequencyRank": 46,
+    "cefrLevel": "A1",
+    "exampleSentence": "They built a new house."
+  },
+  {
+    "word": "service",
+    "definition": "the action of helping or doing work for someone",
+    "partOfSpeech": "noun",
+    "russianTranslation": "услуга, служба, сервис",
+    "synonyms": "assistance, aid, help",
+    "frequencyRank": 47,
+    "cefrLevel": "A2",
+    "exampleSentence": "The service was excellent."
+  },
+  {
+    "word": "friend",
+    "definition": "a person one knows and trusts",
+    "partOfSpeech": "noun",
+    "russianTranslation": "друг, подруга",
+    "synonyms": "companion, buddy, pal",
+    "frequencyRank": 48,
+    "cefrLevel": "A1",
+    "exampleSentence": "She is my best friend."
+  },
+  {
+    "word": "father",
+    "definition": "a male parent",
+    "partOfSpeech": "noun",
+    "russianTranslation": "отец, папа",
+    "synonyms": "dad, papa, parent",
+    "frequencyRank": 49,
+    "cefrLevel": "A1",
+    "exampleSentence": "My father is a doctor."
+  },
+  {
+    "word": "power",
+    "definition": "the ability or capacity to do something",
+    "partOfSpeech": "noun",
+    "russianTranslation": "сила, власть, мощь",
+    "synonyms": "strength, force, authority",
+    "frequencyRank": 50,
+    "cefrLevel": "A2",
+    "exampleSentence": "Knowledge is power."
+  },
+  {
+    "word": "hour",
+    "definition": "a period of 60 minutes",
+    "partOfSpeech": "noun",
+    "russianTranslation": "час",
+    "synonyms": "sixty minutes",
+    "frequencyRank": 51,
+    "cefrLevel": "A1",
+    "exampleSentence": "The class lasts one hour."
+  },
+  {
+    "word": "game",
+    "definition": "an activity one engages in for amusement",
+    "partOfSpeech": "noun",
+    "russianTranslation": "игра",
+    "synonyms": "match, play, sport",
+    "frequencyRank": 52,
+    "cefrLevel": "A1",
+    "exampleSentence": "Let's play a game."
+  },
+  {
+    "word": "line",
+    "definition": "a long narrow mark or band",
+    "partOfSpeech": "noun",
+    "russianTranslation": "линия, строка, очередь",
+    "synonyms": "row, stripe, queue",
+    "frequencyRank": 53,
+    "cefrLevel": "A1",
+    "exampleSentence": "Stand in a line."
+  },
+  {
+    "word": "end",
+    "definition": "a final part of something",
+    "partOfSpeech": "noun/verb",
+    "russianTranslation": "конец, заканчивать",
+    "synonyms": "finish, conclusion, close",
+    "frequencyRank": 54,
+    "cefrLevel": "A1",
+    "exampleSentence": "The story has a happy end."
+  },
+  {
+    "word": "member",
+    "definition": "a person belonging to a group",
+    "partOfSpeech": "noun",
+    "russianTranslation": "член, участник",
+    "synonyms": "participant, associate",
+    "frequencyRank": 55,
+    "cefrLevel": "A2",
+    "exampleSentence": "She is a member of the team."
+  },
+  {
+    "word": "law",
+    "definition": "the system of rules that a country recognizes",
+    "partOfSpeech": "noun",
+    "russianTranslation": "закон, право",
+    "synonyms": "regulation, rule, statute",
+    "frequencyRank": 56,
+    "cefrLevel": "A2",
+    "exampleSentence": "Everyone must obey the law."
+  },
+  {
+    "word": "car",
+    "definition": "a road vehicle with an engine and four wheels",
+    "partOfSpeech": "noun",
+    "russianTranslation": "машина, автомобиль",
+    "synonyms": "auto, vehicle, automobile",
+    "frequencyRank": 57,
+    "cefrLevel": "A1",
+    "exampleSentence": "I drive a red car."
+  },
+  {
+    "word": "city",
+    "definition": "a large town",
+    "partOfSpeech": "noun",
+    "russianTranslation": "город",
+    "synonyms": "town, metropolis, urban area",
+    "frequencyRank": 58,
+    "cefrLevel": "A1",
+    "exampleSentence": "Moscow is a big city."
+  },
+  {
+    "word": "community",
+    "definition": "a group of people living in the same place",
+    "partOfSpeech": "noun",
+    "russianTranslation": "сообщество, община",
+    "synonyms": "society, neighborhood",
+    "frequencyRank": 59,
+    "cefrLevel": "B1",
+    "exampleSentence": "Our community is very friendly."
+  },
+  {
+    "word": "name",
+    "definition": "a word by which a person or thing is known",
+    "partOfSpeech": "noun",
+    "russianTranslation": "имя, название",
+    "synonyms": "title, label, designation",
+    "frequencyRank": 60,
+    "cefrLevel": "A1",
+    "exampleSentence": "What is your name?"
+  },
+  {
+    "word": "experience",
+    "definition": "practical contact with and observation of facts",
+    "partOfSpeech": "noun",
+    "russianTranslation": "опыт, переживание",
+    "synonyms": "knowledge, practice, encounter",
+    "frequencyRank": 61,
+    "cefrLevel": "A2",
+    "exampleSentence": "She has a lot of experience."
+  },
+  {
+    "word": "result",
+    "definition": "a consequence, effect, or outcome",
+    "partOfSpeech": "noun",
+    "russianTranslation": "результат",
+    "synonyms": "outcome, consequence, effect",
+    "frequencyRank": 62,
+    "cefrLevel": "A2",
+    "exampleSentence": "The results were surprising."
+  },
+  {
+    "word": "moment",
+    "definition": "a very brief period of time",
+    "partOfSpeech": "noun",
+    "russianTranslation": "момент, мгновение",
+    "synonyms": "instant, second, minute",
+    "frequencyRank": 63,
+    "cefrLevel": "A2",
+    "exampleSentence": "Wait a moment, please."
+  },
+  {
+    "word": "report",
+    "definition": "an account given of a particular matter",
+    "partOfSpeech": "noun/verb",
+    "russianTranslation": "отчёт, доклад, сообщать",
+    "synonyms": "account, statement, review",
+    "frequencyRank": 64,
+    "cefrLevel": "A2",
+    "exampleSentence": "The report was published today."
+  },
+  {
+    "word": "decision",
+    "definition": "a conclusion reached after consideration",
+    "partOfSpeech": "noun",
+    "russianTranslation": "решение",
+    "synonyms": "choice, resolution, determination",
+    "frequencyRank": 65,
+    "cefrLevel": "A2",
+    "exampleSentence": "It was a difficult decision."
+  },
+  {
+    "word": "event",
+    "definition": "a thing that happens or takes place",
+    "partOfSpeech": "noun",
+    "russianTranslation": "событие, мероприятие",
+    "synonyms": "occurrence, incident, occasion",
+    "frequencyRank": 66,
+    "cefrLevel": "A2",
+    "exampleSentence": "The event attracted many visitors."
+  },
+  {
+    "word": "produce",
+    "definition": "to make or manufacture something",
+    "partOfSpeech": "verb",
+    "russianTranslation": "производить, создавать",
+    "synonyms": "create, generate, make",
+    "frequencyRank": 67,
+    "cefrLevel": "A2",
+    "exampleSentence": "The factory produces cars."
+  },
+  {
+    "word": "remember",
+    "definition": "to have in or be able to bring to one's mind",
+    "partOfSpeech": "verb",
+    "russianTranslation": "помнить, вспоминать",
+    "synonyms": "recall, recollect, retain",
+    "frequencyRank": 68,
+    "cefrLevel": "A1",
+    "exampleSentence": "I remember that day clearly."
+  },
+  {
+    "word": "expect",
+    "definition": "to regard something as likely to happen",
+    "partOfSpeech": "verb",
+    "russianTranslation": "ожидать, предполагать",
+    "synonyms": "anticipate, await, foresee",
+    "frequencyRank": 69,
+    "cefrLevel": "A2",
+    "exampleSentence": "I didn't expect this result."
+  },
+  {
+    "word": "suggest",
+    "definition": "to put forward for consideration",
+    "partOfSpeech": "verb",
+    "russianTranslation": "предлагать, советовать",
+    "synonyms": "propose, recommend, advise",
+    "frequencyRank": 70,
+    "cefrLevel": "A2",
+    "exampleSentence": "I suggest we take a break."
+  },
+  {
+    "word": "require",
+    "definition": "to need for a particular purpose",
+    "partOfSpeech": "verb",
+    "russianTranslation": "требовать, нуждаться",
+    "synonyms": "need, demand, necessitate",
+    "frequencyRank": 71,
+    "cefrLevel": "B1",
+    "exampleSentence": "This job requires patience."
+  },
+  {
+    "word": "develop",
+    "definition": "to grow or cause to grow",
+    "partOfSpeech": "verb",
+    "russianTranslation": "развивать, разрабатывать",
+    "synonyms": "grow, evolve, create",
+    "frequencyRank": 72,
+    "cefrLevel": "A2",
+    "exampleSentence": "We need to develop new skills."
+  },
+  {
+    "word": "return",
+    "definition": "to come or go back to a place or person",
+    "partOfSpeech": "verb",
+    "russianTranslation": "возвращаться, вернуть",
+    "synonyms": "come back, go back, restore",
+    "frequencyRank": 73,
+    "cefrLevel": "A2",
+    "exampleSentence": "She will return tomorrow."
+  },
+  {
+    "word": "contain",
+    "definition": "to have or hold within",
+    "partOfSpeech": "verb",
+    "russianTranslation": "содержать, вмещать",
+    "synonyms": "hold, include, encompass",
+    "frequencyRank": 74,
+    "cefrLevel": "A2",
+    "exampleSentence": "This box contains old photos."
+  },
+  {
+    "word": "believe",
+    "definition": "to accept that something is true",
+    "partOfSpeech": "verb",
+    "russianTranslation": "верить, полагать",
+    "synonyms": "trust, think, consider",
+    "frequencyRank": 75,
+    "cefrLevel": "A2",
+    "exampleSentence": "I believe you are right."
+  },
+  {
+    "word": "allow",
+    "definition": "to let someone do something",
+    "partOfSpeech": "verb",
+    "russianTranslation": "позволять, разрешать",
+    "synonyms": "permit, let, authorize",
+    "frequencyRank": 76,
+    "cefrLevel": "A2",
+    "exampleSentence": "Smoking is not allowed here."
+  },
+  {
+    "word": "improve",
+    "definition": "to make or become better",
+    "partOfSpeech": "verb",
+    "russianTranslation": "улучшать, совершенствовать",
+    "synonyms": "enhance, better, upgrade",
+    "frequencyRank": 77,
+    "cefrLevel": "A2",
+    "exampleSentence": "I want to improve my English."
+  },
+  {
+    "word": "provide",
+    "definition": "to make available for use; supply",
+    "partOfSpeech": "verb",
+    "russianTranslation": "предоставлять, обеспечивать",
+    "synonyms": "supply, give, offer",
+    "frequencyRank": 78,
+    "cefrLevel": "A2",
+    "exampleSentence": "The hotel provides free WiFi."
+  },
+  {
+    "word": "increase",
+    "definition": "to become or make greater in size or amount",
+    "partOfSpeech": "verb/noun",
+    "russianTranslation": "увеличивать, рост",
+    "synonyms": "grow, raise, rise",
+    "frequencyRank": 79,
+    "cefrLevel": "A2",
+    "exampleSentence": "Prices increased by 10%."
+  },
+  {
+    "word": "reduce",
+    "definition": "to make smaller or less in amount",
+    "partOfSpeech": "verb",
+    "russianTranslation": "уменьшать, сокращать",
+    "synonyms": "decrease, lower, cut",
+    "frequencyRank": 80,
+    "cefrLevel": "B1",
+    "exampleSentence": "We need to reduce costs."
+  },
+  {
+    "word": "important",
+    "definition": "of great significance or value",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "важный",
+    "synonyms": "significant, crucial, essential",
+    "frequencyRank": 81,
+    "cefrLevel": "A1",
+    "exampleSentence": "Education is very important."
+  },
+  {
+    "word": "different",
+    "definition": "not the same as another or each other",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "разный, отличающийся",
+    "synonyms": "distinct, various, diverse",
+    "frequencyRank": 82,
+    "cefrLevel": "A1",
+    "exampleSentence": "They have different opinions."
+  },
+  {
+    "word": "possible",
+    "definition": "able to be done or achieved",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "возможный",
+    "synonyms": "feasible, viable, potential",
+    "frequencyRank": 83,
+    "cefrLevel": "A2",
+    "exampleSentence": "Is it possible to change the date?"
+  },
+  {
+    "word": "social",
+    "definition": "relating to society or its organization",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "социальный, общественный",
+    "synonyms": "communal, public, societal",
+    "frequencyRank": 84,
+    "cefrLevel": "A2",
+    "exampleSentence": "Social media is everywhere."
+  },
+  {
+    "word": "political",
+    "definition": "relating to the government or public affairs",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "политический",
+    "synonyms": "governmental, civic",
+    "frequencyRank": 85,
+    "cefrLevel": "B1",
+    "exampleSentence": "The political situation is complex."
+  },
+  {
+    "word": "economic",
+    "definition": "relating to economics or the economy",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "экономический",
+    "synonyms": "financial, fiscal, monetary",
+    "frequencyRank": 86,
+    "cefrLevel": "B1",
+    "exampleSentence": "Economic growth is slowing down."
+  },
+  {
+    "word": "human",
+    "definition": "relating to or characteristic of people",
+    "partOfSpeech": "adjective/noun",
+    "russianTranslation": "человеческий, человек",
+    "synonyms": "mortal, individual, person",
+    "frequencyRank": 87,
+    "cefrLevel": "A2",
+    "exampleSentence": "Human rights are fundamental."
+  },
+  {
+    "word": "available",
+    "definition": "able to be used or obtained",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "доступный, имеющийся",
+    "synonyms": "accessible, obtainable, free",
+    "frequencyRank": 88,
+    "cefrLevel": "A2",
+    "exampleSentence": "The product is now available."
+  },
+  {
+    "word": "necessary",
+    "definition": "needed or required",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "необходимый, нужный",
+    "synonyms": "essential, required, vital",
+    "frequencyRank": 89,
+    "cefrLevel": "A2",
+    "exampleSentence": "Sleep is necessary for health."
+  },
+  {
+    "word": "certain",
+    "definition": "known for sure; established beyond doubt",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "определённый, уверенный",
+    "synonyms": "sure, definite, confident",
+    "frequencyRank": 90,
+    "cefrLevel": "A2",
+    "exampleSentence": "I'm certain about my decision."
+  },
+  {
+    "word": "abandon",
+    "definition": "to leave completely and finally; to give up",
+    "partOfSpeech": "verb",
+    "russianTranslation": "покидать, оставлять",
+    "synonyms": "leave, desert, forsake",
+    "frequencyRank": 91,
+    "cefrLevel": "B1",
+    "exampleSentence": "They had to abandon the ship."
+  },
+  {
+    "word": "ability",
+    "definition": "the quality of being able to do something",
+    "partOfSpeech": "noun",
+    "russianTranslation": "способность, умение",
+    "synonyms": "capability, skill, talent",
+    "frequencyRank": 92,
+    "cefrLevel": "A2",
+    "exampleSentence": "She has the ability to lead."
+  },
+  {
+    "word": "absorb",
+    "definition": "to take in or soak up energy, liquid, or information",
+    "partOfSpeech": "verb",
+    "russianTranslation": "поглощать, впитывать",
+    "synonyms": "soak up, assimilate, take in",
+    "frequencyRank": 93,
+    "cefrLevel": "B1",
+    "exampleSentence": "The sponge absorbs water quickly."
+  },
+  {
+    "word": "abstract",
+    "definition": "existing in thought but not having physical existence",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "абстрактный",
+    "synonyms": "theoretical, conceptual, intangible",
+    "frequencyRank": 94,
+    "cefrLevel": "B2",
+    "exampleSentence": "Love is an abstract concept."
+  },
+  {
+    "word": "accompany",
+    "definition": "to go somewhere with someone as a companion",
+    "partOfSpeech": "verb",
+    "russianTranslation": "сопровождать",
+    "synonyms": "escort, go with, attend",
+    "frequencyRank": 95,
+    "cefrLevel": "B1",
+    "exampleSentence": "She accompanied him to the concert."
+  },
+  {
+    "word": "accomplish",
+    "definition": "to achieve or complete successfully",
+    "partOfSpeech": "verb",
+    "russianTranslation": "достигать, выполнять",
+    "synonyms": "achieve, complete, fulfill",
+    "frequencyRank": 96,
+    "cefrLevel": "B2",
+    "exampleSentence": "She accomplished her goal of running a marathon."
+  },
+  {
+    "word": "accurate",
+    "definition": "correct in all details; exact",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "точный, аккуратный",
+    "synonyms": "precise, exact, correct",
+    "frequencyRank": 97,
+    "cefrLevel": "B1",
+    "exampleSentence": "The data must be accurate."
+  },
+  {
+    "word": "accuse",
+    "definition": "to charge someone with an offence or crime",
+    "partOfSpeech": "verb",
+    "russianTranslation": "обвинять",
+    "synonyms": "blame, charge, indict",
+    "frequencyRank": 98,
+    "cefrLevel": "B1",
+    "exampleSentence": "He was accused of stealing."
+  },
+  {
+    "word": "achieve",
+    "definition": "to successfully reach a desired objective",
+    "partOfSpeech": "verb",
+    "russianTranslation": "достигать, добиваться",
+    "synonyms": "accomplish, attain, reach",
+    "frequencyRank": 99,
+    "cefrLevel": "A2",
+    "exampleSentence": "She achieved her dream."
+  },
+  {
+    "word": "acknowledge",
+    "definition": "to accept or admit the existence or truth of",
+    "partOfSpeech": "verb",
+    "russianTranslation": "признавать, подтверждать",
+    "synonyms": "admit, recognize, accept",
+    "frequencyRank": 100,
+    "cefrLevel": "B2",
+    "exampleSentence": "He acknowledged his mistake."
+  },
+  {
+    "word": "acquire",
+    "definition": "to buy or obtain for oneself",
+    "partOfSpeech": "verb",
+    "russianTranslation": "приобретать, получать",
+    "synonyms": "obtain, gain, get",
+    "frequencyRank": 101,
+    "cefrLevel": "B1",
+    "exampleSentence": "She acquired new skills at work."
+  },
+  {
+    "word": "adapt",
+    "definition": "to make suitable for a new use or purpose",
+    "partOfSpeech": "verb",
+    "russianTranslation": "адаптировать, приспосабливать",
+    "synonyms": "adjust, modify, alter",
+    "frequencyRank": 102,
+    "cefrLevel": "B1",
+    "exampleSentence": "Animals adapt to their environment."
+  },
+  {
+    "word": "adequate",
+    "definition": "sufficient for a specific requirement",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "достаточный, адекватный",
+    "synonyms": "sufficient, enough, satisfactory",
+    "frequencyRank": 103,
+    "cefrLevel": "B2",
+    "exampleSentence": "The preparation was adequate."
+  },
+  {
+    "word": "adjust",
+    "definition": "to alter or move slightly to achieve a desired result",
+    "partOfSpeech": "verb",
+    "russianTranslation": "регулировать, приспосабливать",
+    "synonyms": "adapt, modify, tune",
+    "frequencyRank": 104,
+    "cefrLevel": "B1",
+    "exampleSentence": "Adjust the volume, please."
+  },
+  {
+    "word": "admire",
+    "definition": "to regard with respect or warm approval",
+    "partOfSpeech": "verb",
+    "russianTranslation": "восхищаться",
+    "synonyms": "respect, esteem, appreciate",
+    "frequencyRank": 105,
+    "cefrLevel": "B1",
+    "exampleSentence": "I admire her courage."
+  },
+  {
+    "word": "adopt",
+    "definition": "to legally take another's child; to take up an idea",
+    "partOfSpeech": "verb",
+    "russianTranslation": "усыновлять, принимать",
+    "synonyms": "embrace, take on, assume",
+    "frequencyRank": 106,
+    "cefrLevel": "B1",
+    "exampleSentence": "They decided to adopt a child."
+  },
+  {
+    "word": "advance",
+    "definition": "to move forward; to make progress",
+    "partOfSpeech": "verb/noun",
+    "russianTranslation": "продвигаться, продвигать",
+    "synonyms": "progress, proceed, move forward",
+    "frequencyRank": 107,
+    "cefrLevel": "B1",
+    "exampleSentence": "Technology continues to advance."
+  },
+  {
+    "word": "advantage",
+    "definition": "a condition that puts one in a favorable position",
+    "partOfSpeech": "noun",
+    "russianTranslation": "преимущество, выгода",
+    "synonyms": "benefit, edge, upper hand",
+    "frequencyRank": 108,
+    "cefrLevel": "A2",
+    "exampleSentence": "What are the advantages of this plan?"
+  },
+  {
+    "word": "affair",
+    "definition": "an event or sequence of events; a matter",
+    "partOfSpeech": "noun",
+    "russianTranslation": "дело, событие",
+    "synonyms": "matter, business, concern",
+    "frequencyRank": 109,
+    "cefrLevel": "B1",
+    "exampleSentence": "It's a private affair."
+  },
+  {
+    "word": "affect",
+    "definition": "to have an effect on; make a difference to",
+    "partOfSpeech": "verb",
+    "russianTranslation": "влиять, воздействовать",
+    "synonyms": "influence, impact, alter",
+    "frequencyRank": 110,
+    "cefrLevel": "A2",
+    "exampleSentence": "The weather affects my mood."
+  },
+  {
+    "word": "afford",
+    "definition": "to have enough money or time to pay for or do",
+    "partOfSpeech": "verb",
+    "russianTranslation": "позволять себе",
+    "synonyms": "manage, bear, sustain",
+    "frequencyRank": 111,
+    "cefrLevel": "B1",
+    "exampleSentence": "I can't afford a new car."
+  },
+  {
+    "word": "aggressive",
+    "definition": "ready or likely to attack or confront",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "агрессивный",
+    "synonyms": "hostile, combative, forceful",
+    "frequencyRank": 112,
+    "cefrLevel": "B1",
+    "exampleSentence": "He became very aggressive."
+  },
+  {
+    "word": "anxiety",
+    "definition": "a feeling of worry, nervousness, or unease",
+    "partOfSpeech": "noun",
+    "russianTranslation": "тревога, беспокойство",
+    "synonyms": "worry, concern, unease",
+    "frequencyRank": 113,
+    "cefrLevel": "B1",
+    "exampleSentence": "She felt a lot of anxiety before the exam."
+  },
+  {
+    "word": "apparent",
+    "definition": "clearly visible or understood; obvious",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "очевидный, явный",
+    "synonyms": "obvious, evident, clear",
+    "frequencyRank": 114,
+    "cefrLevel": "B2",
+    "exampleSentence": "The reason was apparent to everyone."
+  },
+  {
+    "word": "appeal",
+    "definition": "to make a serious request; to be attractive",
+    "partOfSpeech": "verb/noun",
+    "russianTranslation": "обращаться, привлекать",
+    "synonyms": "request, attract, plead",
+    "frequencyRank": 115,
+    "cefrLevel": "B1",
+    "exampleSentence": "The idea appeals to me."
+  },
+  {
+    "word": "appreciate",
+    "definition": "to recognize the full worth of; be grateful for",
+    "partOfSpeech": "verb",
+    "russianTranslation": "ценить, оценивать",
+    "synonyms": "value, cherish, be grateful",
+    "frequencyRank": 116,
+    "cefrLevel": "A2",
+    "exampleSentence": "I really appreciate your help."
+  },
+  {
+    "word": "approach",
+    "definition": "to come near to; a way of dealing with something",
+    "partOfSpeech": "verb/noun",
+    "russianTranslation": "приближаться, подход",
+    "synonyms": "method, technique, near",
+    "frequencyRank": 117,
+    "cefrLevel": "A2",
+    "exampleSentence": "We need a new approach to this problem."
+  },
+  {
+    "word": "appropriate",
+    "definition": "suitable or proper in the circumstances",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "подходящий, уместный",
+    "synonyms": "suitable, fitting, proper",
+    "frequencyRank": 118,
+    "cefrLevel": "B1",
+    "exampleSentence": "Wear appropriate clothing."
+  },
+  {
+    "word": "approve",
+    "definition": "to officially agree to or accept as satisfactory",
+    "partOfSpeech": "verb",
+    "russianTranslation": "одобрять, утверждать",
+    "synonyms": "endorse, sanction, authorize",
+    "frequencyRank": 119,
+    "cefrLevel": "B1",
+    "exampleSentence": "The board approved the budget."
+  },
+  {
+    "word": "arise",
+    "definition": "to emerge; to come into being or attention",
+    "partOfSpeech": "verb",
+    "russianTranslation": "возникать, появляться",
+    "synonyms": "emerge, occur, appear",
+    "frequencyRank": 120,
+    "cefrLevel": "B2",
+    "exampleSentence": "A new problem has arisen."
+  },
+  {
+    "word": "arrange",
+    "definition": "to put things in order; to organize",
+    "partOfSpeech": "verb",
+    "russianTranslation": "устраивать, организовывать",
+    "synonyms": "organize, set up, plan",
+    "frequencyRank": 121,
+    "cefrLevel": "A2",
+    "exampleSentence": "She arranged the flowers beautifully."
+  },
+  {
+    "word": "attempt",
+    "definition": "to make an effort to achieve or complete",
+    "partOfSpeech": "verb/noun",
+    "russianTranslation": "пытаться, попытка",
+    "synonyms": "try, endeavor, effort",
+    "frequencyRank": 122,
+    "cefrLevel": "B1",
+    "exampleSentence": "She attempted to climb the mountain."
+  },
+  {
+    "word": "attitude",
+    "definition": "a settled way of thinking or feeling",
+    "partOfSpeech": "noun",
+    "russianTranslation": "отношение, позиция",
+    "synonyms": "mindset, outlook, perspective",
+    "frequencyRank": 123,
+    "cefrLevel": "B1",
+    "exampleSentence": "A positive attitude helps a lot."
+  },
+  {
+    "word": "authority",
+    "definition": "the power to give orders or make decisions",
+    "partOfSpeech": "noun",
+    "russianTranslation": "власть, полномочия",
+    "synonyms": "power, control, jurisdiction",
+    "frequencyRank": 124,
+    "cefrLevel": "B1",
+    "exampleSentence": "He has the authority to decide."
+  },
+  {
+    "word": "aware",
+    "definition": "having knowledge or perception of a situation",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "осведомлённый, осознающий",
+    "synonyms": "conscious, informed, mindful",
+    "frequencyRank": 125,
+    "cefrLevel": "B1",
+    "exampleSentence": "I am aware of the problem."
+  },
+  {
+    "word": "bargain",
+    "definition": "an agreement; something bought cheaply",
+    "partOfSpeech": "noun/verb",
+    "russianTranslation": "сделка, торговаться",
+    "synonyms": "deal, negotiate",
+    "frequencyRank": 126,
+    "cefrLevel": "B2",
+    "exampleSentence": "This jacket was a real bargain."
+  },
+  {
+    "word": "behalf",
+    "definition": "in the interests of a person or group",
+    "partOfSpeech": "noun",
+    "russianTranslation": "от имени, в интересах",
+    "synonyms": "sake, interest, benefit",
+    "frequencyRank": 127,
+    "cefrLevel": "B2",
+    "exampleSentence": "I'm speaking on behalf of the team."
+  },
+  {
+    "word": "beneficial",
+    "definition": "resulting in good; favorable",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "полезный, выгодный",
+    "synonyms": "advantageous, helpful, useful",
+    "frequencyRank": 128,
+    "cefrLevel": "B2",
+    "exampleSentence": "Exercise is beneficial for health."
+  },
+  {
+    "word": "brief",
+    "definition": "of short duration; concise",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "краткий, короткий",
+    "synonyms": "short, concise, succinct",
+    "frequencyRank": 129,
+    "cefrLevel": "B1",
+    "exampleSentence": "Let me give you a brief summary."
+  },
+  {
+    "word": "burden",
+    "definition": "a heavy load; a duty that causes worry",
+    "partOfSpeech": "noun",
+    "russianTranslation": "бремя, ноша",
+    "synonyms": "load, weight, obligation",
+    "frequencyRank": 130,
+    "cefrLevel": "B2",
+    "exampleSentence": "The tax burden is increasing."
+  },
+  {
+    "word": "capable",
+    "definition": "having the ability necessary to do something",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "способный, умелый",
+    "synonyms": "able, competent, skilled",
+    "frequencyRank": 131,
+    "cefrLevel": "B1",
+    "exampleSentence": "She is capable of great things."
+  },
+  {
+    "word": "challenge",
+    "definition": "a call to prove something; a demanding task",
+    "partOfSpeech": "noun/verb",
+    "russianTranslation": "вызов, испытание",
+    "synonyms": "test, dare, trial",
+    "frequencyRank": 132,
+    "cefrLevel": "A2",
+    "exampleSentence": "Learning a language is a challenge."
+  },
+  {
+    "word": "circumstance",
+    "definition": "a fact or condition connected with an event",
+    "partOfSpeech": "noun",
+    "russianTranslation": "обстоятельство",
+    "synonyms": "situation, condition, context",
+    "frequencyRank": 133,
+    "cefrLevel": "B1",
+    "exampleSentence": "Under these circumstances, we must wait."
+  },
+  {
+    "word": "collapse",
+    "definition": "to fall down suddenly; to fail completely",
+    "partOfSpeech": "verb/noun",
+    "russianTranslation": "рухнуть, обрушиться",
+    "synonyms": "fall, crumble, fail",
+    "frequencyRank": 134,
+    "cefrLevel": "B2",
+    "exampleSentence": "The building collapsed during the earthquake."
+  },
+  {
+    "word": "commit",
+    "definition": "to carry out; to pledge to a course of action",
+    "partOfSpeech": "verb",
+    "russianTranslation": "совершать, обязываться",
+    "synonyms": "pledge, devote, perpetrate",
+    "frequencyRank": 135,
+    "cefrLevel": "B1",
+    "exampleSentence": "He committed himself to the project."
+  },
+  {
+    "word": "compare",
+    "definition": "to examine for similarities and differences",
+    "partOfSpeech": "verb",
+    "russianTranslation": "сравнивать",
+    "synonyms": "contrast, liken, equate",
+    "frequencyRank": 136,
+    "cefrLevel": "A2",
+    "exampleSentence": "Let's compare these two options."
+  },
+  {
+    "word": "compensate",
+    "definition": "to give something to make up for loss",
+    "partOfSpeech": "verb",
+    "russianTranslation": "компенсировать, возмещать",
+    "synonyms": "reimburse, repay, offset",
+    "frequencyRank": 137,
+    "cefrLevel": "B2",
+    "exampleSentence": "The company compensated the workers."
+  },
+  {
+    "word": "complex",
+    "definition": "consisting of many different parts",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "сложный, комплексный",
+    "synonyms": "complicated, intricate, elaborate",
+    "frequencyRank": 138,
+    "cefrLevel": "B1",
+    "exampleSentence": "This is a complex problem."
+  },
+  {
+    "word": "concentrate",
+    "definition": "to focus all attention or effort",
+    "partOfSpeech": "verb",
+    "russianTranslation": "концентрироваться, сосредоточиться",
+    "synonyms": "focus, center, devote",
+    "frequencyRank": 139,
+    "cefrLevel": "A2",
+    "exampleSentence": "Please concentrate on your work."
+  },
+  {
+    "word": "concern",
+    "definition": "to relate to; a matter of interest",
+    "partOfSpeech": "verb/noun",
+    "russianTranslation": "касаться, забота",
+    "synonyms": "worry, interest, regard",
+    "frequencyRank": 140,
+    "cefrLevel": "A2",
+    "exampleSentence": "This issue concerns all of us."
+  },
+  {
+    "word": "condition",
+    "definition": "the state of something; a circumstance",
+    "partOfSpeech": "noun",
+    "russianTranslation": "условие, состояние",
+    "synonyms": "state, situation, requirement",
+    "frequencyRank": 141,
+    "cefrLevel": "A2",
+    "exampleSentence": "The car is in good condition."
+  },
+  {
+    "word": "conduct",
+    "definition": "to organize and carry out; behavior",
+    "partOfSpeech": "verb/noun",
+    "russianTranslation": "проводить, поведение",
+    "synonyms": "manage, perform, behavior",
+    "frequencyRank": 142,
+    "cefrLevel": "B1",
+    "exampleSentence": "He conducted the experiment carefully."
+  },
+  {
+    "word": "confirm",
+    "definition": "to establish the truth or correctness of",
+    "partOfSpeech": "verb",
+    "russianTranslation": "подтверждать",
+    "synonyms": "verify, validate, prove",
+    "frequencyRank": 143,
+    "cefrLevel": "A2",
+    "exampleSentence": "Can you confirm the reservation?"
+  },
+  {
+    "word": "conflict",
+    "definition": "a serious disagreement or argument",
+    "partOfSpeech": "noun",
+    "russianTranslation": "конфликт, противоречие",
+    "synonyms": "dispute, clash, fight",
+    "frequencyRank": 144,
+    "cefrLevel": "B1",
+    "exampleSentence": "The conflict lasted for years."
+  },
+  {
+    "word": "connect",
+    "definition": "to join or link together",
+    "partOfSpeech": "verb",
+    "russianTranslation": "соединять, связывать",
+    "synonyms": "join, link, attach",
+    "frequencyRank": 145,
+    "cefrLevel": "A2",
+    "exampleSentence": "Connect the cable to the computer."
+  },
+  {
+    "word": "conscious",
+    "definition": "aware of and responding to one's surroundings",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "сознательный, осознающий",
+    "synonyms": "aware, alert, mindful",
+    "frequencyRank": 146,
+    "cefrLevel": "B1",
+    "exampleSentence": "She was conscious of the danger."
+  },
+  {
+    "word": "consequence",
+    "definition": "a result or effect of an action",
+    "partOfSpeech": "noun",
+    "russianTranslation": "последствие, следствие",
+    "synonyms": "result, outcome, effect",
+    "frequencyRank": 147,
+    "cefrLevel": "B1",
+    "exampleSentence": "Every action has consequences."
+  },
+  {
+    "word": "consider",
+    "definition": "to think carefully about",
+    "partOfSpeech": "verb",
+    "russianTranslation": "рассматривать, считать",
+    "synonyms": "think, contemplate, reflect",
+    "frequencyRank": 148,
+    "cefrLevel": "A2",
+    "exampleSentence": "Please consider my offer."
+  },
+  {
+    "word": "consist",
+    "definition": "to be composed or made up of",
+    "partOfSpeech": "verb",
+    "russianTranslation": "состоять",
+    "synonyms": "comprise, contain, include",
+    "frequencyRank": 149,
+    "cefrLevel": "B1",
+    "exampleSentence": "The team consists of five members."
+  },
+  {
+    "word": "constant",
+    "definition": "occurring continuously over a period of time",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "постоянный",
+    "synonyms": "continuous, steady, persistent",
+    "frequencyRank": 150,
+    "cefrLevel": "B1",
+    "exampleSentence": "She is in constant pain."
+  },
+  {
+    "word": "construct",
+    "definition": "to build or erect something",
+    "partOfSpeech": "verb",
+    "russianTranslation": "строить, конструировать",
+    "synonyms": "build, create, erect",
+    "frequencyRank": 151,
+    "cefrLevel": "B1",
+    "exampleSentence": "They constructed a new bridge."
+  },
+  {
+    "word": "consume",
+    "definition": "to eat, drink, or use up",
+    "partOfSpeech": "verb",
+    "russianTranslation": "потреблять, расходовать",
+    "synonyms": "eat, use, expend",
+    "frequencyRank": 152,
+    "cefrLevel": "B1",
+    "exampleSentence": "We consume too much energy."
+  },
+  {
+    "word": "contribute",
+    "definition": "to give in order to help achieve something",
+    "partOfSpeech": "verb",
+    "russianTranslation": "вносить вклад, содействовать",
+    "synonyms": "donate, provide, give",
+    "frequencyRank": 153,
+    "cefrLevel": "B1",
+    "exampleSentence": "Everyone should contribute to the project."
+  },
+  {
+    "word": "control",
+    "definition": "the power to influence behavior or events",
+    "partOfSpeech": "noun/verb",
+    "russianTranslation": "контроль, управлять",
+    "synonyms": "manage, regulate, govern",
+    "frequencyRank": 154,
+    "cefrLevel": "A2",
+    "exampleSentence": "You need to control your temper."
+  },
+  {
+    "word": "conversation",
+    "definition": "a talk between two or more people",
+    "partOfSpeech": "noun",
+    "russianTranslation": "разговор, беседа",
+    "synonyms": "talk, discussion, chat",
+    "frequencyRank": 155,
+    "cefrLevel": "A2",
+    "exampleSentence": "We had a long conversation."
+  },
+  {
+    "word": "convince",
+    "definition": "to cause someone to believe firmly",
+    "partOfSpeech": "verb",
+    "russianTranslation": "убеждать",
+    "synonyms": "persuade, assure, satisfy",
+    "frequencyRank": 156,
+    "cefrLevel": "B1",
+    "exampleSentence": "She convinced me to stay."
+  },
+  {
+    "word": "create",
+    "definition": "to bring something into existence",
+    "partOfSpeech": "verb",
+    "russianTranslation": "создавать, творить",
+    "synonyms": "make, produce, generate",
+    "frequencyRank": 157,
+    "cefrLevel": "A2",
+    "exampleSentence": "Artists create beautiful works."
+  },
+  {
+    "word": "crisis",
+    "definition": "a time of intense difficulty or danger",
+    "partOfSpeech": "noun",
+    "russianTranslation": "кризис",
+    "synonyms": "emergency, catastrophe, disaster",
+    "frequencyRank": 158,
+    "cefrLevel": "B1",
+    "exampleSentence": "The country faces an economic crisis."
+  },
+  {
+    "word": "criticism",
+    "definition": "the expression of disapproval",
+    "partOfSpeech": "noun",
+    "russianTranslation": "критика",
+    "synonyms": "disapproval, censure, blame",
+    "frequencyRank": 159,
+    "cefrLevel": "B1",
+    "exampleSentence": "He can't handle criticism."
+  },
+  {
+    "word": "crucial",
+    "definition": "of great importance; critical",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "решающий, крайне важный",
+    "synonyms": "vital, essential, critical",
+    "frequencyRank": 160,
+    "cefrLevel": "B2",
+    "exampleSentence": "This is a crucial moment."
+  },
+  {
+    "word": "culture",
+    "definition": "the customs and beliefs of a group of people",
+    "partOfSpeech": "noun",
+    "russianTranslation": "культура",
+    "synonyms": "civilization, heritage, traditions",
+    "frequencyRank": 161,
+    "cefrLevel": "A2",
+    "exampleSentence": "Russian culture is very rich."
+  },
+  {
+    "word": "current",
+    "definition": "happening or existing now",
+    "partOfSpeech": "adjective/noun",
+    "russianTranslation": "текущий, нынешний",
+    "synonyms": "present, ongoing, existing",
+    "frequencyRank": 162,
+    "cefrLevel": "A2",
+    "exampleSentence": "What is the current situation?"
+  },
+  {
+    "word": "damage",
+    "definition": "physical harm that impairs value or usefulness",
+    "partOfSpeech": "noun/verb",
+    "russianTranslation": "ущерб, повреждать",
+    "synonyms": "harm, injury, destruction",
+    "frequencyRank": 163,
+    "cefrLevel": "B1",
+    "exampleSentence": "The storm caused severe damage."
+  },
+  {
+    "word": "debate",
+    "definition": "a formal discussion on a particular matter",
+    "partOfSpeech": "noun/verb",
+    "russianTranslation": "дебаты, обсуждать",
+    "synonyms": "discussion, argument, dispute",
+    "frequencyRank": 164,
+    "cefrLevel": "B1",
+    "exampleSentence": "There was a heated debate."
+  },
+  {
+    "word": "declare",
+    "definition": "to announce officially or publicly",
+    "partOfSpeech": "verb",
+    "russianTranslation": "объявлять, заявлять",
+    "synonyms": "announce, proclaim, state",
+    "frequencyRank": 165,
+    "cefrLevel": "B1",
+    "exampleSentence": "The president declared a state of emergency."
+  },
+  {
+    "word": "decline",
+    "definition": "to become smaller, fewer, or less",
+    "partOfSpeech": "verb/noun",
+    "russianTranslation": "снижаться, отклонять",
+    "synonyms": "decrease, refuse, diminish",
+    "frequencyRank": 166,
+    "cefrLevel": "B1",
+    "exampleSentence": "Sales have declined this year."
+  },
+  {
+    "word": "define",
+    "definition": "to state the exact meaning of a word",
+    "partOfSpeech": "verb",
+    "russianTranslation": "определять, давать определение",
+    "synonyms": "explain, describe, specify",
+    "frequencyRank": 167,
+    "cefrLevel": "B1",
+    "exampleSentence": "How do you define success?"
+  },
+  {
+    "word": "demand",
+    "definition": "an insistent request or the desire of consumers",
+    "partOfSpeech": "noun/verb",
+    "russianTranslation": "требование, спрос",
+    "synonyms": "request, require, claim",
+    "frequencyRank": 168,
+    "cefrLevel": "B1",
+    "exampleSentence": "The demand for housing is growing."
+  },
+  {
+    "word": "demonstrate",
+    "definition": "to show clearly; to take part in a public protest",
+    "partOfSpeech": "verb",
+    "russianTranslation": "демонстрировать, показывать",
+    "synonyms": "show, prove, display",
+    "frequencyRank": 169,
+    "cefrLevel": "B1",
+    "exampleSentence": "He demonstrated how to use the tool."
+  },
+  {
+    "word": "deny",
+    "definition": "to state that something is not true",
+    "partOfSpeech": "verb",
+    "russianTranslation": "отрицать, отказывать",
+    "synonyms": "refuse, reject, contradict",
+    "frequencyRank": 170,
+    "cefrLevel": "B1",
+    "exampleSentence": "He denied all the accusations."
+  },
+  {
+    "word": "depend",
+    "definition": "to be controlled or determined by",
+    "partOfSpeech": "verb",
+    "russianTranslation": "зависеть",
+    "synonyms": "rely, hinge, count on",
+    "frequencyRank": 171,
+    "cefrLevel": "A2",
+    "exampleSentence": "It depends on the weather."
+  },
+  {
+    "word": "describe",
+    "definition": "to give a spoken or written account of",
+    "partOfSpeech": "verb",
+    "russianTranslation": "описывать",
+    "synonyms": "portray, depict, explain",
+    "frequencyRank": 172,
+    "cefrLevel": "A2",
+    "exampleSentence": "Can you describe your experience?"
+  },
+  {
+    "word": "design",
+    "definition": "to plan and make something for a specific purpose",
+    "partOfSpeech": "verb/noun",
+    "russianTranslation": "дизайн, проектировать",
+    "synonyms": "plan, create, devise",
+    "frequencyRank": 173,
+    "cefrLevel": "A2",
+    "exampleSentence": "She designed the new logo."
+  },
+  {
+    "word": "desire",
+    "definition": "a strong feeling of wanting to have something",
+    "partOfSpeech": "noun/verb",
+    "russianTranslation": "желание, хотеть",
+    "synonyms": "wish, want, longing",
+    "frequencyRank": 174,
+    "cefrLevel": "B1",
+    "exampleSentence": "She has a strong desire to travel."
+  },
+  {
+    "word": "despite",
+    "definition": "without being affected by",
+    "partOfSpeech": "preposition",
+    "russianTranslation": "несмотря на",
+    "synonyms": "in spite of, regardless of",
+    "frequencyRank": 175,
+    "cefrLevel": "B1",
+    "exampleSentence": "Despite the rain, we went for a walk."
+  },
+  {
+    "word": "destroy",
+    "definition": "to put an end to the existence of by damage",
+    "partOfSpeech": "verb",
+    "russianTranslation": "уничтожать, разрушать",
+    "synonyms": "ruin, demolish, wreck",
+    "frequencyRank": 176,
+    "cefrLevel": "A2",
+    "exampleSentence": "The fire destroyed the building."
+  },
+  {
+    "word": "detail",
+    "definition": "an individual feature, fact, or item",
+    "partOfSpeech": "noun",
+    "russianTranslation": "деталь, подробность",
+    "synonyms": "particular, specification, element",
+    "frequencyRank": 177,
+    "cefrLevel": "A2",
+    "exampleSentence": "Pay attention to details."
+  },
+  {
+    "word": "determine",
+    "definition": "to cause something to occur in a particular way",
+    "partOfSpeech": "verb",
+    "russianTranslation": "определять, устанавливать",
+    "synonyms": "decide, establish, find out",
+    "frequencyRank": 178,
+    "cefrLevel": "B1",
+    "exampleSentence": "We need to determine the cause."
+  },
+  {
+    "word": "discover",
+    "definition": "to find something unexpectedly or for the first time",
+    "partOfSpeech": "verb",
+    "russianTranslation": "обнаруживать, открывать",
+    "synonyms": "find, uncover, detect",
+    "frequencyRank": 179,
+    "cefrLevel": "A2",
+    "exampleSentence": "Scientists discovered a new species."
+  },
+  {
+    "word": "discuss",
+    "definition": "to talk about something with another person",
+    "partOfSpeech": "verb",
+    "russianTranslation": "обсуждать",
+    "synonyms": "debate, consider, talk about",
+    "frequencyRank": 180,
+    "cefrLevel": "A2",
+    "exampleSentence": "Let's discuss this matter."
+  },
+  {
+    "word": "display",
+    "definition": "to show or exhibit",
+    "partOfSpeech": "verb/noun",
+    "russianTranslation": "отображать, дисплей, выставка",
+    "synonyms": "show, exhibit, present",
+    "frequencyRank": 181,
+    "cefrLevel": "B1",
+    "exampleSentence": "The museum displays ancient artifacts."
+  },
+  {
+    "word": "distribute",
+    "definition": "to give shares of something; to supply",
+    "partOfSpeech": "verb",
+    "russianTranslation": "распределять, раздавать",
+    "synonyms": "allocate, spread, deliver",
+    "frequencyRank": 182,
+    "cefrLevel": "B1",
+    "exampleSentence": "They distributed food to the homeless."
+  },
+  {
+    "word": "domestic",
+    "definition": "relating to the home, household, or family",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "домашний, внутренний",
+    "synonyms": "household, home, internal",
+    "frequencyRank": 183,
+    "cefrLevel": "B1",
+    "exampleSentence": "Domestic flights are cheaper."
+  },
+  {
+    "word": "doubt",
+    "definition": "a feeling of uncertainty or lack of conviction",
+    "partOfSpeech": "noun/verb",
+    "russianTranslation": "сомнение, сомневаться",
+    "synonyms": "uncertainty, suspicion, question",
+    "frequencyRank": 184,
+    "cefrLevel": "B1",
+    "exampleSentence": "I have no doubt about her ability."
+  },
+  {
+    "word": "dramatic",
+    "definition": "sudden and striking; relating to drama",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "драматический, резкий",
+    "synonyms": "striking, impressive, theatrical",
+    "frequencyRank": 185,
+    "cefrLevel": "B1",
+    "exampleSentence": "There was a dramatic change in weather."
+  },
+  {
+    "word": "earn",
+    "definition": "to receive in return for effort or service",
+    "partOfSpeech": "verb",
+    "russianTranslation": "зарабатывать",
+    "synonyms": "gain, make, receive",
+    "frequencyRank": 186,
+    "cefrLevel": "A2",
+    "exampleSentence": "She earns a good salary."
+  },
+  {
+    "word": "effect",
+    "definition": "a change produced by an action or other cause",
+    "partOfSpeech": "noun",
+    "russianTranslation": "эффект, воздействие",
+    "synonyms": "result, impact, consequence",
+    "frequencyRank": 187,
+    "cefrLevel": "A2",
+    "exampleSentence": "The medicine had a positive effect."
+  },
+  {
+    "word": "effort",
+    "definition": "a vigorous or determined attempt",
+    "partOfSpeech": "noun",
+    "russianTranslation": "усилие, старание",
+    "synonyms": "attempt, exertion, endeavor",
+    "frequencyRank": 188,
+    "cefrLevel": "A2",
+    "exampleSentence": "It took a lot of effort."
+  },
+  {
+    "word": "element",
+    "definition": "a component or part of something",
+    "partOfSpeech": "noun",
+    "russianTranslation": "элемент, составная часть",
+    "synonyms": "component, factor, ingredient",
+    "frequencyRank": 189,
+    "cefrLevel": "B1",
+    "exampleSentence": "Water is a key element."
+  },
+  {
+    "word": "eliminate",
+    "definition": "to completely remove or get rid of",
+    "partOfSpeech": "verb",
+    "russianTranslation": "устранять, исключать",
+    "synonyms": "remove, eradicate, abolish",
+    "frequencyRank": 190,
+    "cefrLevel": "B2",
+    "exampleSentence": "We need to eliminate all errors."
+  },
+  {
+    "word": "emerge",
+    "definition": "to move out of or away from something",
+    "partOfSpeech": "verb",
+    "russianTranslation": "появляться, возникать",
+    "synonyms": "appear, arise, surface",
+    "frequencyRank": 191,
+    "cefrLevel": "B2",
+    "exampleSentence": "New evidence has emerged."
+  },
+  {
+    "word": "emotion",
+    "definition": "a strong feeling such as love, fear, or anger",
+    "partOfSpeech": "noun",
+    "russianTranslation": "эмоция, чувство",
+    "synonyms": "feeling, sentiment, passion",
+    "frequencyRank": 192,
+    "cefrLevel": "B1",
+    "exampleSentence": "She could not hide her emotions."
+  },
+  {
+    "word": "emphasize",
+    "definition": "to give special importance or prominence to",
+    "partOfSpeech": "verb",
+    "russianTranslation": "подчёркивать, акцентировать",
+    "synonyms": "stress, highlight, underline",
+    "frequencyRank": 193,
+    "cefrLevel": "B1",
+    "exampleSentence": "I want to emphasize this point."
+  },
+  {
+    "word": "enable",
+    "definition": "to give someone the ability or means to do something",
+    "partOfSpeech": "verb",
+    "russianTranslation": "позволять, давать возможность",
+    "synonyms": "allow, permit, empower",
+    "frequencyRank": 194,
+    "cefrLevel": "B1",
+    "exampleSentence": "Technology enables remote work."
+  },
+  {
+    "word": "encourage",
+    "definition": "to give support, confidence, or hope to",
+    "partOfSpeech": "verb",
+    "russianTranslation": "поощрять, ободрять",
+    "synonyms": "motivate, inspire, support",
+    "frequencyRank": 195,
+    "cefrLevel": "A2",
+    "exampleSentence": "Teachers should encourage students."
+  },
+  {
+    "word": "enormous",
+    "definition": "very large in size, quantity, or extent",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "огромный, громадный",
+    "synonyms": "huge, immense, vast",
+    "frequencyRank": 196,
+    "cefrLevel": "B1",
+    "exampleSentence": "The building is enormous."
+  },
+  {
+    "word": "ensure",
+    "definition": "to make certain that something happens",
+    "partOfSpeech": "verb",
+    "russianTranslation": "обеспечивать, гарантировать",
+    "synonyms": "guarantee, secure, assure",
+    "frequencyRank": 197,
+    "cefrLevel": "B1",
+    "exampleSentence": "We must ensure everyone's safety."
+  },
+  {
+    "word": "entire",
+    "definition": "with no part left out; whole",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "весь, целый",
+    "synonyms": "whole, complete, total",
+    "frequencyRank": 198,
+    "cefrLevel": "A2",
+    "exampleSentence": "She spent the entire day reading."
+  },
+  {
+    "word": "environment",
+    "definition": "the surroundings or conditions one lives in",
+    "partOfSpeech": "noun",
+    "russianTranslation": "окружающая среда",
+    "synonyms": "surroundings, habitat, setting",
+    "frequencyRank": 199,
+    "cefrLevel": "A2",
+    "exampleSentence": "We must protect the environment."
+  },
+  {
+    "word": "essential",
+    "definition": "absolutely necessary; extremely important",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "существенный, необходимый",
+    "synonyms": "vital, crucial, fundamental",
+    "frequencyRank": 200,
+    "cefrLevel": "B1",
+    "exampleSentence": "Water is essential for life."
+  },
+  {
+    "word": "establish",
+    "definition": "to set up on a firm or permanent basis",
+    "partOfSpeech": "verb",
+    "russianTranslation": "устанавливать, учреждать",
+    "synonyms": "found, create, institute",
+    "frequencyRank": 201,
+    "cefrLevel": "B1",
+    "exampleSentence": "The company was established in 1990."
+  },
+  {
+    "word": "estimate",
+    "definition": "to roughly calculate or judge the value of",
+    "partOfSpeech": "verb/noun",
+    "russianTranslation": "оценивать, оценка",
+    "synonyms": "assess, evaluate, approximate",
+    "frequencyRank": 202,
+    "cefrLevel": "B1",
+    "exampleSentence": "We estimate the cost at $1,000."
+  },
+  {
+    "word": "evaluate",
+    "definition": "to form an idea of the value of something",
+    "partOfSpeech": "verb",
+    "russianTranslation": "оценивать, анализировать",
+    "synonyms": "assess, appraise, judge",
+    "frequencyRank": 203,
+    "cefrLevel": "B2",
+    "exampleSentence": "We need to evaluate the results."
+  },
+  {
+    "word": "evidence",
+    "definition": "the available body of facts indicating a belief",
+    "partOfSpeech": "noun",
+    "russianTranslation": "доказательство, свидетельство",
+    "synonyms": "proof, testimony, indication",
+    "frequencyRank": 204,
+    "cefrLevel": "B1",
+    "exampleSentence": "There is no evidence of fraud."
+  },
+  {
+    "word": "evolve",
+    "definition": "to develop gradually over time",
+    "partOfSpeech": "verb",
+    "russianTranslation": "развиваться, эволюционировать",
+    "synonyms": "develop, progress, change",
+    "frequencyRank": 205,
+    "cefrLevel": "B2",
+    "exampleSentence": "Languages evolve over centuries."
+  },
+  {
+    "word": "examine",
+    "definition": "to inspect in detail to determine quality",
+    "partOfSpeech": "verb",
+    "russianTranslation": "исследовать, проверять",
+    "synonyms": "inspect, study, investigate",
+    "frequencyRank": 206,
+    "cefrLevel": "B1",
+    "exampleSentence": "The doctor examined the patient."
+  },
+  {
+    "word": "exceed",
+    "definition": "to be greater than or surpass",
+    "partOfSpeech": "verb",
+    "russianTranslation": "превышать, превосходить",
+    "synonyms": "surpass, outdo, go beyond",
+    "frequencyRank": 207,
+    "cefrLevel": "B2",
+    "exampleSentence": "Costs exceeded expectations."
+  },
+  {
+    "word": "exchange",
+    "definition": "to give and receive reciprocally",
+    "partOfSpeech": "verb/noun",
+    "russianTranslation": "обменивать, обмен",
+    "synonyms": "swap, trade, interchange",
+    "frequencyRank": 208,
+    "cefrLevel": "A2",
+    "exampleSentence": "We exchanged phone numbers."
+  },
+  {
+    "word": "exist",
+    "definition": "to have objective reality or being",
+    "partOfSpeech": "verb",
+    "russianTranslation": "существовать",
+    "synonyms": "live, be, occur",
+    "frequencyRank": 209,
+    "cefrLevel": "A2",
+    "exampleSentence": "Do unicorns exist?"
+  },
+  {
+    "word": "expand",
+    "definition": "to become or make larger or more extensive",
+    "partOfSpeech": "verb",
+    "russianTranslation": "расширять, увеличивать",
+    "synonyms": "enlarge, extend, grow",
+    "frequencyRank": 210,
+    "cefrLevel": "B1",
+    "exampleSentence": "The company plans to expand."
+  },
+  {
+    "word": "expose",
+    "definition": "to make something visible; to reveal",
+    "partOfSpeech": "verb",
+    "russianTranslation": "раскрывать, подвергать",
+    "synonyms": "reveal, uncover, disclose",
+    "frequencyRank": 211,
+    "cefrLevel": "B2",
+    "exampleSentence": "The investigation exposed the truth."
+  },
+  {
+    "word": "extend",
+    "definition": "to make longer or larger; to stretch out",
+    "partOfSpeech": "verb",
+    "russianTranslation": "продлевать, расширять",
+    "synonyms": "expand, prolong, lengthen",
+    "frequencyRank": 212,
+    "cefrLevel": "B1",
+    "exampleSentence": "They extended the deadline."
+  },
+  {
+    "word": "extensive",
+    "definition": "covering a large area; having a wide scope",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "обширный, масштабный",
+    "synonyms": "broad, wide, comprehensive",
+    "frequencyRank": 213,
+    "cefrLevel": "B2",
+    "exampleSentence": "The research was extensive."
+  },
+  {
+    "word": "extent",
+    "definition": "the area covered by something; the degree",
+    "partOfSpeech": "noun",
+    "russianTranslation": "степень, масштаб, протяжённость",
+    "synonyms": "degree, scope, range",
+    "frequencyRank": 214,
+    "cefrLevel": "B1",
+    "exampleSentence": "To what extent do you agree?"
+  },
+  {
+    "word": "extraordinary",
+    "definition": "very unusual or remarkable",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "необычайный, выдающийся",
+    "synonyms": "exceptional, remarkable, amazing",
+    "frequencyRank": 215,
+    "cefrLevel": "B2",
+    "exampleSentence": "She has extraordinary talent."
+  },
+  {
+    "word": "factor",
+    "definition": "a circumstance that contributes to a result",
+    "partOfSpeech": "noun",
+    "russianTranslation": "фактор",
+    "synonyms": "element, component, aspect",
+    "frequencyRank": 216,
+    "cefrLevel": "B1",
+    "exampleSentence": "Cost is a key factor."
+  },
+  {
+    "word": "failure",
+    "definition": "lack of success",
+    "partOfSpeech": "noun",
+    "russianTranslation": "неудача, провал",
+    "synonyms": "defeat, collapse, breakdown",
+    "frequencyRank": 217,
+    "cefrLevel": "B1",
+    "exampleSentence": "Failure is part of learning."
+  },
+  {
+    "word": "feature",
+    "definition": "a distinctive attribute or aspect",
+    "partOfSpeech": "noun/verb",
+    "russianTranslation": "особенность, черта",
+    "synonyms": "characteristic, trait, quality",
+    "frequencyRank": 218,
+    "cefrLevel": "A2",
+    "exampleSentence": "Safety features are important in cars."
+  },
+  {
+    "word": "focus",
+    "definition": "the center of interest or activity",
+    "partOfSpeech": "noun/verb",
+    "russianTranslation": "фокус, сосредоточиться",
+    "synonyms": "concentrate, center, emphasis",
+    "frequencyRank": 219,
+    "cefrLevel": "A2",
+    "exampleSentence": "Focus on the main idea."
+  },
+  {
+    "word": "forecast",
+    "definition": "a prediction about the future",
+    "partOfSpeech": "noun/verb",
+    "russianTranslation": "прогноз, предсказывать",
+    "synonyms": "prediction, projection, outlook",
+    "frequencyRank": 220,
+    "cefrLevel": "B1",
+    "exampleSentence": "The weather forecast says rain."
+  },
+  {
+    "word": "fundamental",
+    "definition": "forming a necessary base or core",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "основной, фундаментальный",
+    "synonyms": "basic, essential, primary",
+    "frequencyRank": 221,
+    "cefrLevel": "B2",
+    "exampleSentence": "Freedom is a fundamental right."
+  },
+  {
+    "word": "generate",
+    "definition": "to cause something to arise or come about",
+    "partOfSpeech": "verb",
+    "russianTranslation": "генерировать, порождать",
+    "synonyms": "produce, create, make",
+    "frequencyRank": 222,
+    "cefrLevel": "B1",
+    "exampleSentence": "Solar panels generate electricity."
+  },
+  {
+    "word": "genuine",
+    "definition": "truly what something is said to be; authentic",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "подлинный, настоящий",
+    "synonyms": "real, authentic, true",
+    "frequencyRank": 223,
+    "cefrLevel": "B2",
+    "exampleSentence": "Is this painting genuine?"
+  },
+  {
+    "word": "global",
+    "definition": "relating to the whole world; worldwide",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "глобальный, мировой",
+    "synonyms": "worldwide, international, universal",
+    "frequencyRank": 224,
+    "cefrLevel": "A2",
+    "exampleSentence": "Global warming is a serious problem."
+  },
+  {
+    "word": "guarantee",
+    "definition": "a formal promise or assurance",
+    "partOfSpeech": "noun/verb",
+    "russianTranslation": "гарантия, гарантировать",
+    "synonyms": "promise, assure, warranty",
+    "frequencyRank": 225,
+    "cefrLevel": "B1",
+    "exampleSentence": "I guarantee the quality of our products."
+  },
+  {
+    "word": "highlight",
+    "definition": "the most interesting or important part",
+    "partOfSpeech": "noun/verb",
+    "russianTranslation": "основной момент, подчеркнуть",
+    "synonyms": "emphasize, feature, underscore",
+    "frequencyRank": 226,
+    "cefrLevel": "B1",
+    "exampleSentence": "The highlight of the trip was the sunset."
+  },
+  {
+    "word": "identify",
+    "definition": "to establish who or what someone or something is",
+    "partOfSpeech": "verb",
+    "russianTranslation": "определять, идентифицировать",
+    "synonyms": "recognize, distinguish, detect",
+    "frequencyRank": 227,
+    "cefrLevel": "B1",
+    "exampleSentence": "Can you identify the problem?"
+  },
+  {
+    "word": "ignore",
+    "definition": "to refuse to take notice of",
+    "partOfSpeech": "verb",
+    "russianTranslation": "игнорировать",
+    "synonyms": "disregard, overlook, neglect",
+    "frequencyRank": 228,
+    "cefrLevel": "A2",
+    "exampleSentence": "Don't ignore the warning signs."
+  },
+  {
+    "word": "illustrate",
+    "definition": "to explain or make something clear",
+    "partOfSpeech": "verb",
+    "russianTranslation": "иллюстрировать, пояснять",
+    "synonyms": "demonstrate, show, depict",
+    "frequencyRank": 229,
+    "cefrLevel": "B1",
+    "exampleSentence": "This example illustrates the point."
+  },
+  {
+    "word": "impact",
+    "definition": "a marked effect or influence",
+    "partOfSpeech": "noun/verb",
+    "russianTranslation": "влияние, воздействие",
+    "synonyms": "effect, influence, consequence",
+    "frequencyRank": 230,
+    "cefrLevel": "B1",
+    "exampleSentence": "The new policy had a big impact."
+  },
+  {
+    "word": "implement",
+    "definition": "to put into effect; to carry out",
+    "partOfSpeech": "verb",
+    "russianTranslation": "реализовывать, внедрять",
+    "synonyms": "execute, apply, enforce",
+    "frequencyRank": 231,
+    "cefrLevel": "B2",
+    "exampleSentence": "We need to implement the changes."
+  },
+  {
+    "word": "imply",
+    "definition": "to suggest without being directly expressed",
+    "partOfSpeech": "verb",
+    "russianTranslation": "подразумевать, намекать",
+    "synonyms": "suggest, hint, indicate",
+    "frequencyRank": 232,
+    "cefrLevel": "B2",
+    "exampleSentence": "What are you implying?"
+  },
+  {
+    "word": "impose",
+    "definition": "to force something on someone",
+    "partOfSpeech": "verb",
+    "russianTranslation": "навязывать, налагать",
+    "synonyms": "enforce, apply, inflict",
+    "frequencyRank": 233,
+    "cefrLevel": "B2",
+    "exampleSentence": "The government imposed new taxes."
+  },
+  {
+    "word": "indicate",
+    "definition": "to point out; to show",
+    "partOfSpeech": "verb",
+    "russianTranslation": "указывать, показывать",
+    "synonyms": "show, suggest, signal",
+    "frequencyRank": 234,
+    "cefrLevel": "B1",
+    "exampleSentence": "The data indicates growth."
+  },
+  {
+    "word": "influence",
+    "definition": "the capacity to have an effect on someone",
+    "partOfSpeech": "noun/verb",
+    "russianTranslation": "влияние, влиять",
+    "synonyms": "impact, affect, power",
+    "frequencyRank": 235,
+    "cefrLevel": "B1",
+    "exampleSentence": "Music influences my mood."
+  },
+  {
+    "word": "initial",
+    "definition": "existing or occurring at the beginning",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "начальный, первоначальный",
+    "synonyms": "first, original, primary",
+    "frequencyRank": 236,
+    "cefrLevel": "B1",
+    "exampleSentence": "My initial reaction was surprise."
+  },
+  {
+    "word": "instance",
+    "definition": "an example or single occurrence of something",
+    "partOfSpeech": "noun",
+    "russianTranslation": "пример, случай",
+    "synonyms": "example, case, occasion",
+    "frequencyRank": 237,
+    "cefrLevel": "B1",
+    "exampleSentence": "For instance, look at this case."
+  },
+  {
+    "word": "interpret",
+    "definition": "to explain the meaning of information",
+    "partOfSpeech": "verb",
+    "russianTranslation": "интерпретировать, толковать",
+    "synonyms": "explain, translate, decipher",
+    "frequencyRank": 238,
+    "cefrLevel": "B2",
+    "exampleSentence": "How do you interpret this data?"
+  },
+  {
+    "word": "investigate",
+    "definition": "to carry out a systematic examination",
+    "partOfSpeech": "verb",
+    "russianTranslation": "исследовать, расследовать",
+    "synonyms": "examine, explore, probe",
+    "frequencyRank": 239,
+    "cefrLevel": "B1",
+    "exampleSentence": "The police are investigating the case."
+  },
+  {
+    "word": "involve",
+    "definition": "to include as a necessary part",
+    "partOfSpeech": "verb",
+    "russianTranslation": "включать, вовлекать",
+    "synonyms": "include, engage, entail",
+    "frequencyRank": 240,
+    "cefrLevel": "B1",
+    "exampleSentence": "The project involves teamwork."
+  },
+  {
+    "word": "isolate",
+    "definition": "to set apart from others",
+    "partOfSpeech": "verb",
+    "russianTranslation": "изолировать, отделять",
+    "synonyms": "separate, detach, quarantine",
+    "frequencyRank": 241,
+    "cefrLevel": "B2",
+    "exampleSentence": "They isolated the infected patients."
+  },
+  {
+    "word": "justify",
+    "definition": "to show or prove to be right or reasonable",
+    "partOfSpeech": "verb",
+    "russianTranslation": "оправдывать, обосновывать",
+    "synonyms": "defend, explain, validate",
+    "frequencyRank": 242,
+    "cefrLevel": "B2",
+    "exampleSentence": "How can you justify this decision?"
+  },
+  {
+    "word": "launch",
+    "definition": "to start or set in motion",
+    "partOfSpeech": "verb/noun",
+    "russianTranslation": "запускать, запуск",
+    "synonyms": "begin, start, initiate",
+    "frequencyRank": 243,
+    "cefrLevel": "B1",
+    "exampleSentence": "They launched a new product."
+  },
+  {
+    "word": "maintain",
+    "definition": "to cause or enable to continue; to keep in good condition",
+    "partOfSpeech": "verb",
+    "russianTranslation": "поддерживать, обслуживать",
+    "synonyms": "preserve, sustain, uphold",
+    "frequencyRank": 244,
+    "cefrLevel": "B1",
+    "exampleSentence": "You should maintain a healthy diet."
+  },
+  {
+    "word": "manage",
+    "definition": "to be in charge of; to succeed in doing",
+    "partOfSpeech": "verb",
+    "russianTranslation": "управлять, справляться",
+    "synonyms": "control, handle, run",
+    "frequencyRank": 245,
+    "cefrLevel": "A2",
+    "exampleSentence": "She manages a team of ten people."
+  },
+  {
+    "word": "measure",
+    "definition": "to ascertain the size, amount, or degree of",
+    "partOfSpeech": "verb/noun",
+    "russianTranslation": "измерять, мера",
+    "synonyms": "assess, evaluate, gauge",
+    "frequencyRank": 246,
+    "cefrLevel": "A2",
+    "exampleSentence": "We need to measure the distance."
+  },
+  {
+    "word": "method",
+    "definition": "a particular procedure for accomplishing something",
+    "partOfSpeech": "noun",
+    "russianTranslation": "метод, способ",
+    "synonyms": "technique, approach, system",
+    "frequencyRank": 247,
+    "cefrLevel": "A2",
+    "exampleSentence": "This is the best method."
+  },
+  {
+    "word": "minor",
+    "definition": "lesser in importance, seriousness, or significance",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "незначительный, второстепенный",
+    "synonyms": "small, slight, trivial",
+    "frequencyRank": 248,
+    "cefrLevel": "B1",
+    "exampleSentence": "It was a minor problem."
+  },
+  {
+    "word": "modify",
+    "definition": "to make partial or minor changes to",
+    "partOfSpeech": "verb",
+    "russianTranslation": "изменять, модифицировать",
+    "synonyms": "alter, change, adjust",
+    "frequencyRank": 249,
+    "cefrLevel": "B2",
+    "exampleSentence": "We need to modify our approach."
+  },
+  {
+    "word": "monitor",
+    "definition": "to observe and check progress over a period",
+    "partOfSpeech": "verb/noun",
+    "russianTranslation": "контролировать, монитор",
+    "synonyms": "watch, track, observe",
+    "frequencyRank": 250,
+    "cefrLevel": "B1",
+    "exampleSentence": "We monitor the situation closely."
+  },
+  {
+    "word": "negotiate",
+    "definition": "to try to reach an agreement through discussion",
+    "partOfSpeech": "verb",
+    "russianTranslation": "вести переговоры",
+    "synonyms": "discuss, bargain, mediate",
+    "frequencyRank": 251,
+    "cefrLevel": "B2",
+    "exampleSentence": "They negotiated a new contract."
+  },
+  {
+    "word": "notion",
+    "definition": "a conception of or belief about something",
+    "partOfSpeech": "noun",
+    "russianTranslation": "понятие, представление",
+    "synonyms": "idea, concept, belief",
+    "frequencyRank": 252,
+    "cefrLevel": "B2",
+    "exampleSentence": "I have no notion of what happened."
+  },
+  {
+    "word": "objective",
+    "definition": "a thing aimed at or sought; a goal",
+    "partOfSpeech": "noun/adjective",
+    "russianTranslation": "цель, объективный",
+    "synonyms": "goal, aim, target",
+    "frequencyRank": 253,
+    "cefrLevel": "B1",
+    "exampleSentence": "Our main objective is growth."
+  },
+  {
+    "word": "obtain",
+    "definition": "to get, acquire, or secure",
+    "partOfSpeech": "verb",
+    "russianTranslation": "получать, приобретать",
+    "synonyms": "get, acquire, gain",
+    "frequencyRank": 254,
+    "cefrLevel": "B1",
+    "exampleSentence": "She obtained a degree in physics."
+  },
+  {
+    "word": "obvious",
+    "definition": "easily perceived or understood; clear",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "очевидный",
+    "synonyms": "clear, evident, apparent",
+    "frequencyRank": 255,
+    "cefrLevel": "A2",
+    "exampleSentence": "The answer is obvious."
+  },
+  {
+    "word": "occupy",
+    "definition": "to reside or have one's place in; to fill",
+    "partOfSpeech": "verb",
+    "russianTranslation": "занимать, оккупировать",
+    "synonyms": "inhabit, fill, hold",
+    "frequencyRank": 256,
+    "cefrLevel": "B1",
+    "exampleSentence": "The army occupied the city."
+  },
+  {
+    "word": "occur",
+    "definition": "to happen; take place",
+    "partOfSpeech": "verb",
+    "russianTranslation": "происходить, случаться",
+    "synonyms": "happen, take place, arise",
+    "frequencyRank": 257,
+    "cefrLevel": "B1",
+    "exampleSentence": "The accident occurred yesterday."
+  },
+  {
+    "word": "opportunity",
+    "definition": "a set of circumstances that makes something possible",
+    "partOfSpeech": "noun",
+    "russianTranslation": "возможность, шанс",
+    "synonyms": "chance, opening, prospect",
+    "frequencyRank": 258,
+    "cefrLevel": "A2",
+    "exampleSentence": "This is a great opportunity."
+  },
+  {
+    "word": "oppose",
+    "definition": "to disapprove of and attempt to prevent",
+    "partOfSpeech": "verb",
+    "russianTranslation": "противодействовать, возражать",
+    "synonyms": "resist, fight, object",
+    "frequencyRank": 259,
+    "cefrLevel": "B1",
+    "exampleSentence": "Many people oppose the new law."
+  },
+  {
+    "word": "participate",
+    "definition": "to take part in an activity or event",
+    "partOfSpeech": "verb",
+    "russianTranslation": "участвовать",
+    "synonyms": "join, engage, contribute",
+    "frequencyRank": 260,
+    "cefrLevel": "B1",
+    "exampleSentence": "Everyone is welcome to participate."
+  },
+  {
+    "word": "perceive",
+    "definition": "to become aware or conscious of",
+    "partOfSpeech": "verb",
+    "russianTranslation": "воспринимать, осознавать",
+    "synonyms": "notice, observe, recognize",
+    "frequencyRank": 261,
+    "cefrLevel": "B2",
+    "exampleSentence": "I perceived a change in his attitude."
+  },
+  {
+    "word": "perform",
+    "definition": "to carry out, accomplish, or do",
+    "partOfSpeech": "verb",
+    "russianTranslation": "выполнять, исполнять",
+    "synonyms": "do, execute, carry out",
+    "frequencyRank": 262,
+    "cefrLevel": "A2",
+    "exampleSentence": "The team performed well."
+  },
+  {
+    "word": "permit",
+    "definition": "to allow to do something",
+    "partOfSpeech": "verb/noun",
+    "russianTranslation": "разрешать, разрешение",
+    "synonyms": "allow, let, authorize",
+    "frequencyRank": 263,
+    "cefrLevel": "B1",
+    "exampleSentence": "Photography is not permitted here."
+  },
+  {
+    "word": "perspective",
+    "definition": "a particular attitude toward something; a point of view",
+    "partOfSpeech": "noun",
+    "russianTranslation": "перспектива, точка зрения",
+    "synonyms": "viewpoint, outlook, standpoint",
+    "frequencyRank": 264,
+    "cefrLevel": "B2",
+    "exampleSentence": "Try to see it from my perspective."
+  },
+  {
+    "word": "phenomenon",
+    "definition": "a fact or situation that is observed to exist",
+    "partOfSpeech": "noun",
+    "russianTranslation": "явление, феномен",
+    "synonyms": "event, occurrence, fact",
+    "frequencyRank": 265,
+    "cefrLevel": "B2",
+    "exampleSentence": "The Northern Lights are a natural phenomenon."
+  },
+  {
+    "word": "policy",
+    "definition": "a course of action adopted by an organization",
+    "partOfSpeech": "noun",
+    "russianTranslation": "политика, курс",
+    "synonyms": "plan, strategy, guideline",
+    "frequencyRank": 266,
+    "cefrLevel": "B1",
+    "exampleSentence": "The company has a strict privacy policy."
+  },
+  {
+    "word": "portion",
+    "definition": "a part of a whole",
+    "partOfSpeech": "noun",
+    "russianTranslation": "порция, часть",
+    "synonyms": "part, piece, share",
+    "frequencyRank": 267,
+    "cefrLevel": "B1",
+    "exampleSentence": "He ate a large portion of pasta."
+  },
+  {
+    "word": "potential",
+    "definition": "having the capacity to develop into something",
+    "partOfSpeech": "adjective/noun",
+    "russianTranslation": "потенциальный, потенциал",
+    "synonyms": "possible, promising, capability",
+    "frequencyRank": 268,
+    "cefrLevel": "B1",
+    "exampleSentence": "She has great potential."
+  },
+  {
+    "word": "predict",
+    "definition": "to say that something will happen in the future",
+    "partOfSpeech": "verb",
+    "russianTranslation": "предсказывать, прогнозировать",
+    "synonyms": "forecast, foresee, anticipate",
+    "frequencyRank": 269,
+    "cefrLevel": "B1",
+    "exampleSentence": "It's hard to predict the outcome."
+  },
+  {
+    "word": "preserve",
+    "definition": "to maintain in its original state",
+    "partOfSpeech": "verb",
+    "russianTranslation": "сохранять, беречь",
+    "synonyms": "protect, maintain, conserve",
+    "frequencyRank": 270,
+    "cefrLevel": "B1",
+    "exampleSentence": "We must preserve our forests."
+  },
+  {
+    "word": "prevent",
+    "definition": "to keep something from happening",
+    "partOfSpeech": "verb",
+    "russianTranslation": "предотвращать",
+    "synonyms": "stop, avert, hinder",
+    "frequencyRank": 271,
+    "cefrLevel": "A2",
+    "exampleSentence": "We must prevent this from happening."
+  },
+  {
+    "word": "previous",
+    "definition": "existing or occurring before in time or order",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "предыдущий, прежний",
+    "synonyms": "former, prior, preceding",
+    "frequencyRank": 272,
+    "cefrLevel": "A2",
+    "exampleSentence": "She mentioned it in a previous email."
+  },
+  {
+    "word": "primary",
+    "definition": "of chief importance; principal",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "основной, первичный",
+    "synonyms": "main, chief, principal",
+    "frequencyRank": 273,
+    "cefrLevel": "B1",
+    "exampleSentence": "Safety is our primary concern."
+  },
+  {
+    "word": "principle",
+    "definition": "a fundamental truth or proposition",
+    "partOfSpeech": "noun",
+    "russianTranslation": "принцип",
+    "synonyms": "rule, law, standard",
+    "frequencyRank": 274,
+    "cefrLevel": "B1",
+    "exampleSentence": "This is based on the principle of equality."
+  },
+  {
+    "word": "proceed",
+    "definition": "to begin or continue a course of action",
+    "partOfSpeech": "verb",
+    "russianTranslation": "продолжать, приступать",
+    "synonyms": "continue, go on, advance",
+    "frequencyRank": 275,
+    "cefrLevel": "B1",
+    "exampleSentence": "Please proceed to the next step."
+  },
+  {
+    "word": "process",
+    "definition": "a series of actions to achieve a particular end",
+    "partOfSpeech": "noun/verb",
+    "russianTranslation": "процесс, обрабатывать",
+    "synonyms": "procedure, method, operation",
+    "frequencyRank": 276,
+    "cefrLevel": "A2",
+    "exampleSentence": "The hiring process takes two weeks."
+  },
+  {
+    "word": "promote",
+    "definition": "to further the progress of; to raise to a higher position",
+    "partOfSpeech": "verb",
+    "russianTranslation": "продвигать, рекламировать",
+    "synonyms": "advance, encourage, advertise",
+    "frequencyRank": 277,
+    "cefrLevel": "B1",
+    "exampleSentence": "She was promoted to manager."
+  },
+  {
+    "word": "proportion",
+    "definition": "a part, share, or number considered in relation to a whole",
+    "partOfSpeech": "noun",
+    "russianTranslation": "пропорция, доля",
+    "synonyms": "ratio, share, percentage",
+    "frequencyRank": 278,
+    "cefrLevel": "B2",
+    "exampleSentence": "A large proportion of students passed."
+  },
+  {
+    "word": "propose",
+    "definition": "to put forward a plan for consideration",
+    "partOfSpeech": "verb",
+    "russianTranslation": "предлагать",
+    "synonyms": "suggest, recommend, offer",
+    "frequencyRank": 279,
+    "cefrLevel": "B1",
+    "exampleSentence": "He proposed a new strategy."
+  },
+  {
+    "word": "prospect",
+    "definition": "the possibility or likelihood of some future event",
+    "partOfSpeech": "noun",
+    "russianTranslation": "перспектива, возможность",
+    "synonyms": "possibility, chance, outlook",
+    "frequencyRank": 280,
+    "cefrLevel": "B2",
+    "exampleSentence": "The prospects look promising."
+  },
+  {
+    "word": "purchase",
+    "definition": "to buy something",
+    "partOfSpeech": "verb/noun",
+    "russianTranslation": "покупать, покупка",
+    "synonyms": "buy, acquire, obtain",
+    "frequencyRank": 281,
+    "cefrLevel": "B1",
+    "exampleSentence": "She purchased a new laptop."
+  },
+  {
+    "word": "pursue",
+    "definition": "to follow in order to catch or to seek to attain",
+    "partOfSpeech": "verb",
+    "russianTranslation": "преследовать, добиваться",
+    "synonyms": "chase, follow, seek",
+    "frequencyRank": 282,
+    "cefrLevel": "B2",
+    "exampleSentence": "She decided to pursue her dream."
+  },
+  {
+    "word": "range",
+    "definition": "the area of variation between limits",
+    "partOfSpeech": "noun/verb",
+    "russianTranslation": "диапазон, ассортимент",
+    "synonyms": "scope, spectrum, variety",
+    "frequencyRank": 283,
+    "cefrLevel": "B1",
+    "exampleSentence": "We offer a wide range of products."
+  },
+  {
+    "word": "react",
+    "definition": "to respond to something",
+    "partOfSpeech": "verb",
+    "russianTranslation": "реагировать",
+    "synonyms": "respond, reply, answer",
+    "frequencyRank": 284,
+    "cefrLevel": "B1",
+    "exampleSentence": "How did she react to the news?"
+  },
+  {
+    "word": "recognize",
+    "definition": "to identify from previous encounters",
+    "partOfSpeech": "verb",
+    "russianTranslation": "узнавать, признавать",
+    "synonyms": "identify, know, acknowledge",
+    "frequencyRank": 285,
+    "cefrLevel": "A2",
+    "exampleSentence": "I recognized her immediately."
+  },
+  {
+    "word": "recommend",
+    "definition": "to suggest that something is good or suitable",
+    "partOfSpeech": "verb",
+    "russianTranslation": "рекомендовать",
+    "synonyms": "suggest, advise, propose",
+    "frequencyRank": 286,
+    "cefrLevel": "A2",
+    "exampleSentence": "I recommend this restaurant."
+  },
+  {
+    "word": "reflect",
+    "definition": "to think deeply or carefully about",
+    "partOfSpeech": "verb",
+    "russianTranslation": "отражать, размышлять",
+    "synonyms": "consider, ponder, mirror",
+    "frequencyRank": 287,
+    "cefrLevel": "B1",
+    "exampleSentence": "Take time to reflect on your mistakes."
+  },
+  {
+    "word": "reform",
+    "definition": "to make changes in order to improve",
+    "partOfSpeech": "verb/noun",
+    "russianTranslation": "реформировать, реформа",
+    "synonyms": "change, improve, amend",
+    "frequencyRank": 288,
+    "cefrLevel": "B1",
+    "exampleSentence": "The government plans to reform education."
+  },
+  {
+    "word": "reject",
+    "definition": "to dismiss as inadequate or unacceptable",
+    "partOfSpeech": "verb",
+    "russianTranslation": "отвергать, отклонять",
+    "synonyms": "refuse, decline, deny",
+    "frequencyRank": 289,
+    "cefrLevel": "B1",
+    "exampleSentence": "He rejected the proposal."
+  },
+  {
+    "word": "release",
+    "definition": "to allow to move, act, or flow freely",
+    "partOfSpeech": "verb/noun",
+    "russianTranslation": "освобождать, выпуск",
+    "synonyms": "free, discharge, publish",
+    "frequencyRank": 290,
+    "cefrLevel": "B1",
+    "exampleSentence": "The film will be released next month."
+  },
+  {
+    "word": "relevant",
+    "definition": "closely connected or appropriate",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "релевантный, уместный",
+    "synonyms": "pertinent, applicable, related",
+    "frequencyRank": 291,
+    "cefrLevel": "B1",
+    "exampleSentence": "Please provide relevant information."
+  },
+  {
+    "word": "rely",
+    "definition": "to depend on with full trust",
+    "partOfSpeech": "verb",
+    "russianTranslation": "полагаться, зависеть",
+    "synonyms": "depend, trust, count on",
+    "frequencyRank": 292,
+    "cefrLevel": "B1",
+    "exampleSentence": "You can rely on me."
+  },
+  {
+    "word": "replace",
+    "definition": "to take the place of",
+    "partOfSpeech": "verb",
+    "russianTranslation": "заменять",
+    "synonyms": "substitute, supersede, exchange",
+    "frequencyRank": 293,
+    "cefrLevel": "A2",
+    "exampleSentence": "We need to replace the old equipment."
+  },
+  {
+    "word": "represent",
+    "definition": "to act or speak on behalf of",
+    "partOfSpeech": "verb",
+    "russianTranslation": "представлять",
+    "synonyms": "symbolize, depict, stand for",
+    "frequencyRank": 294,
+    "cefrLevel": "B1",
+    "exampleSentence": "She represents the company abroad."
+  },
+  {
+    "word": "reputation",
+    "definition": "the beliefs or opinions generally held about someone",
+    "partOfSpeech": "noun",
+    "russianTranslation": "репутация",
+    "synonyms": "name, standing, image",
+    "frequencyRank": 295,
+    "cefrLevel": "B1",
+    "exampleSentence": "He has an excellent reputation."
+  },
+  {
+    "word": "resource",
+    "definition": "a stock of supply that can be drawn on",
+    "partOfSpeech": "noun",
+    "russianTranslation": "ресурс",
+    "synonyms": "supply, asset, reserve",
+    "frequencyRank": 296,
+    "cefrLevel": "B1",
+    "exampleSentence": "Natural resources are limited."
+  },
+  {
+    "word": "respond",
+    "definition": "to say something in reply",
+    "partOfSpeech": "verb",
+    "russianTranslation": "отвечать, реагировать",
+    "synonyms": "answer, reply, react",
+    "frequencyRank": 297,
+    "cefrLevel": "A2",
+    "exampleSentence": "She did not respond to my email."
+  },
+  {
+    "word": "responsible",
+    "definition": "having an obligation to do something",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "ответственный",
+    "synonyms": "accountable, liable, dependable",
+    "frequencyRank": 298,
+    "cefrLevel": "A2",
+    "exampleSentence": "Who is responsible for this project?"
+  },
+  {
+    "word": "restore",
+    "definition": "to bring back to a former condition",
+    "partOfSpeech": "verb",
+    "russianTranslation": "восстанавливать",
+    "synonyms": "repair, renew, rebuild",
+    "frequencyRank": 299,
+    "cefrLevel": "B1",
+    "exampleSentence": "They restored the old building."
+  },
+  {
+    "word": "restrict",
+    "definition": "to put a limit on; to keep under control",
+    "partOfSpeech": "verb",
+    "russianTranslation": "ограничивать",
+    "synonyms": "limit, control, constrain",
+    "frequencyRank": 300,
+    "cefrLevel": "B2",
+    "exampleSentence": "Access is restricted to staff only."
+  },
+  {
+    "word": "reveal",
+    "definition": "to make previously unknown information known",
+    "partOfSpeech": "verb",
+    "russianTranslation": "раскрывать, обнаруживать",
+    "synonyms": "disclose, expose, uncover",
+    "frequencyRank": 301,
+    "cefrLevel": "B1",
+    "exampleSentence": "The investigation revealed the truth."
+  },
+  {
+    "word": "revolution",
+    "definition": "a forcible overthrow of a social order",
+    "partOfSpeech": "noun",
+    "russianTranslation": "революция",
+    "synonyms": "uprising, rebellion, upheaval",
+    "frequencyRank": 302,
+    "cefrLevel": "B1",
+    "exampleSentence": "The French Revolution changed history."
+  },
+  {
+    "word": "risk",
+    "definition": "a situation involving exposure to danger",
+    "partOfSpeech": "noun/verb",
+    "russianTranslation": "риск, рисковать",
+    "synonyms": "danger, hazard, threat",
+    "frequencyRank": 303,
+    "cefrLevel": "A2",
+    "exampleSentence": "There is a risk of flooding."
+  },
+  {
+    "word": "role",
+    "definition": "the function assumed by someone or something",
+    "partOfSpeech": "noun",
+    "russianTranslation": "роль",
+    "synonyms": "part, function, position",
+    "frequencyRank": 304,
+    "cefrLevel": "A2",
+    "exampleSentence": "She plays an important role."
+  },
+  {
+    "word": "satisfy",
+    "definition": "to fulfill the expectations or desires of",
+    "partOfSpeech": "verb",
+    "russianTranslation": "удовлетворять",
+    "synonyms": "please, content, gratify",
+    "frequencyRank": 305,
+    "cefrLevel": "B1",
+    "exampleSentence": "The results satisfied everyone."
+  },
+  {
+    "word": "secure",
+    "definition": "fixed or fastened so as not to give way; safe",
+    "partOfSpeech": "adjective/verb",
+    "russianTranslation": "безопасный, обеспечивать",
+    "synonyms": "safe, protected, obtain",
+    "frequencyRank": 306,
+    "cefrLevel": "B1",
+    "exampleSentence": "Make sure your data is secure."
+  },
+  {
+    "word": "seek",
+    "definition": "to attempt to find or obtain",
+    "partOfSpeech": "verb",
+    "russianTranslation": "искать, стремиться",
+    "synonyms": "look for, search, pursue",
+    "frequencyRank": 307,
+    "cefrLevel": "B1",
+    "exampleSentence": "She is seeking employment."
+  },
+  {
+    "word": "select",
+    "definition": "to carefully choose as being the best",
+    "partOfSpeech": "verb",
+    "russianTranslation": "выбирать, отбирать",
+    "synonyms": "choose, pick, opt for",
+    "frequencyRank": 308,
+    "cefrLevel": "B1",
+    "exampleSentence": "Select the correct answer."
+  },
+  {
+    "word": "separate",
+    "definition": "forming a unit by itself; to set apart",
+    "partOfSpeech": "adjective/verb",
+    "russianTranslation": "отдельный, разделять",
+    "synonyms": "divide, split, individual",
+    "frequencyRank": 309,
+    "cefrLevel": "A2",
+    "exampleSentence": "Keep personal and work life separate."
+  },
+  {
+    "word": "significant",
+    "definition": "sufficiently great or important to be worthy of attention",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "значительный, существенный",
+    "synonyms": "important, notable, major",
+    "frequencyRank": 310,
+    "cefrLevel": "B1",
+    "exampleSentence": "This is a significant achievement."
+  },
+  {
+    "word": "similar",
+    "definition": "resembling without being identical",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "похожий, сходный",
+    "synonyms": "alike, comparable, analogous",
+    "frequencyRank": 311,
+    "cefrLevel": "A2",
+    "exampleSentence": "The two cars look very similar."
+  },
+  {
+    "word": "solve",
+    "definition": "to find an answer or solution to",
+    "partOfSpeech": "verb",
+    "russianTranslation": "решать",
+    "synonyms": "resolve, work out, figure out",
+    "frequencyRank": 312,
+    "cefrLevel": "A2",
+    "exampleSentence": "We need to solve this problem."
+  },
+  {
+    "word": "source",
+    "definition": "a place, person, or thing from which something originates",
+    "partOfSpeech": "noun",
+    "russianTranslation": "источник",
+    "synonyms": "origin, root, cause",
+    "frequencyRank": 313,
+    "cefrLevel": "B1",
+    "exampleSentence": "What is your source of information?"
+  },
+  {
+    "word": "specific",
+    "definition": "clearly defined or identified",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "конкретный, определённый",
+    "synonyms": "particular, precise, exact",
+    "frequencyRank": 314,
+    "cefrLevel": "B1",
+    "exampleSentence": "Do you have any specific questions?"
+  },
+  {
+    "word": "stable",
+    "definition": "not likely to change or fail; firmly established",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "стабильный, устойчивый",
+    "synonyms": "steady, secure, fixed",
+    "frequencyRank": 315,
+    "cefrLevel": "B1",
+    "exampleSentence": "The economy is now stable."
+  },
+  {
+    "word": "strategy",
+    "definition": "a plan of action designed to achieve a goal",
+    "partOfSpeech": "noun",
+    "russianTranslation": "стратегия",
+    "synonyms": "plan, approach, tactic",
+    "frequencyRank": 316,
+    "cefrLevel": "B1",
+    "exampleSentence": "We need a new marketing strategy."
+  },
+  {
+    "word": "structure",
+    "definition": "the arrangement of parts in something",
+    "partOfSpeech": "noun/verb",
+    "russianTranslation": "структура, строение",
+    "synonyms": "framework, organization, layout",
+    "frequencyRank": 317,
+    "cefrLevel": "B1",
+    "exampleSentence": "The structure of the building is strong."
+  },
+  {
+    "word": "sufficient",
+    "definition": "enough; adequate",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "достаточный",
+    "synonyms": "enough, adequate, ample",
+    "frequencyRank": 318,
+    "cefrLevel": "B1",
+    "exampleSentence": "The evidence is not sufficient."
+  },
+  {
+    "word": "supply",
+    "definition": "to make available for use; a stock of something",
+    "partOfSpeech": "verb/noun",
+    "russianTranslation": "снабжать, запас",
+    "synonyms": "provide, furnish, stock",
+    "frequencyRank": 319,
+    "cefrLevel": "B1",
+    "exampleSentence": "The supply of clean water is limited."
+  },
+  {
+    "word": "support",
+    "definition": "to bear all or part of the weight of; to give help",
+    "partOfSpeech": "verb/noun",
+    "russianTranslation": "поддерживать, поддержка",
+    "synonyms": "help, assist, sustain",
+    "frequencyRank": 320,
+    "cefrLevel": "A2",
+    "exampleSentence": "I support your decision."
+  },
+  {
+    "word": "survive",
+    "definition": "to continue to live or exist",
+    "partOfSpeech": "verb",
+    "russianTranslation": "выживать, выдерживать",
+    "synonyms": "endure, persist, remain",
+    "frequencyRank": 321,
+    "cefrLevel": "B1",
+    "exampleSentence": "Many animals struggle to survive."
+  },
+  {
+    "word": "theory",
+    "definition": "a set of principles to explain something",
+    "partOfSpeech": "noun",
+    "russianTranslation": "теория",
+    "synonyms": "hypothesis, concept, idea",
+    "frequencyRank": 322,
+    "cefrLevel": "B1",
+    "exampleSentence": "The theory was proven correct."
+  },
+  {
+    "word": "threaten",
+    "definition": "to state one's intention to harm",
+    "partOfSpeech": "verb",
+    "russianTranslation": "угрожать",
+    "synonyms": "menace, intimidate, endanger",
+    "frequencyRank": 323,
+    "cefrLevel": "B1",
+    "exampleSentence": "Climate change threatens our future."
+  },
+  {
+    "word": "tradition",
+    "definition": "the transmission of customs from generation to generation",
+    "partOfSpeech": "noun",
+    "russianTranslation": "традиция",
+    "synonyms": "custom, convention, heritage",
+    "frequencyRank": 324,
+    "cefrLevel": "A2",
+    "exampleSentence": "This is an old family tradition."
+  },
+  {
+    "word": "transform",
+    "definition": "to make a thorough or dramatic change",
+    "partOfSpeech": "verb",
+    "russianTranslation": "преобразовывать, трансформировать",
+    "synonyms": "change, convert, alter",
+    "frequencyRank": 325,
+    "cefrLevel": "B1",
+    "exampleSentence": "Technology has transformed our lives."
+  },
+  {
+    "word": "trend",
+    "definition": "a general direction in which something is developing",
+    "partOfSpeech": "noun",
+    "russianTranslation": "тенденция, тренд",
+    "synonyms": "tendency, pattern, movement",
+    "frequencyRank": 326,
+    "cefrLevel": "B1",
+    "exampleSentence": "There is a growing trend towards remote work."
+  },
+  {
+    "word": "unique",
+    "definition": "being the only one of its kind",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "уникальный, неповторимый",
+    "synonyms": "distinctive, singular, one-of-a-kind",
+    "frequencyRank": 327,
+    "cefrLevel": "B1",
+    "exampleSentence": "Everyone is unique."
+  },
+  {
+    "word": "vast",
+    "definition": "of very great extent or quantity",
+    "partOfSpeech": "adjective",
+    "russianTranslation": "обширный, громадный",
+    "synonyms": "huge, enormous, immense",
+    "frequencyRank": 328,
+    "cefrLevel": "B2",
+    "exampleSentence": "The desert is vast and empty."
+  },
+  {
+    "word": "vary",
+    "definition": "to differ in size, amount, degree, or nature",
+    "partOfSpeech": "verb",
+    "russianTranslation": "варьироваться, менять",
+    "synonyms": "change, differ, fluctuate",
+    "frequencyRank": 329,
+    "cefrLevel": "B1",
+    "exampleSentence": "Prices vary from store to store."
+  },
+  {
+    "word": "volume",
+    "definition": "the amount of space that something occupies",
+    "partOfSpeech": "noun",
+    "russianTranslation": "объём, том, громкость",
+    "synonyms": "capacity, size, quantity",
+    "frequencyRank": 330,
+    "cefrLevel": "B1",
+    "exampleSentence": "Turn down the volume, please."
+  },
+  {
+    "word": "withdraw",
+    "definition": "to remove or take away; to retreat",
+    "partOfSpeech": "verb",
+    "russianTranslation": "отзывать, снимать деньги",
+    "synonyms": "remove, retreat, take out",
+    "frequencyRank": 331,
+    "cefrLevel": "B2",
+    "exampleSentence": "She withdrew money from the ATM."
+  },
+  {
+    "word": "witness",
+    "definition": "a person who sees an event take place",
+    "partOfSpeech": "noun/verb",
+    "russianTranslation": "свидетель, быть свидетелем",
+    "synonyms": "observer, spectator, see",
+    "frequencyRank": 332,
+    "cefrLevel": "B1",
+    "exampleSentence": "He was a witness to the accident."
+  },
+  {
+    "word": "yield",
+    "definition": "to produce or provide",
+    "partOfSpeech": "verb/noun",
+    "russianTranslation": "уступать, приносить, урожай",
+    "synonyms": "produce, give, surrender",
+    "frequencyRank": 333,
+    "cefrLevel": "B2",
+    "exampleSentence": "The farm yields a good harvest."
+  }
+]

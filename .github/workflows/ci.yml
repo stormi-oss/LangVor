@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  analyze-and-test:
+    # Runs on macOS to match the plugins actually used (sqlite3_flutter_libs,
+    # path_provider, file_picker) — analysis/tests are cheap enough that the
+    # slower runner isn't a real cost, and it avoids Linux-only false passes.
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.44.5
+
+      - run: flutter pub get
+
+      - run: flutter analyze
+
+      - run: flutter test

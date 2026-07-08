@@ -1,0 +1,23 @@
+en_words.txt — provenance and license
+======================================
+
+Source: the FreeBSD "words" wordlist (/usr/share/dict/words), which is
+Webster's Second International Dictionary (1934).
+
+Per the FreeBSD README shipped alongside that file:
+
+  "Welcome to web2 (Webster's Second International) all 234,936 words
+  worth. The 1934 copyright has lapsed, according to the supplier."
+
+The list is in the public domain due to copyright expiration and is
+redistributed as-is (public domain, unmodified) inside macOS, FreeBSD,
+many Linux distributions, and countless open-source projects.
+
+This file (en_words.txt) is a filtered and expanded derivative: only
+lowercase alphabetic entries (proper nouns and non-alphabetic entries
+removed) from the original list, then mechanically expanded with
+regular English inflections (plural/3rd-person -s/-es, past tense
+-ed, gerund -ing) so common inflected forms aren't false-flagged as
+misspelled — Webster's 1934 lists headwords, not every inflected
+form. Used as an offline English spell-check wordlist — see
+lib/domain/nlp/english_wordlist.dart.

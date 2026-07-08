@@ -1,0 +1,76 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.44.5
+
+      - run: flutter pub get
+
+      - run: flutter build windows --release
+
+      - name: Zip Windows build
+        run: |
+          Compress-Archive -Path build\windows\x64\runner\Release\* -DestinationPath langvor-windows.zip
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: langvor-windows
+          path: langvor-windows.zip
+
+  build-macos:
+    # Pinned (not -latest) so the produced binary's architecture support is
+    # reproducible across releases.
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.44.5
+
+      - run: flutter pub get
+
+      - run: flutter build macos --release
+
+      - name: Zip macOS build
+        run: |
+          cd build/macos/Build/Products/Release
+          ditto -c -k --sequesterRsrc --keepParent langvor.app ../../../../../langvor-macos.zip
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: langvor-macos
+          path: langvor-macos.zip
+
+  release:
+    needs: [build-windows, build-macos]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            artifacts/langvor-windows/langvor-windows.zip
+            artifacts/langvor-macos/langvor-macos.zip
+          generate_release_notes: true
