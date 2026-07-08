@@ -516,6 +516,8 @@ class TranslationBloc extends Bloc<TranslationEvent, TranslationState> {
     final merged = base.copyWith(
       checkSource: result.source,
       referenceTranslation: result.referenceTranslation,
+      translationGrade: result.grade,
+      onlineFeedback: result.feedback,
       coverageScore: result.similarity,
       overallScore:
           (base.overallScore * 0.7 + result.similarity * 0.3).clamp(0.0, 1.0),

@@ -1,3 +1,4 @@
+import '../nlp/levenshtein.dart';
 import '../nlp/spell_checker.dart';
 import '../nlp/tokenizer.dart';
 import 'mymemory_client.dart';
@@ -17,37 +18,75 @@ enum OnlineCheckFailureReason {
   malformedResponse,
 }
 
-/// Result of comparing the user's translation against a real machine
-/// translation of the source text, rather than a fixed word-pair lookup.
+/// Coarse quality bands for a translation, mirroring how a human reviewer
+/// would summarize it.
+enum TranslationGrade { exact, good, partial, poor }
+
+extension TranslationGradeInfo on TranslationGrade {
+  String get label => switch (this) {
+        TranslationGrade.exact => 'Excellent match',
+        TranslationGrade.good => 'Good — minor differences',
+        TranslationGrade.partial => 'Partially correct',
+        TranslationGrade.poor => 'Needs work',
+      };
+}
+
+/// Per-source-word assessment used to give detailed, word-level feedback.
+class WordAssessment {
+  final String expected; // word from the reference translation
+  final MatchLevel level;
+  final String? userWord; // the user's word that matched, if any
+
+  const WordAssessment({
+    required this.expected,
+    required this.level,
+    this.userWord,
+  });
+}
+
+enum MatchLevel { exact, synonymOrFuzzy, missing }
+
+/// Result of comparing the user's English translation against a live machine
+/// translation of the Russian source — a multi-level, graded assessment.
 class OnlineCheckResult {
   final CheckSource source;
   final String? referenceTranslation;
 
-  /// Content words present in the reference translation but not found
-  /// (even fuzzily) in the user's text — surfaced as gentle suggestions,
-  /// not hard errors, since the reference is just one possible phrasing.
-  final List<String> missingContentWords;
-
-  /// Rough content-word overlap between reference and user text (0–1),
-  /// presented in the UI as an estimate, not an exact grade.
+  /// 0–1 semantic overlap score used to blend into the overall score.
   final double similarity;
+
+  /// The coarse quality band derived from [similarity] and coverage.
+  final TranslationGrade grade;
+
+  /// Word-level breakdown against the reference translation.
+  final List<WordAssessment> wordAssessments;
+
+  /// Short human-readable feedback lines (what's good / what to fix).
+  final List<String> feedback;
 
   final OnlineCheckFailureReason? failureReason;
 
   const OnlineCheckResult({
     required this.source,
     this.referenceTranslation,
-    this.missingContentWords = const [],
     this.similarity = 0.0,
+    this.grade = TranslationGrade.poor,
+    this.wordAssessments = const [],
+    this.feedback = const [],
     this.failureReason,
   });
 
   bool get isAvailable => failureReason == null;
+
+  List<String> get missingContentWords => wordAssessments
+      .where((a) => a.level == MatchLevel.missing)
+      .map((a) => a.expected)
+      .toList();
 }
 
 /// Compares a user's English translation against a live machine translation
-/// of the Russian source (via [MyMemoryClient]) instead of a fixed
-/// word-for-word dictionary — this is the "real translator" check.
+/// of the Russian source (via [MyMemoryClient]) and grades it on multiple
+/// levels — this is the "real translator" check.
 class OnlineTranslationChecker {
   final MyMemoryClient _client;
   final TranslationCache _cache;
@@ -115,31 +154,119 @@ class OnlineTranslationChecker {
     final refContentWords = Tokenizer.tokenize(reference)
         .map((t) => t.normalized)
         .where((w) => w.length > 2 && !SpellChecker.stopWords.contains(w))
-        .toSet();
+        .toList();
     final userWords =
-        Tokenizer.tokenize(userEnglish).map((t) => t.normalized).toSet();
+        Tokenizer.tokenize(userEnglish).map((t) => t.normalized).toList();
+    final userSet = userWords.toSet();
 
-    final missing = <String>[];
+    // Word-level grading: exact hit, fuzzy/near hit, or missing.
+    final assessments = <WordAssessment>[];
+    int exact = 0, fuzzy = 0, missing = 0;
+    final seen = <String>{};
     for (final word in refContentWords) {
-      if (userWords.contains(word)) continue;
-      // Fuzzy-match near forms (e.g. "go" vs "went") before flagging —
-      // a single machine translation is only one valid phrasing.
-      final hasCloseMatch = userWords
-          .any((userWord) => SpellChecker.levenshtein(word, userWord) <= 2);
-      if (!hasCloseMatch) missing.add(word);
+      if (!seen.add(word)) continue; // dedupe
+      if (userSet.contains(word)) {
+        exact++;
+        assessments.add(WordAssessment(
+            expected: word, level: MatchLevel.exact, userWord: word));
+        continue;
+      }
+      String? near;
+      for (final u in userWords) {
+        if (levenshteinDistance(word, u) <= 2) {
+          near = u;
+          break;
+        }
+      }
+      if (near != null) {
+        fuzzy++;
+        assessments.add(WordAssessment(
+            expected: word, level: MatchLevel.synonymOrFuzzy, userWord: near));
+      } else {
+        missing++;
+        assessments.add(
+            WordAssessment(expected: word, level: MatchLevel.missing));
+      }
     }
 
-    final union = refContentWords.union(userWords);
-    final intersection = refContentWords.intersection(userWords);
-    final similarity =
-        union.isEmpty ? 0.0 : intersection.length / union.length;
+    final totalContent = exact + fuzzy + missing;
+    // Weighted coverage: exact = full credit, fuzzy = partial credit.
+    final coverage = totalContent == 0
+        ? 1.0
+        : (exact + fuzzy * 0.6) / totalContent;
+
+    // Jaccard token overlap as a second, holistic signal.
+    final refSet = refContentWords.toSet();
+    final union = refSet.union(userSet);
+    final jaccard =
+        union.isEmpty ? 0.0 : refSet.intersection(userSet).length / union.length;
+
+    final similarity = (coverage * 0.7 + jaccard * 0.3).clamp(0.0, 1.0);
+    final grade = _grade(similarity, missing, totalContent);
+    final feedback =
+        _buildFeedback(grade, assessments, similarity);
 
     return OnlineCheckResult(
       source: source,
       referenceTranslation: reference,
-      missingContentWords: missing,
-      similarity: similarity.clamp(0.0, 1.0),
+      similarity: similarity,
+      grade: grade,
+      wordAssessments: assessments,
+      feedback: feedback,
     );
+  }
+
+  TranslationGrade _grade(double similarity, int missing, int total) {
+    if (similarity >= 0.9 || (total > 0 && missing == 0 && similarity >= 0.8)) {
+      return TranslationGrade.exact;
+    }
+    if (similarity >= 0.7) return TranslationGrade.good;
+    if (similarity >= 0.4) return TranslationGrade.partial;
+    return TranslationGrade.poor;
+  }
+
+  List<String> _buildFeedback(
+    TranslationGrade grade,
+    List<WordAssessment> assessments,
+    double similarity,
+  ) {
+    final lines = <String>[];
+    final missing =
+        assessments.where((a) => a.level == MatchLevel.missing).toList();
+    final fuzzy = assessments
+        .where((a) => a.level == MatchLevel.synonymOrFuzzy)
+        .toList();
+
+    switch (grade) {
+      case TranslationGrade.exact:
+        lines.add('Your translation closely matches the reference. 🎉');
+        break;
+      case TranslationGrade.good:
+        lines.add('Solid translation — it captures the meaning well.');
+        break;
+      case TranslationGrade.partial:
+        lines.add('You got part of the meaning across, but some key '
+            'words are missing or off.');
+        break;
+      case TranslationGrade.poor:
+        lines.add('This differs a lot from the reference — compare it '
+            'below and try again.');
+        break;
+    }
+
+    if (missing.isNotEmpty) {
+      final words = missing.take(6).map((a) => a.expected).join(', ');
+      lines.add('Consider including: $words'
+          '${missing.length > 6 ? '…' : ''}.');
+    }
+    if (fuzzy.isNotEmpty && grade != TranslationGrade.exact) {
+      final pairs = fuzzy
+          .take(4)
+          .map((a) => '"${a.userWord}" → "${a.expected}"')
+          .join(', ');
+      lines.add('Close, but check word choice: $pairs.');
+    }
+    return lines;
   }
 
   OnlineCheckFailureReason _mapFailure(MyMemoryFailure reason) {

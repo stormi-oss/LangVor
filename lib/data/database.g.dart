@@ -481,6 +481,303 @@ class TranslationProjectsCompanion extends UpdateCompanion<TranslationProject> {
   }
 }
 
+class $VocabularyFoldersTable extends VocabularyFolders
+    with TableInfo<$VocabularyFoldersTable, VocabularyFolder> {
+  @override
+  final GeneratedDatabase attachedDatabase;
+  final String? _alias;
+  $VocabularyFoldersTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _idMeta = const VerificationMeta('id');
+  @override
+  late final GeneratedColumn<int> id = GeneratedColumn<int>(
+      'id', aliasedName, false,
+      hasAutoIncrement: true,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultConstraints:
+          GeneratedColumn.constraintIsAlways('PRIMARY KEY AUTOINCREMENT'));
+  static const VerificationMeta _nameMeta = const VerificationMeta('name');
+  @override
+  late final GeneratedColumn<String> name = GeneratedColumn<String>(
+      'name', aliasedName, false,
+      additionalChecks:
+          GeneratedColumn.checkTextLength(minTextLength: 1, maxTextLength: 120),
+      type: DriftSqlType.string,
+      requiredDuringInsert: true);
+  static const VerificationMeta _colorMeta = const VerificationMeta('color');
+  @override
+  late final GeneratedColumn<String> color = GeneratedColumn<String>(
+      'color', aliasedName, false,
+      type: DriftSqlType.string,
+      requiredDuringInsert: false,
+      defaultValue: const Constant(''));
+  static const VerificationMeta _sortOrderMeta =
+      const VerificationMeta('sortOrder');
+  @override
+  late final GeneratedColumn<int> sortOrder = GeneratedColumn<int>(
+      'sort_order', aliasedName, false,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultValue: const Constant(0));
+  static const VerificationMeta _createdAtMeta =
+      const VerificationMeta('createdAt');
+  @override
+  late final GeneratedColumn<DateTime> createdAt = GeneratedColumn<DateTime>(
+      'created_at', aliasedName, false,
+      type: DriftSqlType.dateTime,
+      requiredDuringInsert: false,
+      defaultValue: currentDateAndTime);
+  @override
+  List<GeneratedColumn> get $columns => [id, name, color, sortOrder, createdAt];
+  @override
+  String get aliasedName => _alias ?? actualTableName;
+  @override
+  String get actualTableName => $name;
+  static const String $name = 'vocabulary_folders';
+  @override
+  VerificationContext validateIntegrity(Insertable<VocabularyFolder> instance,
+      {bool isInserting = false}) {
+    final context = VerificationContext();
+    final data = instance.toColumns(true);
+    if (data.containsKey('id')) {
+      context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
+    }
+    if (data.containsKey('name')) {
+      context.handle(
+          _nameMeta, name.isAcceptableOrUnknown(data['name']!, _nameMeta));
+    } else if (isInserting) {
+      context.missing(_nameMeta);
+    }
+    if (data.containsKey('color')) {
+      context.handle(
+          _colorMeta, color.isAcceptableOrUnknown(data['color']!, _colorMeta));
+    }
+    if (data.containsKey('sort_order')) {
+      context.handle(_sortOrderMeta,
+          sortOrder.isAcceptableOrUnknown(data['sort_order']!, _sortOrderMeta));
+    }
+    if (data.containsKey('created_at')) {
+      context.handle(_createdAtMeta,
+          createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta));
+    }
+    return context;
+  }
+
+  @override
+  Set<GeneratedColumn> get $primaryKey => {id};
+  @override
+  VocabularyFolder map(Map<String, dynamic> data, {String? tablePrefix}) {
+    final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
+    return VocabularyFolder(
+      id: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}id'])!,
+      name: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}name'])!,
+      color: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}color'])!,
+      sortOrder: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}sort_order'])!,
+      createdAt: attachedDatabase.typeMapping
+          .read(DriftSqlType.dateTime, data['${effectivePrefix}created_at'])!,
+    );
+  }
+
+  @override
+  $VocabularyFoldersTable createAlias(String alias) {
+    return $VocabularyFoldersTable(attachedDatabase, alias);
+  }
+}
+
+class VocabularyFolder extends DataClass
+    implements Insertable<VocabularyFolder> {
+  final int id;
+  final String name;
+  final String color;
+  final int sortOrder;
+  final DateTime createdAt;
+  const VocabularyFolder(
+      {required this.id,
+      required this.name,
+      required this.color,
+      required this.sortOrder,
+      required this.createdAt});
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    map['id'] = Variable<int>(id);
+    map['name'] = Variable<String>(name);
+    map['color'] = Variable<String>(color);
+    map['sort_order'] = Variable<int>(sortOrder);
+    map['created_at'] = Variable<DateTime>(createdAt);
+    return map;
+  }
+
+  VocabularyFoldersCompanion toCompanion(bool nullToAbsent) {
+    return VocabularyFoldersCompanion(
+      id: Value(id),
+      name: Value(name),
+      color: Value(color),
+      sortOrder: Value(sortOrder),
+      createdAt: Value(createdAt),
+    );
+  }
+
+  factory VocabularyFolder.fromJson(Map<String, dynamic> json,
+      {ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return VocabularyFolder(
+      id: serializer.fromJson<int>(json['id']),
+      name: serializer.fromJson<String>(json['name']),
+      color: serializer.fromJson<String>(json['color']),
+      sortOrder: serializer.fromJson<int>(json['sortOrder']),
+      createdAt: serializer.fromJson<DateTime>(json['createdAt']),
+    );
+  }
+  @override
+  Map<String, dynamic> toJson({ValueSerializer? serializer}) {
+    serializer ??= driftRuntimeOptions.defaultSerializer;
+    return <String, dynamic>{
+      'id': serializer.toJson<int>(id),
+      'name': serializer.toJson<String>(name),
+      'color': serializer.toJson<String>(color),
+      'sortOrder': serializer.toJson<int>(sortOrder),
+      'createdAt': serializer.toJson<DateTime>(createdAt),
+    };
+  }
+
+  VocabularyFolder copyWith(
+          {int? id,
+          String? name,
+          String? color,
+          int? sortOrder,
+          DateTime? createdAt}) =>
+      VocabularyFolder(
+        id: id ?? this.id,
+        name: name ?? this.name,
+        color: color ?? this.color,
+        sortOrder: sortOrder ?? this.sortOrder,
+        createdAt: createdAt ?? this.createdAt,
+      );
+  VocabularyFolder copyWithCompanion(VocabularyFoldersCompanion data) {
+    return VocabularyFolder(
+      id: data.id.present ? data.id.value : this.id,
+      name: data.name.present ? data.name.value : this.name,
+      color: data.color.present ? data.color.value : this.color,
+      sortOrder: data.sortOrder.present ? data.sortOrder.value : this.sortOrder,
+      createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
+    );
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('VocabularyFolder(')
+          ..write('id: $id, ')
+          ..write('name: $name, ')
+          ..write('color: $color, ')
+          ..write('sortOrder: $sortOrder, ')
+          ..write('createdAt: $createdAt')
+          ..write(')'))
+        .toString();
+  }
+
+  @override
+  int get hashCode => Object.hash(id, name, color, sortOrder, createdAt);
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      (other is VocabularyFolder &&
+          other.id == this.id &&
+          other.name == this.name &&
+          other.color == this.color &&
+          other.sortOrder == this.sortOrder &&
+          other.createdAt == this.createdAt);
+}
+
+class VocabularyFoldersCompanion extends UpdateCompanion<VocabularyFolder> {
+  final Value<int> id;
+  final Value<String> name;
+  final Value<String> color;
+  final Value<int> sortOrder;
+  final Value<DateTime> createdAt;
+  const VocabularyFoldersCompanion({
+    this.id = const Value.absent(),
+    this.name = const Value.absent(),
+    this.color = const Value.absent(),
+    this.sortOrder = const Value.absent(),
+    this.createdAt = const Value.absent(),
+  });
+  VocabularyFoldersCompanion.insert({
+    this.id = const Value.absent(),
+    required String name,
+    this.color = const Value.absent(),
+    this.sortOrder = const Value.absent(),
+    this.createdAt = const Value.absent(),
+  }) : name = Value(name);
+  static Insertable<VocabularyFolder> custom({
+    Expression<int>? id,
+    Expression<String>? name,
+    Expression<String>? color,
+    Expression<int>? sortOrder,
+    Expression<DateTime>? createdAt,
+  }) {
+    return RawValuesInsertable({
+      if (id != null) 'id': id,
+      if (name != null) 'name': name,
+      if (color != null) 'color': color,
+      if (sortOrder != null) 'sort_order': sortOrder,
+      if (createdAt != null) 'created_at': createdAt,
+    });
+  }
+
+  VocabularyFoldersCompanion copyWith(
+      {Value<int>? id,
+      Value<String>? name,
+      Value<String>? color,
+      Value<int>? sortOrder,
+      Value<DateTime>? createdAt}) {
+    return VocabularyFoldersCompanion(
+      id: id ?? this.id,
+      name: name ?? this.name,
+      color: color ?? this.color,
+      sortOrder: sortOrder ?? this.sortOrder,
+      createdAt: createdAt ?? this.createdAt,
+    );
+  }
+
+  @override
+  Map<String, Expression> toColumns(bool nullToAbsent) {
+    final map = <String, Expression>{};
+    if (id.present) {
+      map['id'] = Variable<int>(id.value);
+    }
+    if (name.present) {
+      map['name'] = Variable<String>(name.value);
+    }
+    if (color.present) {
+      map['color'] = Variable<String>(color.value);
+    }
+    if (sortOrder.present) {
+      map['sort_order'] = Variable<int>(sortOrder.value);
+    }
+    if (createdAt.present) {
+      map['created_at'] = Variable<DateTime>(createdAt.value);
+    }
+    return map;
+  }
+
+  @override
+  String toString() {
+    return (StringBuffer('VocabularyFoldersCompanion(')
+          ..write('id: $id, ')
+          ..write('name: $name, ')
+          ..write('color: $color, ')
+          ..write('sortOrder: $sortOrder, ')
+          ..write('createdAt: $createdAt')
+          ..write(')'))
+        .toString();
+  }
+}
+
 class $VocabularyCardsTable extends VocabularyCards
     with TableInfo<$VocabularyCardsTable, VocabularyCard> {
   @override
@@ -540,6 +837,22 @@ class $VocabularyCardsTable extends VocabularyCards
       type: DriftSqlType.dateTime,
       requiredDuringInsert: false,
       defaultValue: currentDateAndTime);
+  static const VerificationMeta _folderIdMeta =
+      const VerificationMeta('folderId');
+  @override
+  late final GeneratedColumn<int> folderId = GeneratedColumn<int>(
+      'folder_id', aliasedName, true,
+      type: DriftSqlType.int, requiredDuringInsert: false);
+  static const VerificationMeta _favoriteMeta =
+      const VerificationMeta('favorite');
+  @override
+  late final GeneratedColumn<bool> favorite = GeneratedColumn<bool>(
+      'favorite', aliasedName, false,
+      type: DriftSqlType.bool,
+      requiredDuringInsert: false,
+      defaultConstraints:
+          GeneratedColumn.constraintIsAlways('CHECK ("favorite" IN (0, 1))'),
+      defaultValue: const Constant(false));
   static const VerificationMeta _nextReviewAtMeta =
       const VerificationMeta('nextReviewAt');
   @override
@@ -581,6 +894,8 @@ class $VocabularyCardsTable extends VocabularyCards
         contextSentence,
         partOfSpeech,
         createdAt,
+        folderId,
+        favorite,
         nextReviewAt,
         easeFactor,
         interval,
@@ -637,6 +952,14 @@ class $VocabularyCardsTable extends VocabularyCards
       context.handle(_createdAtMeta,
           createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta));
     }
+    if (data.containsKey('folder_id')) {
+      context.handle(_folderIdMeta,
+          folderId.isAcceptableOrUnknown(data['folder_id']!, _folderIdMeta));
+    }
+    if (data.containsKey('favorite')) {
+      context.handle(_favoriteMeta,
+          favorite.isAcceptableOrUnknown(data['favorite']!, _favoriteMeta));
+    }
     if (data.containsKey('next_review_at')) {
       context.handle(
           _nextReviewAtMeta,
@@ -682,6 +1005,10 @@ class $VocabularyCardsTable extends VocabularyCards
           .read(DriftSqlType.string, data['${effectivePrefix}part_of_speech'])!,
       createdAt: attachedDatabase.typeMapping
           .read(DriftSqlType.dateTime, data['${effectivePrefix}created_at'])!,
+      folderId: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}folder_id']),
+      favorite: attachedDatabase.typeMapping
+          .read(DriftSqlType.bool, data['${effectivePrefix}favorite'])!,
       nextReviewAt: attachedDatabase.typeMapping.read(
           DriftSqlType.dateTime, data['${effectivePrefix}next_review_at'])!,
       easeFactor: attachedDatabase.typeMapping
@@ -707,6 +1034,8 @@ class VocabularyCard extends DataClass implements Insertable<VocabularyCard> {
   final String contextSentence;
   final String partOfSpeech;
   final DateTime createdAt;
+  final int? folderId;
+  final bool favorite;
   final DateTime nextReviewAt;
   final double easeFactor;
   final int interval;
@@ -719,6 +1048,8 @@ class VocabularyCard extends DataClass implements Insertable<VocabularyCard> {
       required this.contextSentence,
       required this.partOfSpeech,
       required this.createdAt,
+      this.folderId,
+      required this.favorite,
       required this.nextReviewAt,
       required this.easeFactor,
       required this.interval,
@@ -733,6 +1064,10 @@ class VocabularyCard extends DataClass implements Insertable<VocabularyCard> {
     map['context_sentence'] = Variable<String>(contextSentence);
     map['part_of_speech'] = Variable<String>(partOfSpeech);
     map['created_at'] = Variable<DateTime>(createdAt);
+    if (!nullToAbsent || folderId != null) {
+      map['folder_id'] = Variable<int>(folderId);
+    }
+    map['favorite'] = Variable<bool>(favorite);
     map['next_review_at'] = Variable<DateTime>(nextReviewAt);
     map['ease_factor'] = Variable<double>(easeFactor);
     map['interval'] = Variable<int>(interval);
@@ -749,6 +1084,10 @@ class VocabularyCard extends DataClass implements Insertable<VocabularyCard> {
       contextSentence: Value(contextSentence),
       partOfSpeech: Value(partOfSpeech),
       createdAt: Value(createdAt),
+      folderId: folderId == null && nullToAbsent
+          ? const Value.absent()
+          : Value(folderId),
+      favorite: Value(favorite),
       nextReviewAt: Value(nextReviewAt),
       easeFactor: Value(easeFactor),
       interval: Value(interval),
@@ -768,6 +1107,8 @@ class VocabularyCard extends DataClass implements Insertable<VocabularyCard> {
       contextSentence: serializer.fromJson<String>(json['contextSentence']),
       partOfSpeech: serializer.fromJson<String>(json['partOfSpeech']),
       createdAt: serializer.fromJson<DateTime>(json['createdAt']),
+      folderId: serializer.fromJson<int?>(json['folderId']),
+      favorite: serializer.fromJson<bool>(json['favorite']),
       nextReviewAt: serializer.fromJson<DateTime>(json['nextReviewAt']),
       easeFactor: serializer.fromJson<double>(json['easeFactor']),
       interval: serializer.fromJson<int>(json['interval']),
@@ -785,6 +1126,8 @@ class VocabularyCard extends DataClass implements Insertable<VocabularyCard> {
       'contextSentence': serializer.toJson<String>(contextSentence),
       'partOfSpeech': serializer.toJson<String>(partOfSpeech),
       'createdAt': serializer.toJson<DateTime>(createdAt),
+      'folderId': serializer.toJson<int?>(folderId),
+      'favorite': serializer.toJson<bool>(favorite),
       'nextReviewAt': serializer.toJson<DateTime>(nextReviewAt),
       'easeFactor': serializer.toJson<double>(easeFactor),
       'interval': serializer.toJson<int>(interval),
@@ -800,6 +1143,8 @@ class VocabularyCard extends DataClass implements Insertable<VocabularyCard> {
           String? contextSentence,
           String? partOfSpeech,
           DateTime? createdAt,
+          Value<int?> folderId = const Value.absent(),
+          bool? favorite,
           DateTime? nextReviewAt,
           double? easeFactor,
           int? interval,
@@ -812,6 +1157,8 @@ class VocabularyCard extends DataClass implements Insertable<VocabularyCard> {
         contextSentence: contextSentence ?? this.contextSentence,
         partOfSpeech: partOfSpeech ?? this.partOfSpeech,
         createdAt: createdAt ?? this.createdAt,
+        folderId: folderId.present ? folderId.value : this.folderId,
+        favorite: favorite ?? this.favorite,
         nextReviewAt: nextReviewAt ?? this.nextReviewAt,
         easeFactor: easeFactor ?? this.easeFactor,
         interval: interval ?? this.interval,
@@ -834,6 +1181,8 @@ class VocabularyCard extends DataClass implements Insertable<VocabularyCard> {
           ? data.partOfSpeech.value
           : this.partOfSpeech,
       createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
+      folderId: data.folderId.present ? data.folderId.value : this.folderId,
+      favorite: data.favorite.present ? data.favorite.value : this.favorite,
       nextReviewAt: data.nextReviewAt.present
           ? data.nextReviewAt.value
           : this.nextReviewAt,
@@ -855,6 +1204,8 @@ class VocabularyCard extends DataClass implements Insertable<VocabularyCard> {
           ..write('contextSentence: $contextSentence, ')
           ..write('partOfSpeech: $partOfSpeech, ')
           ..write('createdAt: $createdAt, ')
+          ..write('folderId: $folderId, ')
+          ..write('favorite: $favorite, ')
           ..write('nextReviewAt: $nextReviewAt, ')
           ..write('easeFactor: $easeFactor, ')
           ..write('interval: $interval, ')
@@ -872,6 +1223,8 @@ class VocabularyCard extends DataClass implements Insertable<VocabularyCard> {
       contextSentence,
       partOfSpeech,
       createdAt,
+      folderId,
+      favorite,
       nextReviewAt,
       easeFactor,
       interval,
@@ -887,6 +1240,8 @@ class VocabularyCard extends DataClass implements Insertable<VocabularyCard> {
           other.contextSentence == this.contextSentence &&
           other.partOfSpeech == this.partOfSpeech &&
           other.createdAt == this.createdAt &&
+          other.folderId == this.folderId &&
+          other.favorite == this.favorite &&
           other.nextReviewAt == this.nextReviewAt &&
           other.easeFactor == this.easeFactor &&
           other.interval == this.interval &&
@@ -901,6 +1256,8 @@ class VocabularyCardsCompanion extends UpdateCompanion<VocabularyCard> {
   final Value<String> contextSentence;
   final Value<String> partOfSpeech;
   final Value<DateTime> createdAt;
+  final Value<int?> folderId;
+  final Value<bool> favorite;
   final Value<DateTime> nextReviewAt;
   final Value<double> easeFactor;
   final Value<int> interval;
@@ -913,6 +1270,8 @@ class VocabularyCardsCompanion extends UpdateCompanion<VocabularyCard> {
     this.contextSentence = const Value.absent(),
     this.partOfSpeech = const Value.absent(),
     this.createdAt = const Value.absent(),
+    this.folderId = const Value.absent(),
+    this.favorite = const Value.absent(),
     this.nextReviewAt = const Value.absent(),
     this.easeFactor = const Value.absent(),
     this.interval = const Value.absent(),
@@ -926,6 +1285,8 @@ class VocabularyCardsCompanion extends UpdateCompanion<VocabularyCard> {
     this.contextSentence = const Value.absent(),
     this.partOfSpeech = const Value.absent(),
     this.createdAt = const Value.absent(),
+    this.folderId = const Value.absent(),
+    this.favorite = const Value.absent(),
     this.nextReviewAt = const Value.absent(),
     this.easeFactor = const Value.absent(),
     this.interval = const Value.absent(),
@@ -940,6 +1301,8 @@ class VocabularyCardsCompanion extends UpdateCompanion<VocabularyCard> {
     Expression<String>? contextSentence,
     Expression<String>? partOfSpeech,
     Expression<DateTime>? createdAt,
+    Expression<int>? folderId,
+    Expression<bool>? favorite,
     Expression<DateTime>? nextReviewAt,
     Expression<double>? easeFactor,
     Expression<int>? interval,
@@ -953,6 +1316,8 @@ class VocabularyCardsCompanion extends UpdateCompanion<VocabularyCard> {
       if (contextSentence != null) 'context_sentence': contextSentence,
       if (partOfSpeech != null) 'part_of_speech': partOfSpeech,
       if (createdAt != null) 'created_at': createdAt,
+      if (folderId != null) 'folder_id': folderId,
+      if (favorite != null) 'favorite': favorite,
       if (nextReviewAt != null) 'next_review_at': nextReviewAt,
       if (easeFactor != null) 'ease_factor': easeFactor,
       if (interval != null) 'interval': interval,
@@ -968,6 +1333,8 @@ class VocabularyCardsCompanion extends UpdateCompanion<VocabularyCard> {
       Value<String>? contextSentence,
       Value<String>? partOfSpeech,
       Value<DateTime>? createdAt,
+      Value<int?>? folderId,
+      Value<bool>? favorite,
       Value<DateTime>? nextReviewAt,
       Value<double>? easeFactor,
       Value<int>? interval,
@@ -980,6 +1347,8 @@ class VocabularyCardsCompanion extends UpdateCompanion<VocabularyCard> {
       contextSentence: contextSentence ?? this.contextSentence,
       partOfSpeech: partOfSpeech ?? this.partOfSpeech,
       createdAt: createdAt ?? this.createdAt,
+      folderId: folderId ?? this.folderId,
+      favorite: favorite ?? this.favorite,
       nextReviewAt: nextReviewAt ?? this.nextReviewAt,
       easeFactor: easeFactor ?? this.easeFactor,
       interval: interval ?? this.interval,
@@ -1011,6 +1380,12 @@ class VocabularyCardsCompanion extends UpdateCompanion<VocabularyCard> {
     if (createdAt.present) {
       map['created_at'] = Variable<DateTime>(createdAt.value);
     }
+    if (folderId.present) {
+      map['folder_id'] = Variable<int>(folderId.value);
+    }
+    if (favorite.present) {
+      map['favorite'] = Variable<bool>(favorite.value);
+    }
     if (nextReviewAt.present) {
       map['next_review_at'] = Variable<DateTime>(nextReviewAt.value);
     }
@@ -1036,6 +1411,8 @@ class VocabularyCardsCompanion extends UpdateCompanion<VocabularyCard> {
           ..write('contextSentence: $contextSentence, ')
           ..write('partOfSpeech: $partOfSpeech, ')
           ..write('createdAt: $createdAt, ')
+          ..write('folderId: $folderId, ')
+          ..write('favorite: $favorite, ')
           ..write('nextReviewAt: $nextReviewAt, ')
           ..write('easeFactor: $easeFactor, ')
           ..write('interval: $interval, ')
@@ -1887,6 +2264,8 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   $AppDatabaseManager get managers => $AppDatabaseManager(this);
   late final $TranslationProjectsTable translationProjects =
       $TranslationProjectsTable(this);
+  late final $VocabularyFoldersTable vocabularyFolders =
+      $VocabularyFoldersTable(this);
   late final $VocabularyCardsTable vocabularyCards =
       $VocabularyCardsTable(this);
   late final $DictionaryEntriesTable dictionaryEntries =
@@ -1896,8 +2275,13 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
   @override
-  List<DatabaseSchemaEntity> get allSchemaEntities =>
-      [translationProjects, vocabularyCards, dictionaryEntries, grammarRules];
+  List<DatabaseSchemaEntity> get allSchemaEntities => [
+        translationProjects,
+        vocabularyFolders,
+        vocabularyCards,
+        dictionaryEntries,
+        grammarRules
+      ];
 }
 
 typedef $$TranslationProjectsTableCreateCompanionBuilder
@@ -2138,6 +2522,175 @@ typedef $$TranslationProjectsTableProcessedTableManager = ProcessedTableManager<
     ),
     TranslationProject,
     PrefetchHooks Function()>;
+typedef $$VocabularyFoldersTableCreateCompanionBuilder
+    = VocabularyFoldersCompanion Function({
+  Value<int> id,
+  required String name,
+  Value<String> color,
+  Value<int> sortOrder,
+  Value<DateTime> createdAt,
+});
+typedef $$VocabularyFoldersTableUpdateCompanionBuilder
+    = VocabularyFoldersCompanion Function({
+  Value<int> id,
+  Value<String> name,
+  Value<String> color,
+  Value<int> sortOrder,
+  Value<DateTime> createdAt,
+});
+
+class $$VocabularyFoldersTableFilterComposer
+    extends Composer<_$AppDatabase, $VocabularyFoldersTable> {
+  $$VocabularyFoldersTableFilterComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnFilters<int> get id => $composableBuilder(
+      column: $table.id, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get name => $composableBuilder(
+      column: $table.name, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<String> get color => $composableBuilder(
+      column: $table.color, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<int> get sortOrder => $composableBuilder(
+      column: $table.sortOrder, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<DateTime> get createdAt => $composableBuilder(
+      column: $table.createdAt, builder: (column) => ColumnFilters(column));
+}
+
+class $$VocabularyFoldersTableOrderingComposer
+    extends Composer<_$AppDatabase, $VocabularyFoldersTable> {
+  $$VocabularyFoldersTableOrderingComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  ColumnOrderings<int> get id => $composableBuilder(
+      column: $table.id, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get name => $composableBuilder(
+      column: $table.name, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<String> get color => $composableBuilder(
+      column: $table.color, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<int> get sortOrder => $composableBuilder(
+      column: $table.sortOrder, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<DateTime> get createdAt => $composableBuilder(
+      column: $table.createdAt, builder: (column) => ColumnOrderings(column));
+}
+
+class $$VocabularyFoldersTableAnnotationComposer
+    extends Composer<_$AppDatabase, $VocabularyFoldersTable> {
+  $$VocabularyFoldersTableAnnotationComposer({
+    required super.$db,
+    required super.$table,
+    super.joinBuilder,
+    super.$addJoinBuilderToRootComposer,
+    super.$removeJoinBuilderFromRootComposer,
+  });
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
+
+  GeneratedColumn<String> get name =>
+      $composableBuilder(column: $table.name, builder: (column) => column);
+
+  GeneratedColumn<String> get color =>
+      $composableBuilder(column: $table.color, builder: (column) => column);
+
+  GeneratedColumn<int> get sortOrder =>
+      $composableBuilder(column: $table.sortOrder, builder: (column) => column);
+
+  GeneratedColumn<DateTime> get createdAt =>
+      $composableBuilder(column: $table.createdAt, builder: (column) => column);
+}
+
+class $$VocabularyFoldersTableTableManager extends RootTableManager<
+    _$AppDatabase,
+    $VocabularyFoldersTable,
+    VocabularyFolder,
+    $$VocabularyFoldersTableFilterComposer,
+    $$VocabularyFoldersTableOrderingComposer,
+    $$VocabularyFoldersTableAnnotationComposer,
+    $$VocabularyFoldersTableCreateCompanionBuilder,
+    $$VocabularyFoldersTableUpdateCompanionBuilder,
+    (
+      VocabularyFolder,
+      BaseReferences<_$AppDatabase, $VocabularyFoldersTable, VocabularyFolder>
+    ),
+    VocabularyFolder,
+    PrefetchHooks Function()> {
+  $$VocabularyFoldersTableTableManager(
+      _$AppDatabase db, $VocabularyFoldersTable table)
+      : super(TableManagerState(
+          db: db,
+          table: table,
+          createFilteringComposer: () =>
+              $$VocabularyFoldersTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$VocabularyFoldersTableOrderingComposer($db: db, $table: table),
+          createComputedFieldComposer: () =>
+              $$VocabularyFoldersTableAnnotationComposer(
+                  $db: db, $table: table),
+          updateCompanionCallback: ({
+            Value<int> id = const Value.absent(),
+            Value<String> name = const Value.absent(),
+            Value<String> color = const Value.absent(),
+            Value<int> sortOrder = const Value.absent(),
+            Value<DateTime> createdAt = const Value.absent(),
+          }) =>
+              VocabularyFoldersCompanion(
+            id: id,
+            name: name,
+            color: color,
+            sortOrder: sortOrder,
+            createdAt: createdAt,
+          ),
+          createCompanionCallback: ({
+            Value<int> id = const Value.absent(),
+            required String name,
+            Value<String> color = const Value.absent(),
+            Value<int> sortOrder = const Value.absent(),
+            Value<DateTime> createdAt = const Value.absent(),
+          }) =>
+              VocabularyFoldersCompanion.insert(
+            id: id,
+            name: name,
+            color: color,
+            sortOrder: sortOrder,
+            createdAt: createdAt,
+          ),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
+          prefetchHooksCallback: null,
+        ));
+}
+
+typedef $$VocabularyFoldersTableProcessedTableManager = ProcessedTableManager<
+    _$AppDatabase,
+    $VocabularyFoldersTable,
+    VocabularyFolder,
+    $$VocabularyFoldersTableFilterComposer,
+    $$VocabularyFoldersTableOrderingComposer,
+    $$VocabularyFoldersTableAnnotationComposer,
+    $$VocabularyFoldersTableCreateCompanionBuilder,
+    $$VocabularyFoldersTableUpdateCompanionBuilder,
+    (
+      VocabularyFolder,
+      BaseReferences<_$AppDatabase, $VocabularyFoldersTable, VocabularyFolder>
+    ),
+    VocabularyFolder,
+    PrefetchHooks Function()>;
 typedef $$VocabularyCardsTableCreateCompanionBuilder = VocabularyCardsCompanion
     Function({
   Value<int> id,
@@ -2147,6 +2700,8 @@ typedef $$VocabularyCardsTableCreateCompanionBuilder = VocabularyCardsCompanion
   Value<String> contextSentence,
   Value<String> partOfSpeech,
   Value<DateTime> createdAt,
+  Value<int?> folderId,
+  Value<bool> favorite,
   Value<DateTime> nextReviewAt,
   Value<double> easeFactor,
   Value<int> interval,
@@ -2161,6 +2716,8 @@ typedef $$VocabularyCardsTableUpdateCompanionBuilder = VocabularyCardsCompanion
   Value<String> contextSentence,
   Value<String> partOfSpeech,
   Value<DateTime> createdAt,
+  Value<int?> folderId,
+  Value<bool> favorite,
   Value<DateTime> nextReviewAt,
   Value<double> easeFactor,
   Value<int> interval,
@@ -2198,6 +2755,12 @@ class $$VocabularyCardsTableFilterComposer
 
   ColumnFilters<DateTime> get createdAt => $composableBuilder(
       column: $table.createdAt, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<int> get folderId => $composableBuilder(
+      column: $table.folderId, builder: (column) => ColumnFilters(column));
+
+  ColumnFilters<bool> get favorite => $composableBuilder(
+      column: $table.favorite, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<DateTime> get nextReviewAt => $composableBuilder(
       column: $table.nextReviewAt, builder: (column) => ColumnFilters(column));
@@ -2245,6 +2808,12 @@ class $$VocabularyCardsTableOrderingComposer
   ColumnOrderings<DateTime> get createdAt => $composableBuilder(
       column: $table.createdAt, builder: (column) => ColumnOrderings(column));
 
+  ColumnOrderings<int> get folderId => $composableBuilder(
+      column: $table.folderId, builder: (column) => ColumnOrderings(column));
+
+  ColumnOrderings<bool> get favorite => $composableBuilder(
+      column: $table.favorite, builder: (column) => ColumnOrderings(column));
+
   ColumnOrderings<DateTime> get nextReviewAt => $composableBuilder(
       column: $table.nextReviewAt,
       builder: (column) => ColumnOrderings(column));
@@ -2288,6 +2857,12 @@ class $$VocabularyCardsTableAnnotationComposer
 
   GeneratedColumn<DateTime> get createdAt =>
       $composableBuilder(column: $table.createdAt, builder: (column) => column);
+
+  GeneratedColumn<int> get folderId =>
+      $composableBuilder(column: $table.folderId, builder: (column) => column);
+
+  GeneratedColumn<bool> get favorite =>
+      $composableBuilder(column: $table.favorite, builder: (column) => column);
 
   GeneratedColumn<DateTime> get nextReviewAt => $composableBuilder(
       column: $table.nextReviewAt, builder: (column) => column);
@@ -2336,6 +2911,8 @@ class $$VocabularyCardsTableTableManager extends RootTableManager<
             Value<String> contextSentence = const Value.absent(),
             Value<String> partOfSpeech = const Value.absent(),
             Value<DateTime> createdAt = const Value.absent(),
+            Value<int?> folderId = const Value.absent(),
+            Value<bool> favorite = const Value.absent(),
             Value<DateTime> nextReviewAt = const Value.absent(),
             Value<double> easeFactor = const Value.absent(),
             Value<int> interval = const Value.absent(),
@@ -2349,6 +2926,8 @@ class $$VocabularyCardsTableTableManager extends RootTableManager<
             contextSentence: contextSentence,
             partOfSpeech: partOfSpeech,
             createdAt: createdAt,
+            folderId: folderId,
+            favorite: favorite,
             nextReviewAt: nextReviewAt,
             easeFactor: easeFactor,
             interval: interval,
@@ -2362,6 +2941,8 @@ class $$VocabularyCardsTableTableManager extends RootTableManager<
             Value<String> contextSentence = const Value.absent(),
             Value<String> partOfSpeech = const Value.absent(),
             Value<DateTime> createdAt = const Value.absent(),
+            Value<int?> folderId = const Value.absent(),
+            Value<bool> favorite = const Value.absent(),
             Value<DateTime> nextReviewAt = const Value.absent(),
             Value<double> easeFactor = const Value.absent(),
             Value<int> interval = const Value.absent(),
@@ -2375,6 +2956,8 @@ class $$VocabularyCardsTableTableManager extends RootTableManager<
             contextSentence: contextSentence,
             partOfSpeech: partOfSpeech,
             createdAt: createdAt,
+            folderId: folderId,
+            favorite: favorite,
             nextReviewAt: nextReviewAt,
             easeFactor: easeFactor,
             interval: interval,
@@ -2834,6 +3417,8 @@ class $AppDatabaseManager {
   $AppDatabaseManager(this._db);
   $$TranslationProjectsTableTableManager get translationProjects =>
       $$TranslationProjectsTableTableManager(_db, _db.translationProjects);
+  $$VocabularyFoldersTableTableManager get vocabularyFolders =>
+      $$VocabularyFoldersTableTableManager(_db, _db.vocabularyFolders);
   $$VocabularyCardsTableTableManager get vocabularyCards =>
       $$VocabularyCardsTableTableManager(_db, _db.vocabularyCards);
   $$DictionaryEntriesTableTableManager get dictionaryEntries =>

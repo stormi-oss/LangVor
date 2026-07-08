@@ -63,6 +63,12 @@ class AnalysisResult {
   /// [CheckSource.online] or [CheckSource.cache].
   final String? referenceTranslation;
 
+  /// The graded quality band from the online check, if available.
+  final TranslationGrade? translationGrade;
+
+  /// Detailed, human-readable reviewer feedback lines from the online check.
+  final List<String> onlineFeedback;
+
   const AnalysisResult({
     required this.errors,
     required this.overallScore,
@@ -72,6 +78,8 @@ class AnalysisResult {
     this.coveredTerms = 0,
     this.checkSource = CheckSource.offlineFallback,
     this.referenceTranslation,
+    this.translationGrade,
+    this.onlineFeedback = const [],
   });
 
   AnalysisResult copyWith({
@@ -83,6 +91,8 @@ class AnalysisResult {
     int? coveredTerms,
     CheckSource? checkSource,
     String? referenceTranslation,
+    TranslationGrade? translationGrade,
+    List<String>? onlineFeedback,
   }) {
     return AnalysisResult(
       errors: errors ?? this.errors,
@@ -93,6 +103,8 @@ class AnalysisResult {
       coveredTerms: coveredTerms ?? this.coveredTerms,
       checkSource: checkSource ?? this.checkSource,
       referenceTranslation: referenceTranslation ?? this.referenceTranslation,
+      translationGrade: translationGrade ?? this.translationGrade,
+      onlineFeedback: onlineFeedback ?? this.onlineFeedback,
     );
   }
 

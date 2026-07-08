@@ -29,8 +29,8 @@ class EmptyStateView extends StatelessWidget {
     final color = accentColor ?? AppColors.primary;
 
     return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(AppSpacing.xxxl),
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.all(AppSpacing.xl),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [

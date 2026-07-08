@@ -21,12 +21,77 @@ class AppCard extends StatelessWidget {
         border: Border.all(
           color: isDark ? AppColors.darkDivider : AppColors.lightDivider,
         ),
+        boxShadow: AppColors.cardShadow(isDark),
       ),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(AppSpacing.radiusMd),
         child: padding != null
             ? Padding(padding: padding!, child: Column(children: children))
             : Column(children: children),
+      ),
+    );
+  }
+}
+
+/// A clickable card that lifts slightly and deepens its shadow on hover —
+/// the standard interactive surface for project/vocabulary/folder tiles.
+class HoverCard extends StatefulWidget {
+  final Widget child;
+  final VoidCallback? onTap;
+  final VoidCallback? onSecondaryTap; // right-click / context menu
+  final EdgeInsetsGeometry padding;
+  final bool selected;
+
+  const HoverCard({
+    super.key,
+    required this.child,
+    this.onTap,
+    this.onSecondaryTap,
+    this.padding = const EdgeInsets.all(AppSpacing.lg),
+    this.selected = false,
+  });
+
+  @override
+  State<HoverCard> createState() => _HoverCardState();
+}
+
+class _HoverCardState extends State<HoverCard> {
+  bool _hovered = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final borderColor = widget.selected
+        ? AppColors.primary
+        : (isDark ? AppColors.darkDivider : AppColors.lightDivider);
+
+    return MouseRegion(
+      cursor: widget.onTap != null
+          ? SystemMouseCursors.click
+          : MouseCursor.defer,
+      onEnter: (_) => setState(() => _hovered = true),
+      onExit: (_) => setState(() => _hovered = false),
+      child: GestureDetector(
+        onTap: widget.onTap,
+        onSecondaryTap: widget.onSecondaryTap,
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 180),
+          curve: Curves.easeOut,
+          transform: Matrix4.translationValues(0, _hovered ? -2 : 0, 0),
+          padding: widget.padding,
+          decoration: BoxDecoration(
+            color: isDark ? AppColors.darkCard : AppColors.lightCard,
+            borderRadius: BorderRadius.circular(AppSpacing.radiusMd),
+            border: Border.all(
+              color: borderColor,
+              width: widget.selected ? 1.5 : 1,
+            ),
+            boxShadow: _hovered
+                ? AppColors.hoverShadow(isDark)
+                : AppColors.cardShadow(isDark),
+          ),
+          child: widget.child,
+        ),
       ),
     );
   }

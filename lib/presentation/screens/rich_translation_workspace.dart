@@ -7,12 +7,15 @@ import 'package:flutter_quill/flutter_quill.dart';
 import '../theme/app_colors.dart';
 import '../bloc/translation/translation_bloc.dart';
 import '../bloc/vocabulary/vocabulary_bloc.dart';
+import '../bloc/settings/settings_bloc.dart';
+import 'translation_trainer_screen.dart';
 import '../widgets/formatting_toolbar.dart';
 import '../widgets/error_tooltip.dart';
 import '../widgets/new_project_dialog.dart';
 import '../widgets/state_placeholders.dart';
 import '../../domain/offline_analyzer.dart';
-import '../../domain/online/online_translation_checker.dart' show CheckSource;
+import '../../domain/online/online_translation_checker.dart'
+    show CheckSource, TranslationGrade, TranslationGradeInfo;
 
 /// Rich-text translation workspace with dual Quill editors.
 ///
@@ -312,6 +315,27 @@ class _RichTranslationWorkspaceState extends State<RichTranslationWorkspace> {
                     )
                   : const Icon(Icons.fact_check_outlined, size: 18),
               label: const Text('Analyze'),
+            ),
+          ),
+          // Trainer
+          Padding(
+            padding: const EdgeInsets.only(right: 4),
+            child: TextButton.icon(
+              onPressed: () {
+                final project = state.selectedProject;
+                if (project == null) return;
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (_) => BlocProvider.value(
+                    value: context.read<SettingsBloc>(),
+                    child: TranslationTrainerScreen(
+                      title: project.title,
+                      sourceText: state.sourceText,
+                    ),
+                  ),
+                ));
+              },
+              icon: const Icon(Icons.fitness_center_rounded, size: 18),
+              label: const Text('Trainer'),
             ),
           ),
           // Score badge
@@ -797,6 +821,20 @@ class _AnalysisBar extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
             ),
           ),
+          if (result.translationGrade != null) ...[
+            const SizedBox(width: 8),
+            _GradeBadge(grade: result.translationGrade!),
+            const SizedBox(width: 4),
+            TextButton.icon(
+              onPressed: () => _showReviewerFeedback(context, result),
+              icon: const Icon(Icons.rate_review_outlined, size: 16),
+              label: const Text('Feedback'),
+              style: TextButton.styleFrom(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                minimumSize: const Size(0, 32),
+              ),
+            ),
+          ],
           const SizedBox(width: 8),
           _OnlineStatusChip(
             isChecking: isCheckingOnline,
@@ -807,6 +845,126 @@ class _AnalysisBar extends StatelessWidget {
       ),
     );
   }
+}
+
+Color _gradeColor(TranslationGrade grade) => switch (grade) {
+      TranslationGrade.exact => AppColors.success,
+      TranslationGrade.good => AppColors.info,
+      TranslationGrade.partial => AppColors.warning,
+      TranslationGrade.poor => AppColors.error,
+    };
+
+class _GradeBadge extends StatelessWidget {
+  final TranslationGrade grade;
+  const _GradeBadge({required this.grade});
+
+  @override
+  Widget build(BuildContext context) {
+    final color = _gradeColor(grade);
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+      decoration: BoxDecoration(
+        color: color.withValues(alpha: 0.16),
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Text(
+        grade.label,
+        style: Theme.of(context).textTheme.labelSmall?.copyWith(
+              color: color,
+              fontWeight: FontWeight.w700,
+            ),
+      ),
+    );
+  }
+}
+
+/// Shows the detailed reviewer feedback: grade, a reference translation, and
+/// specific what-to-fix lines from the online check.
+Future<void> _showReviewerFeedback(
+    BuildContext context, AnalysisResult result) {
+  final theme = Theme.of(context);
+  final color = _gradeColor(result.translationGrade!);
+  return showDialog(
+    context: context,
+    builder: (ctx) => AlertDialog(
+      title: Row(
+        children: [
+          Icon(Icons.rate_review_rounded, color: color),
+          const SizedBox(width: 10),
+          Text(result.translationGrade!.label),
+        ],
+      ),
+      content: SizedBox(
+        width: 440,
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              // Score meter
+              Row(
+                children: [
+                  Expanded(
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(4),
+                      child: LinearProgressIndicator(
+                        value: result.overallScore,
+                        minHeight: 8,
+                        color: color,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Text('${(result.overallScore * 100).round()}%',
+                      style: theme.textTheme.labelMedium
+                          ?.copyWith(color: color)),
+                ],
+              ),
+              const SizedBox(height: 16),
+              ...result.onlineFeedback.map((line) => Padding(
+                    padding: const EdgeInsets.only(bottom: 8),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text('•  '),
+                        Expanded(
+                            child: Text(line,
+                                style: theme.textTheme.bodyMedium)),
+                      ],
+                    ),
+                  )),
+              if (result.referenceTranslation != null) ...[
+                const SizedBox(height: 12),
+                Text('Reference translation',
+                    style: theme.textTheme.labelMedium),
+                const SizedBox(height: 4),
+                Container(
+                  width: double.infinity,
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: AppColors.primary.withValues(alpha: 0.08),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Text(result.referenceTranslation!,
+                      style: theme.textTheme.bodyLarge),
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  'This is one machine-generated reference — not the only '
+                  'correct answer. Use it as a guide.',
+                  style: theme.textTheme.labelSmall,
+                ),
+              ],
+            ],
+          ),
+        ),
+      ),
+      actions: [
+        TextButton(
+            onPressed: () => Navigator.pop(ctx), child: const Text('Close')),
+      ],
+    ),
+  );
 }
 
 /// Small status indicator for the MyMemory-backed translation check.

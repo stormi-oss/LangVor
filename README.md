@@ -38,11 +38,13 @@ These builds are **not signed** with a paid developer certificate, so both opera
 ## Features
 
 - **Dual-pane translation workspace** — Russian source and your English translation side by side, rich-text editing (bold/italic, verse mode for poetry).
-- **Real translation checking, not word-matching** — your translation is compared against a live reference translation fetched from the [MyMemory Translation API](https://mymemory.translated.net/) (free, no API key), not a fixed dictionary lookup. Reference translations are cached locally to minimize repeat requests.
-- **Offline fallback** — spelling (English wordlist) and grammar (rule-based) checks always run locally and instantly; if you're offline or turn off online checking in Settings, translation-coverage checking degrades gracefully to a local dictionary-based comparison instead of breaking.
-- **Vocabulary trainer** — look up words while translating, add them to a deck, and review them with an SM-2 spaced-repetition algorithm (flip cards, Again/Hard/Good/Easy ratings). Import/export as JSON or CSV.
-- **Keyboard shortcuts** — Ctrl/Cmd+Enter to re-check immediately, Ctrl/Cmd+N for a new text, Escape to dismiss dialogs.
-- **Light and dark themes**, adjustable font size.
+- **Graded translation checking, not word-matching** — your translation is compared against a live reference translation from the [MyMemory Translation API](https://mymemory.translated.net/) (free, no API key) and graded on multiple levels (exact / good / partial / needs work), with detailed reviewer feedback: missing words, word-choice hints, and a reference translation. Cached locally to minimize repeat requests.
+- **Offline fallback** — spelling (English wordlist) and grammar (rule-based) checks always run locally and instantly; if you're offline or turn off online checking, coverage checking degrades gracefully instead of breaking.
+- **Translation trainer** — practice a text sentence by sentence with Easy / Medium / Hard difficulty, a timer, live grading, achievement badges, and a personal-best leaderboard.
+- **Vocabulary manager (Finder-style)** — organize words into folders with a sidebar; switch between list, grid, and column views; inline-rename folders, right-click context menus, and drag words between folders. Import from **.txt / .csv / .json / .xlsx** (creates a folder per file) and export to JSON/CSV.
+- **Four study modes** — Flashcards, multiple-choice Quiz, Typing, and Listening (text-to-speech), plus SM-2 spaced-repetition review and a results chart.
+- **Fully customizable typography** — font size (presets + 10–24px slider), weight (Light → Extra Bold), italic, and line spacing, all applied live across the app.
+- **Light and dark themes** with a smooth transition, plus keyboard shortcuts (Ctrl/Cmd+Enter to re-check, Ctrl/Cmd+N for a new text, Escape to dismiss dialogs).
 
 ## Privacy
 

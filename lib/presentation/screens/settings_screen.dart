@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_spacing.dart';
+import '../theme/font_settings.dart';
 import '../bloc/settings/settings_bloc.dart';
 import '../widgets/app_card.dart';
 
@@ -68,28 +69,17 @@ class SettingsScreen extends StatelessWidget {
                             activeThumbColor: AppColors.primary,
                           ),
                         ),
-                        const Divider(height: 1, indent: 56),
-                        AppCardTile(
-                          icon: Icons.text_fields_rounded,
-                          title: 'Font Size',
-                          subtitle: '${state.fontSize.toInt()}px',
-                          trailing: SizedBox(
-                            width: 160,
-                            child: Slider(
-                              value: state.fontSize,
-                              min: 12,
-                              max: 24,
-                              divisions: 6,
-                              label: '${state.fontSize.toInt()}px',
-                              onChanged: (v) => context
-                                  .read<SettingsBloc>()
-                                  .add(SetFontSize(v)),
-                              activeColor: AppColors.primary,
-                            ),
-                          ),
-                        ),
                       ],
-                    ).animate().fadeIn(delay: 250.ms, duration: 400.ms),
+                    ).animate().fadeIn(delay: 220.ms, duration: 400.ms),
+
+                    const SizedBox(height: AppSpacing.xl),
+                    // ── Typography ──
+                    const AppSectionHeader(
+                        title: 'Typography', icon: Icons.text_fields_rounded),
+                    const SizedBox(height: AppSpacing.sm),
+                    _TypographyCard(state: state)
+                        .animate()
+                        .fadeIn(delay: 260.ms, duration: 400.ms),
 
                     const SizedBox(height: AppSpacing.xl),
                     // ── Online Checking ──
@@ -192,6 +182,188 @@ class SettingsScreen extends StatelessWidget {
 /// SettingsBloc rebuilds triggered by every keystroke (a plain
 /// `TextEditingController(text: state.contactEmail)` inline in build()
 /// would be recreated on every rebuild and jump the cursor to the end).
+/// The full typography controls: size (presets + slider), weight, italic,
+/// and line height — all applied live and persisted.
+class _TypographyCard extends StatelessWidget {
+  final SettingsState state;
+  const _TypographyCard({required this.state});
+
+  static const _sizePresets = <String, double>{
+    'Small': 12,
+    'Normal': 14,
+    'Large': 16,
+    'X-Large': 18,
+  };
+  static const _lineHeights = [1.2, 1.5, 1.8, 2.0];
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final bloc = context.read<SettingsBloc>();
+
+    return AppCard(
+      padding: const EdgeInsets.all(AppSpacing.lg),
+      children: [
+        // Live preview
+        Container(
+          width: double.infinity,
+          padding: const EdgeInsets.all(AppSpacing.md),
+          decoration: BoxDecoration(
+            color: theme.brightness == Brightness.dark
+                ? AppColors.darkSurfaceElevated
+                : AppColors.lightSurfaceElevated,
+            borderRadius: BorderRadius.circular(AppSpacing.radiusSm),
+          ),
+          child: Text(
+            'The quick brown fox jumps over the lazy dog.',
+            style: theme.textTheme.bodyLarge,
+          ),
+        ),
+        const SizedBox(height: AppSpacing.lg),
+
+        // Size presets
+        _rowLabel(context, 'Size', '${state.fontSize.toInt()}px'),
+        const SizedBox(height: AppSpacing.sm),
+        Wrap(
+          spacing: AppSpacing.sm,
+          children: _sizePresets.entries.map((e) {
+            final selected = state.fontSize == e.value;
+            return ChoiceChip(
+              label: Text(e.key),
+              selected: selected,
+              onSelected: (_) => bloc.add(SetFontSize(e.value)),
+            );
+          }).toList(),
+        ),
+        const SizedBox(height: AppSpacing.xs),
+        Slider(
+          value: state.fontSize.clamp(10, 24),
+          min: 10,
+          max: 24,
+          divisions: 14,
+          label: '${state.fontSize.toInt()}px',
+          activeColor: AppColors.primary,
+          onChanged: (v) => bloc.add(SetFontSize(v.roundToDouble())),
+        ),
+        const Divider(height: AppSpacing.xl),
+
+        // Weight
+        _rowLabel(context, 'Weight',
+            FontSettings.weightLabels[state.fontWeightIndex]),
+        const SizedBox(height: AppSpacing.sm),
+        _SegmentedControl(
+          options: FontSettings.weightLabels,
+          selectedIndex: state.fontWeightIndex,
+          onSelected: (i) => bloc.add(SetFontWeight(i)),
+        ),
+        const Divider(height: AppSpacing.xl),
+
+        // Line height
+        _rowLabel(context, 'Line spacing', '${state.lineHeight}×'),
+        const SizedBox(height: AppSpacing.sm),
+        _SegmentedControl(
+          options: _lineHeights.map((h) => '$h×').toList(),
+          selectedIndex: _lineHeights.indexOf(state.lineHeight).clamp(0, 3),
+          onSelected: (i) => bloc.add(SetLineHeight(_lineHeights[i])),
+        ),
+        const Divider(height: AppSpacing.xl),
+
+        // Italic
+        Row(
+          children: [
+            Icon(Icons.format_italic_rounded,
+                size: 20, color: theme.textTheme.bodySmall?.color),
+            const SizedBox(width: AppSpacing.md),
+            Expanded(
+              child: Text('Italic', style: theme.textTheme.titleSmall),
+            ),
+            Switch(
+              value: state.italic,
+              onChanged: (v) => bloc.add(SetItalic(v)),
+              activeThumbColor: AppColors.primary,
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  Widget _rowLabel(BuildContext context, String label, String value) {
+    final theme = Theme.of(context);
+    return Row(
+      children: [
+        Text(label, style: theme.textTheme.titleSmall),
+        const Spacer(),
+        Text(value,
+            style: theme.textTheme.labelMedium?.copyWith(
+              color: AppColors.primary,
+              fontWeight: FontWeight.w600,
+            )),
+      ],
+    );
+  }
+}
+
+/// A compact segmented button row used across the typography controls.
+class _SegmentedControl extends StatelessWidget {
+  final List<String> options;
+  final int selectedIndex;
+  final ValueChanged<int> onSelected;
+
+  const _SegmentedControl({
+    required this.options,
+    required this.selectedIndex,
+    required this.onSelected,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+
+    return Container(
+      padding: const EdgeInsets.all(3),
+      decoration: BoxDecoration(
+        color: isDark
+            ? AppColors.darkSurfaceElevated
+            : AppColors.lightSurfaceElevated,
+        borderRadius: BorderRadius.circular(AppSpacing.radiusSm),
+      ),
+      child: Row(
+        children: List.generate(options.length, (i) {
+          final selected = i == selectedIndex;
+          return Expanded(
+            child: GestureDetector(
+              onTap: () => onSelected(i),
+              child: AnimatedContainer(
+                duration: const Duration(milliseconds: 180),
+                curve: Curves.easeOut,
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                margin: const EdgeInsets.symmetric(horizontal: 1),
+                decoration: BoxDecoration(
+                  color: selected ? AppColors.primary : Colors.transparent,
+                  borderRadius: BorderRadius.circular(6),
+                ),
+                child: Text(
+                  options[i],
+                  textAlign: TextAlign.center,
+                  style: theme.textTheme.labelMedium?.copyWith(
+                    color: selected
+                        ? Colors.white
+                        : theme.textTheme.bodySmall?.color,
+                    fontWeight:
+                        selected ? FontWeight.w600 : FontWeight.w500,
+                  ),
+                ),
+              ),
+            ),
+          );
+        }),
+      ),
+    );
+  }
+}
+
 class _ContactEmailField extends StatefulWidget {
   final String initialValue;
   final ValueChanged<String> onChanged;

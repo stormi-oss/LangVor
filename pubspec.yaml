@@ -1,7 +1,7 @@
 name: langvor
 description: Cross-platform translation practice app for English learners (A2-B1 → B2).
 publish_to: 'none'
-version: 1.0.1+2
+version: 1.1.0+3
 
 environment:
   sdk: ^3.6.0
@@ -31,6 +31,9 @@ dependencies:
   file_picker: ^8.1.6
   http: ^1.2.2
   crypto: ^3.0.6
+  excel: ^4.0.6
+  flutter_tts: ^4.2.0
+  fl_chart: ^0.69.2
 
 dev_dependencies:
   flutter_test:

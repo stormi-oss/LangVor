@@ -25,6 +25,15 @@ class TranslationProjects extends Table {
   DateTimeColumn get updatedAt => dateTime().withDefault(currentDateAndTime)();
 }
 
+/// A named collection ("deck"/folder) that groups vocabulary cards.
+class VocabularyFolders extends Table {
+  IntColumn get id => integer().autoIncrement()();
+  TextColumn get name => text().withLength(min: 1, max: 120)();
+  TextColumn get color => text().withDefault(const Constant(''))();
+  IntColumn get sortOrder => integer().withDefault(const Constant(0))();
+  DateTimeColumn get createdAt => dateTime().withDefault(currentDateAndTime)();
+}
+
 /// Vocabulary flashcards with SM-2 spaced repetition metadata.
 class VocabularyCards extends Table {
   IntColumn get id => integer().autoIncrement()();
@@ -34,6 +43,9 @@ class VocabularyCards extends Table {
   TextColumn get contextSentence => text().withDefault(const Constant(''))();
   TextColumn get partOfSpeech => text().withDefault(const Constant(''))();
   DateTimeColumn get createdAt => dateTime().withDefault(currentDateAndTime)();
+  // Organization
+  IntColumn get folderId => integer().nullable()();
+  BoolColumn get favorite => boolean().withDefault(const Constant(false))();
   // SM-2 SRS fields
   DateTimeColumn get nextReviewAt =>
       dateTime().withDefault(currentDateAndTime)();
@@ -79,6 +91,7 @@ class GrammarRules extends Table {
 
 @DriftDatabase(tables: [
   TranslationProjects,
+  VocabularyFolders,
   VocabularyCards,
   DictionaryEntries,
   GrammarRules,
@@ -90,7 +103,7 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase.forTesting(super.e);
 
   @override
-  int get schemaVersion => 3;
+  int get schemaVersion => 4;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -124,8 +137,54 @@ class AppDatabase extends _$AppDatabase {
             await m.addColumn(
                 translationProjects, translationProjects.isVerseMode);
           }
+          if (from < 4) {
+            // Vocabulary folders + card organization
+            await m.createTable(vocabularyFolders);
+            await m.addColumn(vocabularyCards, vocabularyCards.folderId);
+            await m.addColumn(vocabularyCards, vocabularyCards.favorite);
+          }
         },
       );
+
+  // ── Vocabulary Folder Queries ──
+
+  Future<List<VocabularyFolder>> getAllFolders() =>
+      (select(vocabularyFolders)
+            ..orderBy([
+              (f) => OrderingTerm(expression: f.sortOrder),
+              (f) => OrderingTerm(expression: f.createdAt),
+            ]))
+          .get();
+
+  Stream<List<VocabularyFolder>> watchAllFolders() =>
+      (select(vocabularyFolders)
+            ..orderBy([
+              (f) => OrderingTerm(expression: f.sortOrder),
+              (f) => OrderingTerm(expression: f.createdAt),
+            ]))
+          .watch();
+
+  Future<int> insertFolder(VocabularyFoldersCompanion folder) =>
+      into(vocabularyFolders).insert(folder);
+
+  Future<bool> updateFolder(VocabularyFolder folder) =>
+      update(vocabularyFolders).replace(folder);
+
+  /// Deletes a folder; its cards are unfiled (folderId → null), not deleted.
+  Future<void> deleteFolder(int id) async {
+    await (update(vocabularyCards)..where((c) => c.folderId.equals(id)))
+        .write(const VocabularyCardsCompanion(folderId: Value(null)));
+    await (delete(vocabularyFolders)..where((f) => f.id.equals(id))).go();
+  }
+
+  /// Moves a card into [folderId] (null = unfiled).
+  Future<void> moveCardToFolder(int cardId, int? folderId) =>
+      (update(vocabularyCards)..where((c) => c.id.equals(cardId)))
+          .write(VocabularyCardsCompanion(folderId: Value(folderId)));
+
+  Future<void> setCardFavorite(int cardId, bool favorite) =>
+      (update(vocabularyCards)..where((c) => c.id.equals(cardId)))
+          .write(VocabularyCardsCompanion(favorite: Value(favorite)));
 
   // ── Project Queries ──
 

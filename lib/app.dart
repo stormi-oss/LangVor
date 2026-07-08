@@ -21,9 +21,20 @@ class LangVorApp extends StatelessWidget {
         return MaterialApp(
           title: 'LangVor',
           debugShowCheckedModeBanner: false,
-          theme: AppTheme.lightTheme,
-          darkTheme: AppTheme.darkTheme,
+          theme: AppTheme.light(settings.fontSettings),
+          darkTheme: AppTheme.dark(settings.fontSettings),
           themeMode: settings.themeMode,
+          // Apply the user's font-size choice to the entire UI at once,
+          // and smoothly animate theme/typography changes.
+          builder: (context, child) => AnimatedTheme(
+            data: Theme.of(context),
+            duration: const Duration(milliseconds: 300),
+            child: MediaQuery.withClampedTextScaling(
+              minScaleFactor: settings.fontSettings.textScale,
+              maxScaleFactor: settings.fontSettings.textScale,
+              child: child!,
+            ),
+          ),
           home: BlocListener<SettingsBloc, SettingsState>(
             listenWhen: (previous, current) =>
                 previous.onlineCheckingEnabled !=
