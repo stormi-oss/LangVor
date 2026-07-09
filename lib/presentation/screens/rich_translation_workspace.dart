@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:math' show max;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -509,6 +510,7 @@ class _RichTranslationWorkspaceState extends State<RichTranslationWorkspace> {
             ),
           ),
         ),
+        _PageNavigator(controller: _sourceScrollController),
       ],
     );
   }
@@ -599,6 +601,7 @@ class _RichTranslationWorkspaceState extends State<RichTranslationWorkspace> {
             ],
           ),
         ),
+        _PageNavigator(controller: _translationScrollController),
       ],
     );
   }
@@ -1322,6 +1325,189 @@ class _WordLookupDialog extends StatelessWidget {
           ],
         );
       },
+    );
+  }
+}
+
+/// "Page X of Y" indicator with Previous/Next buttons for a scrollable
+/// editor panel. Pages are derived from the *actual rendered* scroll
+/// metrics (viewport height vs. total content height) rather than an
+/// estimated line count, so it always matches what's really on screen —
+/// and it hides itself entirely when the content fits on one page.
+///
+/// Deliberately does not bind bare Left/Right arrow keys globally: those
+/// keys move the text cursor inside the editor, and hijacking them here
+/// would break normal editing.
+class _PageNavigator extends StatefulWidget {
+  final ScrollController controller;
+  const _PageNavigator({required this.controller});
+
+  @override
+  State<_PageNavigator> createState() => _PageNavigatorState();
+}
+
+class _PageNavigatorState extends State<_PageNavigator> {
+  @override
+  void initState() {
+    super.initState();
+    widget.controller.addListener(_onScroll);
+    // Content/viewport size isn't known until the first frame lays out.
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) setState(() {});
+    });
+  }
+
+  @override
+  void dispose() {
+    widget.controller.removeListener(_onScroll);
+    super.dispose();
+  }
+
+  void _onScroll() {
+    if (mounted) setState(() {});
+  }
+
+  /// `ScrollController.hasClients` can be true before the first layout
+  /// pass has actually run — `ScrollPosition.viewportDimension` still
+  /// throws a null-check error in that window. `hasContentDimensions`
+  /// plus a belt-and-suspenders try/catch avoids crashing on that gap.
+  bool get _metricsReady {
+    if (!widget.controller.hasClients) return false;
+    try {
+      final pos = widget.controller.position;
+      return pos.hasContentDimensions && pos.viewportDimension > 0;
+    } catch (_) {
+      return false;
+    }
+  }
+
+  int get _pageCount {
+    if (!_metricsReady) return 1;
+    try {
+      final pos = widget.controller.position;
+      final viewport = pos.viewportDimension;
+      return max(1, ((pos.maxScrollExtent + viewport) / viewport).ceil());
+    } catch (_) {
+      return 1;
+    }
+  }
+
+  int get _currentPage {
+    if (!_metricsReady) return 1;
+    try {
+      final pos = widget.controller.position;
+      return (pos.pixels / pos.viewportDimension).round() + 1;
+    } catch (_) {
+      return 1;
+    }
+  }
+
+  void _goToPage(int page) {
+    if (!_metricsReady) return;
+    final pos = widget.controller.position;
+    final target =
+        ((page - 1) * pos.viewportDimension).clamp(0.0, pos.maxScrollExtent);
+    widget.controller.animateTo(
+      target,
+      duration: const Duration(milliseconds: 250),
+      curve: Curves.easeOut,
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final pages = _pageCount;
+    if (pages <= 1) return const SizedBox.shrink();
+    final current = _currentPage.clamp(1, pages);
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 6),
+      decoration: BoxDecoration(
+        border: Border(
+          top: BorderSide(
+            color: isDark ? AppColors.darkDivider : AppColors.lightDivider,
+          ),
+        ),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          _PageArrowButton(
+            icon: Icons.chevron_left_rounded,
+            enabled: current > 1,
+            onPressed: () => _goToPage(current - 1),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+            child: Text(
+              'Page $current of $pages',
+              style: theme.textTheme.labelSmall?.copyWith(
+                color: isDark
+                    ? AppColors.darkTextTertiary
+                    : AppColors.lightTextTertiary,
+              ),
+            ),
+          ),
+          _PageArrowButton(
+            icon: Icons.chevron_right_rounded,
+            enabled: current < pages,
+            onPressed: () => _goToPage(current + 1),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _PageArrowButton extends StatefulWidget {
+  final IconData icon;
+  final bool enabled;
+  final VoidCallback onPressed;
+  const _PageArrowButton({
+    required this.icon,
+    required this.enabled,
+    required this.onPressed,
+  });
+
+  @override
+  State<_PageArrowButton> createState() => _PageArrowButtonState();
+}
+
+class _PageArrowButtonState extends State<_PageArrowButton> {
+  bool _hovered = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final color = widget.enabled
+        ? AppColors.primary
+        : Theme.of(context).disabledColor;
+    return MouseRegion(
+      cursor: widget.enabled
+          ? SystemMouseCursors.click
+          : SystemMouseCursors.basic,
+      onEnter: (_) => setState(() => _hovered = true),
+      onExit: (_) => setState(() => _hovered = false),
+      child: GestureDetector(
+        onTap: widget.enabled ? widget.onPressed : null,
+        child: AnimatedScale(
+          scale: _hovered && widget.enabled ? 1.05 : 1.0,
+          duration: const Duration(milliseconds: 100),
+          child: Container(
+            width: 32,
+            height: 32,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: _hovered && widget.enabled
+                  ? AppColors.primary.withValues(alpha: 0.12)
+                  : Colors.transparent,
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: Icon(widget.icon, size: 20, color: color),
+          ),
+        ),
+      ),
     );
   }
 }

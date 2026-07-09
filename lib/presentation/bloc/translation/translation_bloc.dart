@@ -348,9 +348,24 @@ class TranslationBloc extends Bloc<TranslationEvent, TranslationState> {
         ),
       );
 
-      // Reload and select the new project
-      add(const LoadProjects());
-      add(SelectProject(projectId));
+      // Reload and select the new project in one deterministic step —
+      // dispatching separate LoadProjects/SelectProject events here would
+      // race (SelectProject could read the pre-insert project list and
+      // fail to find the new project, since both events' handlers run
+      // concurrently by default).
+      final projects = await _db.getAllProjects();
+      final project = projects.firstWhere((p) => p.id == projectId);
+      emit(state.copyWith(
+        status: TranslationStatus.loaded,
+        projects: projects,
+        selectedProject: project,
+        sourceText: project.sourceText,
+        translationText: project.userTranslation,
+        sourceDelta: project.sourceFormatted,
+        translationDelta: project.translationFormatted,
+        clearAnalysis: true,
+        clearLookup: true,
+      ));
     } catch (e) {
       emit(state.copyWith(
         errorMessage: 'Failed to create project: $e',

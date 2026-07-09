@@ -3,12 +3,30 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'presentation/theme/app_theme.dart';
 import 'presentation/bloc/settings/settings_bloc.dart';
 import 'presentation/bloc/translation/translation_bloc.dart';
+import 'presentation/bloc/vocabulary/vocabulary_bloc.dart';
 import 'presentation/screens/rich_translation_workspace.dart';
 import 'presentation/screens/vocabulary_screen.dart';
 import 'presentation/screens/settings_screen.dart';
 import 'presentation/theme/app_colors.dart';
 import 'presentation/widgets/keyboard_shortcuts_wrapper.dart';
 import 'presentation/widgets/new_project_dialog.dart';
+
+/// App-wide messenger key so any BlocListener (even ones above the nearest
+/// Scaffold) can surface an error SnackBar. Without this, a caught
+/// exception in a bloc handler sets `state.errorMessage` but nothing ever
+/// displays it — the UI just looks like the action silently did nothing.
+final GlobalKey<ScaffoldMessengerState> appScaffoldMessengerKey =
+    GlobalKey<ScaffoldMessengerState>();
+
+void showAppError(String message) {
+  appScaffoldMessengerKey.currentState?.showSnackBar(
+    SnackBar(
+      content: Text(message),
+      backgroundColor: AppColors.error,
+      behavior: SnackBarBehavior.floating,
+    ),
+  );
+}
 
 /// Root application widget with theme management and adaptive navigation.
 class LangVorApp extends StatelessWidget {
@@ -21,6 +39,7 @@ class LangVorApp extends StatelessWidget {
         return MaterialApp(
           title: 'LangVor',
           debugShowCheckedModeBanner: false,
+          scaffoldMessengerKey: appScaffoldMessengerKey,
           theme: AppTheme.light(settings.fontSettings),
           darkTheme: AppTheme.dark(settings.fontSettings),
           themeMode: settings.themeMode,
@@ -35,17 +54,33 @@ class LangVorApp extends StatelessWidget {
               child: child!,
             ),
           ),
-          home: BlocListener<SettingsBloc, SettingsState>(
-            listenWhen: (previous, current) =>
-                previous.onlineCheckingEnabled !=
-                    current.onlineCheckingEnabled ||
-                previous.contactEmail != current.contactEmail,
-            listener: (context, settings) {
-              context.read<TranslationBloc>().add(SyncOnlineCheckSettings(
-                    enabled: settings.onlineCheckingEnabled,
-                    contactEmail: settings.contactEmail,
-                  ));
-            },
+          home: MultiBlocListener(
+            listeners: [
+              BlocListener<SettingsBloc, SettingsState>(
+                listenWhen: (previous, current) =>
+                    previous.onlineCheckingEnabled !=
+                        current.onlineCheckingEnabled ||
+                    previous.contactEmail != current.contactEmail,
+                listener: (context, settings) {
+                  context.read<TranslationBloc>().add(SyncOnlineCheckSettings(
+                        enabled: settings.onlineCheckingEnabled,
+                        contactEmail: settings.contactEmail,
+                      ));
+                },
+              ),
+              BlocListener<TranslationBloc, TranslationState>(
+                listenWhen: (previous, current) =>
+                    current.errorMessage != null &&
+                    current.errorMessage != previous.errorMessage,
+                listener: (context, state) => showAppError(state.errorMessage!),
+              ),
+              BlocListener<VocabularyBloc, VocabularyState>(
+                listenWhen: (previous, current) =>
+                    current.errorMessage != null &&
+                    current.errorMessage != previous.errorMessage,
+                listener: (context, state) => showAppError(state.errorMessage!),
+              ),
+            ],
             child: const _AppShell(),
           ),
         );

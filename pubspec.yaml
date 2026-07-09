@@ -1,7 +1,7 @@
 name: langvor
 description: Cross-platform translation practice app for English learners (A2-B1 → B2).
 publish_to: 'none'
-version: 1.1.0+3
+version: 1.2.0+4
 
 environment:
   sdk: ^3.6.0

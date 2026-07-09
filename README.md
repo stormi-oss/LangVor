@@ -37,7 +37,7 @@ These builds are **not signed** with a paid developer certificate, so both opera
 
 ## Features
 
-- **Dual-pane translation workspace** — Russian source and your English translation side by side, rich-text editing (bold/italic, verse mode for poetry).
+- **Dual-pane translation workspace** — Russian source and your English translation side by side, rich-text editing (bold/italic, verse mode for poetry), with a "Page X of Y" indicator and Previous/Next navigation once a text is long enough to scroll.
 - **Graded translation checking, not word-matching** — your translation is compared against a live reference translation from the [MyMemory Translation API](https://mymemory.translated.net/) (free, no API key) and graded on multiple levels (exact / good / partial / needs work), with detailed reviewer feedback: missing words, word-choice hints, and a reference translation. Cached locally to minimize repeat requests.
 - **Offline fallback** — spelling (English wordlist) and grammar (rule-based) checks always run locally and instantly; if you're offline or turn off online checking, coverage checking degrades gracefully instead of breaking.
 - **Translation trainer** — practice a text sentence by sentence with Easy / Medium / Hard difficulty, a timer, live grading, achievement badges, and a personal-best leaderboard.

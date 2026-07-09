@@ -111,40 +111,78 @@ class AppDatabase extends _$AppDatabase {
           await m.createAll();
         },
         onUpgrade: (m, from, to) async {
+          // Every step below checks whether it was already applied before
+          // running. A migration can be left half-applied if the app is
+          // killed mid-upgrade (each DDL statement commits immediately in
+          // SQLite, but the schema-version bump only happens after the
+          // whole onUpgrade callback returns) — without these guards, the
+          // next launch would retry an already-applied step (e.g. "ADD
+          // COLUMN" on a column that exists) and fail permanently, taking
+          // every database query down with it.
           if (from < 2) {
-            // Add new columns to TranslationProjects
-            await m.addColumn(
-                translationProjects, translationProjects.userTranslation);
-            await m.addColumn(
-                translationProjects, translationProjects.sourceFormatted);
-            await m.addColumn(
-                translationProjects, translationProjects.translationFormatted);
-
-            // Add new columns to DictionaryEntries
-            await m.addColumn(
-                dictionaryEntries, dictionaryEntries.cefrLevel);
-            await m.addColumn(
-                dictionaryEntries, dictionaryEntries.exampleSentence);
-
-            // Create GrammarRules table
-            await m.createTable(grammarRules);
-
-            // Drop TranslationSegments table (old schema)
+            if (!await _columnExists('translation_projects', 'user_translation')) {
+              await m.addColumn(
+                  translationProjects, translationProjects.userTranslation);
+            }
+            if (!await _columnExists('translation_projects', 'source_formatted')) {
+              await m.addColumn(
+                  translationProjects, translationProjects.sourceFormatted);
+            }
+            if (!await _columnExists(
+                'translation_projects', 'translation_formatted')) {
+              await m.addColumn(translationProjects,
+                  translationProjects.translationFormatted);
+            }
+            if (!await _columnExists('dictionary_entries', 'cefr_level')) {
+              await m.addColumn(
+                  dictionaryEntries, dictionaryEntries.cefrLevel);
+            }
+            if (!await _columnExists('dictionary_entries', 'example_sentence')) {
+              await m.addColumn(
+                  dictionaryEntries, dictionaryEntries.exampleSentence);
+            }
+            if (!await _tableExists('grammar_rules')) {
+              await m.createTable(grammarRules);
+            }
             await customStatement('DROP TABLE IF EXISTS translation_segments');
           }
           if (from < 3) {
-            // Add isVerseMode column to TranslationProjects
-            await m.addColumn(
-                translationProjects, translationProjects.isVerseMode);
+            if (!await _columnExists('translation_projects', 'is_verse_mode')) {
+              await m.addColumn(
+                  translationProjects, translationProjects.isVerseMode);
+            }
           }
           if (from < 4) {
-            // Vocabulary folders + card organization
-            await m.createTable(vocabularyFolders);
-            await m.addColumn(vocabularyCards, vocabularyCards.folderId);
-            await m.addColumn(vocabularyCards, vocabularyCards.favorite);
+            if (!await _tableExists('vocabulary_folders')) {
+              await m.createTable(vocabularyFolders);
+            }
+            if (!await _columnExists('vocabulary_cards', 'folder_id')) {
+              await m.addColumn(vocabularyCards, vocabularyCards.folderId);
+            }
+            if (!await _columnExists('vocabulary_cards', 'favorite')) {
+              await m.addColumn(vocabularyCards, vocabularyCards.favorite);
+            }
           }
         },
       );
+
+  Future<bool> _tableExists(String table) async {
+    final rows = await customSelect(
+      "SELECT name FROM sqlite_master WHERE type='table' AND name = ?1",
+      variables: [Variable.withString(table)],
+    ).get();
+    return rows.isNotEmpty;
+  }
+
+  Future<bool> _columnExists(String table, String column) async {
+    // pragma_table_info doesn't support bound parameters for the table
+    // name in all SQLite builds, but `table` is always one of our own
+    // hardcoded literals above, never user input.
+    final rows =
+        await customSelect("SELECT name FROM pragma_table_info('$table')")
+            .get();
+    return rows.any((r) => r.read<String>('name') == column);
+  }
 
   // ── Vocabulary Folder Queries ──
 
